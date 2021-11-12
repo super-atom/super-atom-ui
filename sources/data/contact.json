@@ -1,0 +1,10 @@
+{
+  "head": {
+    "title": "title - contact",
+    "description": "description - contact"
+  },
+  "body": {
+    "image": "images/contact.jpg",
+    "mainText": "main text - contact"
+  }
+}

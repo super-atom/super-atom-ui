@@ -1,0 +1,11 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-standard-scss",
+    "stylelint-config-prettier"
+  ],
+  "rules": {
+    "declaration-block-single-line-max-declarations": 1,
+    "declaration-block-multi-line-min-declarations": 1
+  }
+}
