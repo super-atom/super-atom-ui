@@ -1,0 +1,7 @@
+@mixin text-shadow($x: 1px, $y: 2px, $blur: 1px, $color: rgba(0, 0, 0, 0.4)) {
+  @if $blur == false {
+    text-shadow: $x $y $color;
+  } @else {
+    text-shadow: $x $y $blur $color;
+  }
+}

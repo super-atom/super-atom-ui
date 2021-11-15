@@ -1,0 +1,9 @@
+// flex grid
+@mixin flex-grid-col($i) {
+  flex: 0 1 span($i);
+  margin-right: gutter();
+}
+
+@mixin flex-grid-col-half($i) {
+  flex: 0 1 span(($i * 0.5) of $i);
+}

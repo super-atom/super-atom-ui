@@ -1,0 +1,29 @@
+$base-input-padding: 8px;
+
+// Input Text
+$input__text-list: (
+  "[type='color']",
+  "[type='date']",
+  "[type='datetime']",
+  "[type='datetime-local']",
+  "[type='email']",
+  "[type='month']",
+  "[type='number']",
+  "[type='password']",
+  "[type='search']",
+  "[type='tel']",
+  "[type='text']",
+  "[type='time']",
+  "[type='url']",
+  "[type='week']",
+  'input:not([type])',
+  'textarea'
+);
+
+// Input Button
+$input__button-list: (
+  'button',
+  "[type='button']",
+  "[type='reset']",
+  "[type='submit']"
+);

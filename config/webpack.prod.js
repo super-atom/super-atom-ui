@@ -59,6 +59,8 @@ const configureSW = () => {
 const configureCopy = () => {
   return {
     patterns: [
+      { from: '../assets/manifest.json', to: 'manifest.json' },
+      { from: '../assets/browserconfig.xml', to: 'browserconfig.xml' },
       {
         from: 'sources/assets/',
         to: 'assets/',
@@ -101,7 +103,7 @@ module.exports = merge(baseConfig, {
   optimization: configureOptimization(),
   plugins: [
     // when we run the production build then
-    // the docs folder is cleared
+    // the dist folder is cleared
     new CleanWebpackPlugin({
       dry: false,
       verbose: true,

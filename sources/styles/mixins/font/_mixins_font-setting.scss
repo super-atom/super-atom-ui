@@ -1,0 +1,69 @@
+@import './_mixins_font-size';
+@import '../../variables/_variables_font-size';
+
+@mixin base-font-title() {
+  font-family: $base-font;
+  letter-spacing: $base-font-letter-spacing;
+}
+
+// *Responsive Base Font Size
+@mixin base-font-sizes() {
+  @include font-size($base-font-sizes);
+}
+
+@mixin base-font-sizes-title() {
+  @include base-font-title;
+  @include font-size($base-font-sizes-title);
+}
+
+@mixin base-font-sizes-section-title() {
+  @include base-font-title;
+  @include font-size($base-font-sizes-section-title);
+}
+
+@mixin base-font-sizes-section-name() {
+  @include base-font-title;
+}
+
+@mixin base-font-sizes-content() {
+  @include font-size($base-font-sizes-content);
+}
+
+@mixin base-font-sizes-util() {
+  @include font-size($base-font-sizes-util);
+}
+
+// *Responsive Base Element Size
+@mixin base-font-sizes-p() {
+  @include font-size($base-font-sizes-p);
+}
+
+// *Responsive Basic Font Size Mixin
+@mixin basic-font-sizes() {
+  @include font-size($basic-font-sizes);
+}
+
+// *Responsive Admin Layout Content Font Size Mixin
+@mixin font-sizes-layout-section-main-title() {
+  @include base-font-title;
+  @include font-size($font-sizes-layout-section-main-title);
+}
+
+@mixin font-sizes-layout-section-sub-title() {
+  @include base-font-title;
+  @include font-size($font-sizes-layout-section-sub-title);
+}
+
+@mixin font-sizes-layout-content-title() {
+  @include base-font-title;
+  @include font-size($font-sizes-layout-content-title);
+}
+
+@mixin font-sizes-layout-content-item-title() {
+  @include base-font-title;
+  @include font-size($font-sizes-layout-content-item-title);
+}
+
+@mixin font-sizes-layout-content-description() {
+  @include font-size($font-sizes-layout-content-description);
+}

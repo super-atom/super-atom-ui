@@ -7,15 +7,18 @@ module.exports = (api) => {
 
   return {
     // You can specify any options from https://postcss.org/api/#processoptions here
-    parser: require('postcss-scss'),
+    parser: 'postcss-scss',
+    syntax: 'postcss-scss',
     plugins: [
+      'postcss-browser-reporter',
       'lost',
       'cssnano',
       'postcss-url',
+      'postcss-short',
       'postcss-import',
-      'postcss-preset-env',
+      'postcss-simple-vars',
       'postcss-reporter',
-      'postcss-browser-reporter',
+      'precss',
       'autoprefixer',
     ],
   };

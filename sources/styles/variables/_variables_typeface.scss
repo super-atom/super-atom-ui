@@ -1,0 +1,18 @@
+// *Typeface
+$typeface-noto-sans: 'Noto Sans KR', sans-serif;
+$typeface-noto-sans-letter-spacing: -0.5px;
+
+$typeface-nanum-gothic: 'Nanum Gothic', sans-serif;
+$typeface-nanum-gothic-letter-spacing: -0.1px;
+
+$typeface-kopub: 'KoPub Dotum', sans-serif;
+$typeface-kopub-letter-spacing: -1px;
+
+// *Typeface Setting
+// Base
+$base-font: $typeface-nanum-gothic;
+$base-font-letter-spacing: $typeface-nanum-gothic-letter-spacing;
+
+// Main Font
+$main-font: $typeface-noto-sans;
+$main-font-letter-spacing: $typeface-noto-sans-letter-spacing;

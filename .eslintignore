@@ -1,4 +1,4 @@
 .gitignore
 config/
-docs/
+dist/
 node_modules/

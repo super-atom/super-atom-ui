@@ -1,8 +1,13 @@
 {
+  "plugins": ["stylelint-prettier"],
+  "rules": {
+    "prettier/prettier": true
+  },
   "extends": [
     "stylelint-config-standard",
     "stylelint-config-standard-scss",
-    "stylelint-config-prettier"
+    "stylelint-config-prettier",
+    "stylelint-prettier/recommended"
   ],
   "rules": {
     "declaration-block-single-line-max-declarations": 1,

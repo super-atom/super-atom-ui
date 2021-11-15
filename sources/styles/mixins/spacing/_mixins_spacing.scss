@@ -1,0 +1,9 @@
+@import '../../functions/_functions_directional-property';
+
+@mixin padding($values) {
+  @include _directional-property(padding, null, $values);
+}
+
+@mixin margin($values) {
+  @include _directional-property(margin, null, $values);
+}

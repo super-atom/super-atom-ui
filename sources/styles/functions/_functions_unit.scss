@@ -1,0 +1,9 @@
+@use 'sass:math';
+
+// Function for converting a px based font-size to rem.
+@function unit($value, $type: rem) {
+  @if ($type == rem) {
+    $remSize: math.div($value, 16px);
+    @return #{$remSize}rem;
+  }
+}

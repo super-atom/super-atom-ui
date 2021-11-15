@@ -1,0 +1,40 @@
+@mixin font-size-padding($font-size, $padding) {
+  $type-collection: list number string;
+
+  @if is-valid-types($padding, $type-collection) {
+    $padding-type: type-of($padding);
+    @if $padding-type == 'number' {
+      padding: em($padding, $font-size);
+    }
+
+    @if $padding-type == 'string' {
+      padding: $padding;
+    }
+
+    @if $padding-type == 'list' {
+      $convert-padding-list: ();
+
+      @each $value in $padding {
+        @if type-of($value) == 'number' {
+          $convert-padding-list: append(
+            $convert-padding-list,
+            em($value, $font-size)
+          );
+        }
+
+        @if type-of($value) == 'string' {
+          $convert-padding-list: append($convert-padding-list, $value);
+        }
+      }
+
+      padding: $convert-padding-list;
+    }
+  } @else {
+    @error '전달 받은 #{$padding} 값은 요구되는 #{join($type-collection, [], $separator: comma, $bracketed: true)} 유형이 아닙니다.';
+  }
+
+  @if type-of($font-size) != 'number' {
+    @error '전달 받은 #{$font-size} 값은 숫자 유형이 아닙니다.';
+  }
+  font-size: rem($font-size);
+}

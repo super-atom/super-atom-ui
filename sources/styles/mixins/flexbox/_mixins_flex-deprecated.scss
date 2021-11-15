@@ -1,0 +1,24 @@
+// @mixin flex-container(
+//     $content: space-between,
+//     $direction: row,
+//     $items: center,
+//     $wrap: nowrap,
+//     $line: false
+// ) {
+//     display: flex;
+//     @if $content {
+//         justify-content: $content;
+//     }
+//     @if $direction {
+//         flex-direction: $direction;
+//     }
+//     @if $items {
+//         align-items: $items;
+//     }
+//     @if $line {
+//         line-height: $line;
+//     }
+//     @if $wrap {
+//         flex-wrap: $wrap;
+//     }
+// }

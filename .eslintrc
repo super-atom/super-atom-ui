@@ -1,13 +1,17 @@
 {
   "plugins": ["prettier"],
   "extends": ["eslint:recommended", "prettier/prettier"],
+  "parserOptions": {
+    "sourceType": "module"
+  },
   "rules": {
     // "prettier/prettier": "error"
-    "no-undefined": false
+    "no-undefined": 0
   },
   "env": {
     "browser": true,
     "es2021": true,
-    "commonjs": true
+    "commonjs": true,
+    "jquery": true
   }
 }

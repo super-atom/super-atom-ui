@@ -1,0 +1,27 @@
+@mixin separate() {
+  display: flex;
+  height: auto;
+
+  > * {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 8px;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    & + * {
+      &:before {
+        @include pseudo();
+        width: 1px;
+        height: 60%;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        background-color: $base-grey;
+      }
+    }
+  }
+}

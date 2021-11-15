@@ -1,0 +1,17 @@
+@mixin box-shadow($direction: bottom) {
+  @if $direction == top {
+    box-shadow: 0 -5px 5px -5px #aaa;
+  } @else if $direction == left {
+    box-shadow: 5px 0 5px -5px #aaa;
+  } @else if $direction == right {
+    box-shadow: -5px 0 5px -5px #aaa;
+  } @else if $direction == bottom {
+    box-shadow: 0 5px 5px -5px #aaa;
+  } @else if $direction == all {
+    box-shadow: 0 0 5px #aaa;
+  }
+
+  @if $direction == false {
+    @content;
+  }
+}

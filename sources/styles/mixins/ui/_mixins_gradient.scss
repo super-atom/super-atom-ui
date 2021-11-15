@@ -1,0 +1,16 @@
+@mixin linear-gradient($from, $to, $start: top, $end: bottom) {
+  background: $to;
+  @content;
+  background: -moz-linear-gradient($start, $from 0%, $to 100%);
+  background: -webkit-gradient(
+    linear,
+    left $start,
+    left $end,
+    color-stop(0%, $from),
+    color-stop(100%, $to)
+  );
+  background: -webkit-linear-gradient($start, $from 0%, $to 100%);
+  background: -o-linear-gradient($start, $from 0%, $to 100%);
+  background: linear-gradient(to $end, $from 0%, $to 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#{$from}, endColorstr=#{$to});
+}

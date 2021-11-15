@@ -1,0 +1,100 @@
+@mixin list-spacing(
+  $type: padding,
+  $direction: top,
+  $value: 16px,
+  $selector: 'first-child',
+  $not: true
+) {
+  @if $selector == 'first-child' {
+    @if $not {
+      &:not(:first-child) {
+        @if $type {
+          #{$type}-#{$direction}: $value;
+        }
+        @content;
+      }
+    } @else {
+      &:first-child {
+        #{$type}-#{$direction}: $value;
+        @content;
+      }
+    }
+  }
+
+  @if $selector == 'first-of-type' {
+    @if $not {
+      &:not(:first-of-type) {
+        #{$type}-#{$direction}: $value;
+        @content;
+      }
+    } @else {
+      &:first-of-type {
+        #{$type}-#{$direction}: $value;
+        @content;
+      }
+    }
+  }
+
+  @if $selector == 'last-child' {
+    @if $not {
+      &:not(:last-child) {
+        #{$type}-#{$direction}: $value;
+        @content;
+      }
+    } @else {
+      &:last-child {
+        #{$type}-#{$direction}: $value;
+        @content;
+      }
+    }
+  }
+
+  @if $selector == 'last-of-type' {
+    @if $not {
+      &:not(:last-of-type) {
+        #{$type}-#{$direction}: $value;
+        @content;
+      }
+    } @else {
+      &:last-of-type {
+        #{$type}-#{$direction}: $value;
+        @content;
+      }
+    }
+  }
+
+  @if $selector == 'all' {
+    @content;
+  }
+}
+
+@mixin list-wrap-spacing($direction: horizon, $value: 4px) {
+  @if ($direction == horizon) {
+    margin-left: (-$value);
+    margin-right: (-$value);
+
+    & > * {
+      margin-left: $value;
+      margin-right: $value;
+      margin-bottom: $value * 2;
+    }
+  }
+
+  @if ($direction == vertical) {
+    margin-top: (-$value);
+    margin-bottom: (-$value);
+
+    & > * {
+      margin-top: $value;
+      margin-bottom: $value;
+    }
+  }
+
+  @if ($direction == all) {
+    margin: -$value * 2;
+
+    & > * {
+      margin: $value;
+    }
+  }
+}

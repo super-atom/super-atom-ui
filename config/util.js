@@ -19,10 +19,6 @@ module.exports.cssLoaders = [
     loader: 'sass-loader',
     options: {
       sourceMap: true,
-      additionalData: `
-        @import "sources/scss/modules/_config.scss";
-        @import "sources/scss/modules/_global.scss";
-      `,
     },
   },
 ];

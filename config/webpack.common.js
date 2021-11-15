@@ -1,5 +1,7 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 // only form HtmlWebPackPlugin
 const config = [
@@ -32,26 +34,35 @@ const configurePugLoader = () => {
 };
 
 // configure HtmlWebPackPlugin
-const entryHtmlPlugins = config.map(({ site, share }) => {
-  return new HtmlWebPackPlugin({
-    filename: `${site}.html`,
+const entryHtmlPlugins = config
+  .map(({ site, share }) => {
+    return new HtmlWebPackPlugin({
+      filename: `${site}.html`,
 
-    // template for individual pages index, about and contact
-    template: `./sources/templates/${site}.pug`,
+      // template for individual pages index, about and contact
+      template: `./sources/templates/${site}.pug`,
 
-    // json data drawn into pug templates
-    DATA: require(`../sources/data/${site}.json`),
+      // json data drawn into pug templates
+      DATA: require(`../sources/data/${site}.json`),
 
-    // injecting js and css files into
-    // html as well as common share.js file
-    chunks: [site, share],
-  });
-});
+      // injecting js and css files into
+      // html as well as common share.js file
+      chunks: [site, share],
+    });
+  })
+  .concat([
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.$': 'jquery',
+      'window.jQuery': 'jquery',
+    }),
+  ]);
 
 // configure Output
 const configureOutput = () => {
   return {
-    path: path.resolve(__dirname, '../docs'),
+    path: path.resolve(__dirname, '../dist'),
     filename: 'vendor/js/[name].[fullhash].js',
     // assetModuleFilename: 'images/static/[name].[hash][ext]',
   };
@@ -132,5 +143,5 @@ module.exports = {
       configurePugLoader(),
     ],
   },
-  plugins: [...entryHtmlPlugins],
+  plugins: [...entryHtmlPlugins, new ESLintPlugin()],
 };

@@ -1,0 +1,4 @@
+@mixin responsive-container($val: 1200) {
+  max-width: $val + px;
+  margin: 0 auto;
+}
