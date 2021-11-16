@@ -4,7 +4,7 @@
     "description": "description - about"
   },
   "body": {
-    "image": "images/about.jpg",
+    "image": "assets/images/about.jpg",
     "mainText": "main text - about"
   }
 }

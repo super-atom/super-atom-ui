@@ -1,4 +1,4 @@
-import '../../scss/app.scss';
+import '../../assets/styles/common.scss';
 
 const shareInfo = document.createElement('h2');
 shareInfo.textContent = 'shared module between "index" and "about me"';

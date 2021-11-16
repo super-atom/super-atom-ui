@@ -12,7 +12,6 @@
     "jquery": "^3.6.0",
     "jquery-ui": "^1.13.0",
     "lodash": "^4.17.21",
-    "modernizr": "^3.11.8",
     "open-color": "^1.9.1",
     "swiper": "^7.2.0"
   },

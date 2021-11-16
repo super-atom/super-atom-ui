@@ -4,7 +4,10 @@
     "description": "description - index"
   },
   "body": {
-    "image": "images/index.jpg",
+    "image": "assets/images/index.jpg",
     "mainText": "main text - index"
+  },
+  "content": {
+    "section": "section1"
   }
 }

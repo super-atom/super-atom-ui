@@ -59,15 +59,13 @@ const configureSW = () => {
 const configureCopy = () => {
   return {
     patterns: [
-      { from: '../assets/manifest.json', to: 'manifest.json' },
-      { from: '../assets/browserconfig.xml', to: 'browserconfig.xml' },
       {
         from: 'sources/assets/',
         to: 'assets/',
       },
       {
-        from: 'sources/images/',
-        to: 'images/',
+        from: 'sources/assets/images/',
+        to: 'assets/images/',
         // blocking file copying by plugin webpack will
         // do it for you and rename it with a hash
         globOptions: {
