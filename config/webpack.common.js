@@ -3,100 +3,55 @@ const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
-// only form HtmlWebPackPlugin
-const config = [
-  { site: 'index', share: 'share' },
-  { site: 'about', share: 'share' },
-  { site: 'contact' },
-];
-
-// configure Babel Loader
-const configureBabelLoader = () => {
-  return {
-    test: /\.js$/,
-    exclude: /node_modules/,
-    use: {
-      loader: 'babel-loader',
-    },
-  };
-};
-
-// configure Pug Loader
-const configurePugLoader = () => {
-  return {
-    test: /\.pug$/,
-    loader: 'pug-loader',
-    options: {
-      pretty: true,
-      self: true,
-    },
-  };
-};
+const PATHS = require('../config/paths');
+const PAGES = ['index', 'about', 'work', 'contact', 'sample'];
 
 // configure HtmlWebPackPlugin
-const entryHtmlPlugins = config
-  .map(({ site, share }) => {
-    return new HtmlWebPackPlugin({
-      filename: `${site}.html`,
+const entryHtmlPlugins = PAGES.map((page) => {
+  return new HtmlWebPackPlugin({
+    filename: `${page}.html`,
 
-      // template for individual pages index, about and contact
-      template: `./sources/templates/${site}.pug`,
+    // template for individual pages index, about and contact
+    template: `./sources/pages/${page}/${page}.pug`,
 
-      // json data drawn into pug templates
-      DATA: require(`../sources/data/${site}.json`),
+    // json data drawn into pug templates
+    DATA: require(`../sources/pages/${page}/${page}.json`),
 
-      // injecting js and css files into
-      // html as well as common share.js file
-      chunks: [site, share],
-    });
-  })
-  .concat([
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-      'window.$': 'jquery',
-      'window.jQuery': 'jquery',
-    }),
-  ]);
+    // injecting js and css files into
+    // html as well as common share.js file
+    chunks: ['common', page],
+  });
+});
 
-// configure Output
-const configureOutput = () => {
-  return {
+module.exports = {
+  entry: (() => {
+    const entries = {};
+    PAGES.forEach(
+      (page) => (entries[page] = PATHS.source + `/pages/${page}/${page}.js`)
+    );
+    return entries;
+  })(),
+  // configuration of output files
+  output: {
     path: path.resolve(__dirname, '../dist'),
     filename: 'vendor/js/[name].[fullhash].js',
     // assetModuleFilename: 'images/static/[name].[hash][ext]',
-  };
-};
-
-module.exports = {
-  // input files
-  entry: {
-    index: {
-      import: './sources/js/index.js',
-      dependOn: 'share',
-    },
-    about: {
-      import: './sources/js/about.js',
-      dependOn: 'share',
-    },
-    contact: {
-      import: './sources/js/contact.js',
-    },
-    share: './sources/js/module/share.js',
   },
-  // configuration of output files
-  output: configureOutput(),
   module: {
     rules: [
       // Images, fonts, e.t.c: Copy files to build folder
       // https://webpack.js.org/guides/asset-modules/#resource-assets
       {
-        test: /\.svg/,
+        test: /\.(png|jpg|gif|svg)$/i,
         type: 'asset/resource',
         generator: {
           // adding a hash to the file
-          filename: 'images/static/[name].[hash][ext]',
+          filename: '[name].[hash][ext]',
         },
+      },
+      {
+        test: /\.html$/i,
+        use: ['html-loader'],
       },
 
       // OR -------------------------
@@ -138,10 +93,31 @@ module.exports = {
         test: /\.(woff(2)?|eot|ttf|otf)$/,
         type: 'asset/inline',
       },
-
-      configureBabelLoader(),
-      configurePugLoader(),
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+        },
+      },
+      {
+        test: /\.pug$/,
+        loader: 'pug-loader',
+        options: {
+          pretty: true,
+          self: true,
+        },
+      },
     ],
   },
-  plugins: [...entryHtmlPlugins, new ESLintPlugin()],
+  plugins: [
+    ...entryHtmlPlugins,
+    new ESLintPlugin(),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.$': 'jquery',
+      'window.jQuery': 'jquery',
+    }),
+  ],
 };

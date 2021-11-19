@@ -1,3 +1,4 @@
+const path = require('path');
 const webpack = require('webpack');
 const baseConfig = require('./webpack.common.js');
 
@@ -45,37 +46,6 @@ const configureMiniCssExtract = () => {
   };
 };
 
-// configure Service Worker
-const configureSW = () => {
-  return {
-    clientsClaim: true,
-    skipWaiting: true,
-    directoryIndex: 'index.html',
-    offlineGoogleAnalytics: true,
-  };
-};
-
-// configure Copy
-const configureCopy = () => {
-  return {
-    patterns: [
-      {
-        from: 'sources/assets/',
-        to: 'assets/',
-      },
-      {
-        from: 'sources/assets/images/',
-        to: 'assets/images/',
-        // blocking file copying by plugin webpack will
-        // do it for you and rename it with a hash
-        globOptions: {
-          ignore: ['**.svg'],
-        },
-      },
-    ],
-  };
-};
-
 module.exports = merge(baseConfig, {
   mode: 'production',
   target: 'browserslist',
@@ -112,11 +82,23 @@ module.exports = merge(baseConfig, {
     new MiniCssExtractPlugin(configureMiniCssExtract()),
 
     // we create a service-worker for our data
-    new WorkboxPlugin.GenerateSW(configureSW()),
+    new WorkboxPlugin.GenerateSW({
+      clientsClaim: true,
+      skipWaiting: true,
+      directoryIndex: 'index.html',
+      offlineGoogleAnalytics: true,
+    }),
 
     // we copy all necessary graphic files
     // and assets to build folder
-    new CopyWebpackPlugin(configureCopy()),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, '../sources/assets/'),
+          to: path.resolve(__dirname, '../dist/assets/'),
+        },
+      ],
+    }),
 
     // we create a global variable that
     // we use in pug and we can use in js

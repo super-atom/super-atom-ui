@@ -6,7 +6,8 @@
   },
   "rules": {
     // "prettier/prettier": "error"
-    "no-undefined": 0
+    "no-undefined": 0,
+    "no-unused-vars": "off"
   },
   "env": {
     "browser": true,

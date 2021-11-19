@@ -1,0 +1,13 @@
+{
+  "head": {
+    "title": "title - index",
+    "description": "description - index"
+  },
+  "body": {
+    "image": "assets/images/index.jpg",
+    "mainText": "main text - index"
+  },
+  "content": {
+    "section": "section1"
+  }
+}

@@ -6,20 +6,6 @@ const { merge } = require('webpack-merge');
 // common part for production and dev
 const { cssLoaders } = require('./util');
 
-// Configure Dev Server
-const configureDevServer = () => {
-  return {
-    static: {
-      directory: path.resolve(__dirname, '../sources'),
-      publicPath: '/',
-    },
-    open: true,
-    port: 3000,
-    liveReload: true,
-    hot: true,
-  };
-};
-
 module.exports = merge(baseConfig, {
   // This option controls if and
   // how source maps are generated
@@ -31,7 +17,26 @@ module.exports = merge(baseConfig, {
 
   // https://webpack.js.org/configuration/target/#root
   target: 'web',
-  devServer: configureDevServer(),
+  devServer: {
+    static: {
+      directory: path.resolve(__dirname, '../dist'),
+      publicPath: '/',
+      watch: true,
+    },
+    client: {
+      overlay: true,
+    },
+    open: true,
+    port: 3000,
+    liveReload: true,
+    hot: false,
+    host: 'localhost',
+  },
+  watchOptions: {
+    aggregateTimeout: 300,
+    poll: 300,
+    ignored: /node_modules/,
+  },
   module: {
     rules: [
       {

@@ -1,0 +1,298 @@
+block variables
+- var DATA = self.htmlWebpackPlugin.options.DATA
+
+doctype html
+html(lang="pl" dir="ltr" class="index")
+
+  include ../../templates/includes/head.pug
+  include ../../templates/includes/menuItem.pug
+
+  head
+    +head(DATA)
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css")
+
+  body
+    #wrap
+      #header
+        .inner
+          h1.logo
+            a(href="./index.html") 국도화학 로고
+          #nav.clfix
+            ul.menuList
+              li.menu
+                a(href="javascript:void(0)") 회사소개
+                ul.depth02
+                  li
+                    a(href="./sub01.html") 가치체계
+                  li
+                    a(href="javascript:void(0)") 히스토리
+                  li
+                    a(href="javascript:void(0)") CEO 메시지
+                  li
+                    a(href="javascript:void(0)") R&D
+                  li
+                    a(href="javascript:void(0)") 사업장
+              li.menu
+                a(href="javascript:void(0)") 시공사례
+                ul.depth02
+                  li
+                    a(href="javascript:void(0)") 생활 속 국도
+                  li
+                    a(href="./sub02.html") 에폭시
+                  li
+                    a(href="javascript:void(0)") 경화제
+                  li
+                    a(href="javascript:void(0)") 폴리우레탄
+                  li
+                    a(href="javascript:void(0)") 첨단소재
+                  li
+                    a(href="javascript:void(0)") 전지전자소재
+                  li
+                    a(href="javascript:void(0)") 에폭시 반응성희석제
+                  li
+                    a(href="javascript:void(0)") 특수 에폭시 수지
+              li.menu
+                a(href="javascript:void(0)") 투자정보
+                ul.depth02
+                  li
+                    a(href="javascript:void(0)") 제무정보
+                  li
+                    a(href="javascript:void(0)") 경영정보
+                  li
+                    a(href="javascript:void(0)") 주가정보
+                  li
+                    a(href="javascript:void(0)") 공시정보
+              li.menu
+                a(href="javascript:void(0)") 인재채용
+                ul.depth02
+                  li
+                    a(href="javascript:void(0)") 인재상
+                  li
+                    a(href="javascript:void(0)") 인사제도
+                  li
+                    a(href="javascript:void(0)") 채용안내
+                  li
+                    a(href="javascript:void(0)") 채용공고
+                  li
+                    a(href="javascript:void(0)") 채용FAQ
+                  li
+                    a(href="javascript:void(0)") 채용문의
+              li.menu
+                a(href="javascript:void(0)") 뉴스센터
+                ul.depth02
+                  li
+                    a(href="javascript:void(0)") 뉴스
+                  li
+                    a(href="javascript:void(0)") 홍보물
+              li.menu
+                a(href="javascript:void(0)") 국도라이프
+                ul.depth02
+                  li
+                    a(href="javascript:void(0)") 국도인의 하루
+                  li
+                    a(href="javascript:void(0)") 국도인 인터뷰
+            button.btnChangeLang(type="button")
+        .bg
+      #container
+        .mainVisual
+          .swiper-container-main
+            ul.swiper-wrapper
+              li.swiper-slide.visual01
+                .videoWrap
+                  video(autoplay, muted)
+                    source(src="assets/videos/01.mp4" type="video/mp4")
+                .txtWrap
+                  .illust01
+                    svg(version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="107px" height="125px" viewBox="0 0 107 125" enable-background="new 0 0 107 125" space="preserve")
+                      g
+                        polyline#circleLine01(fill="none" stroke="#FFFFFF" stroke-width="5" stroke-miterlimit="10" points="44.914 125 44.914,80.867 21.125,80.867 21.125,62.924 50.716,41.577 75.71,41.577 75.71,125")
+                      g
+                        line.line(fill="none" stroke="#FFFFFF" stroke-width="7" stroke-miterlimit="10" x1="90.259" y1="33.222" x2="104.333" y2="20.926")
+                        line.line(fill="none" stroke="#FFFFFF" stroke-width="7" stroke-miterlimit="10" x1="74.11" y1="22.852" x2="81.519" y2="6.408")
+                        line.line(fill="none" stroke="#FFFFFF" stroke-width="7" stroke-miterlimit="10" x1="53.5" y1="19.148" x2="53.5" y2="0")
+                        line.line(fill="none" stroke="#FFFFFF" stroke-width="7" stroke-miterlimit="10" x1="33.37" y1="22.852" x2="25.222" y2="6.408")
+                        line.line(fill="none" stroke="#FFFFFF" stroke-width="7" stroke-miterlimit="10" x1="17.222" y1="33.963" x2="1.962" y2="20.926")
+                      g
+                        circle.circle(fill="#FFFFFF" cx="75.889" cy="41.963" r="5.5")
+                        circle.circle(fill="#FFFFFF" cx="49.418" cy="41.577" r="5.5")
+                        circle.circle(fill="#FFFFFF" cx="20.852" cy="60.556" r="5.5")
+                        circle.circle(fill="#FFFFFF" cx="21.125" cy="80.741" r="5.5")
+                        circle.circle(fill="#FFFFFF" cx="44.754" cy="80.742" r="5.5")
+                  p.visualTit
+                    span.animateTxt01 혁신과
+                    span.animateTxt02 최고를
+                    em.animateTxt03 잇다
+                  p.visualTxt
+                    |물질과 물질을 잇는 화학반응처럼,
+                    br
+                    |국도화학은 한계를 넘는 혁신과 도전을 바탕으로
+                    br
+                    |세계 최고의 화학소재기업을 지향합니다.
+              li.swiper-slide.visual02
+                .videoWrap
+                  video(muted)
+                    source(src="assets/videos/02.mp4" type="video/mp4")
+                .txtWrap
+                  .illust02
+                    svg(version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="114px" height="91px" viewBox="0 0 114 91" enable-background="new 0 0 114 91" space="preserve")
+                      g
+                        polyline#circleLine02(fill="none" stroke="#FFFFFF" stroke-width="5" stroke-miterlimit="10" points="5.5,91 5.5,39.774 56.657,4 108.5,37.679 108.5,91")
+                      g
+                        circle.circle01(fill="#FFFFFF" cx="5.5" cy="37.5" r="5.5")
+                        circle.circle01(fill="#FFFFFF" cx="57" cy="5.5" r="5.5")
+                        circle.circle01(fill="#FFFFFF" cx="108.5" cy="37.5" r="5.5")
+                      g
+                        polygon#circleLine03(fill="none" stroke="#FFFFFF" stroke-width="5" stroke-miterlimit="10" points="72.688,42.069 86.688,58.807 56,85.069 27.583,59.017 40.162,41.543 56,56.28")
+                      g
+                        circle.circle02(fill="#FFFFFF" cx="73.5" cy="42.5" r="5.5")
+                        circle.circle02(fill="#FFFFFF" cx="85.5" cy="59.5" r="5.5")
+                        circle.circle02(fill="#FFFFFF" cx="56.5" cy="83.5" r="5.5")
+                        circle.circle02(fill="#FFFFFF" cx="28.5" cy="59.5" r="5.5")
+                        circle.circle02(fill="#FFFFFF" cx="40.5" cy="42.5" r="5.5")
+                        circle.circle02(fill="#FFFFFF" cx="56.5" cy="55.5" r="5.5")
+                  p.visualTit
+                    span.animateTxt01 삶과
+                    span.animateTxt02 행복을
+                    em.animateTxt03 잇다
+                  p.visualTxt
+                    |화학은 바로 우리 삶의 이야기입니다.
+                    br
+                    |일상 생활 속 화학 제품을 통해 행복을 이어가는 삶
+                    br
+                    |국도화학이 추구하는 가치입니다.
+              li.swiper-slide.visual03
+                .videoWrap
+                  video(muted)
+                    source(src="assets/videos/03.mp4" type="video/mp4")
+                .txtWrap
+                  .illust03
+                    svg(version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="104px" height="108px" viewBox="0 0 104 108" enable-background="new 0 0 104 108" space="preserve")
+                      g
+                        path#circleLine05(fill="none" stroke="#FFFFFF" stroke-width="5" stroke-miterlimit="10" d="M83,81c0,0-20.125,2.625-24.5-16.875")
+                      g
+                        polyline#circleLine04(fill="none" stroke="#FFFFFF" stroke-width="5" stroke-miterlimit="10" points="5.5,108.25 5.5,5.75 85.326,5.75 99.5,58.742 84.575,58.742 84.575,94.89 58.216,94.89 58.216,108.25")
+                      g
+                        circle.circle01(fill="#FFFFFF" cx="5.5" cy="5.5" r="5.5")
+                        circle.circle01(fill="#FFFFFF" cx="85.5" cy="5.5" r="5.5")
+                        circle.circle01(fill="#FFFFFF" cx="98.5" cy="59.5" r="5.5")
+                        circle.circle01(fill="#FFFFFF" cx="85" cy="95" r="5.5")
+                      g
+                        circle.circle02(fill="#FFFFFF" cx="57.5" cy="28.5" r="7.5")
+                        circle.circle03(fill="#FFFFFF" cx="58.5" cy="65.5" r="5.5")
+                  p.visualTit
+                    span.animateTxt01 고객과
+                    span.animateTxt02 성공을
+                    em.animateTxt03 잇다
+                  p.visualTxt
+                    |고객의 성공은 국도화학의 사명입니다.
+                    br
+                    |단단하게 결합한 화학물질이 좋은 제품으로 이어지듯
+                    br
+                    |국도화학은 고객과 성공을 잇도록 공헌합니다.
+          .swiper-container-util
+            .swiper-pagination-main
+            button.btnAutoplayToggle(type="button")
+        .contents
+          .section.section01.animated(data-animate="animate01")
+            .inner
+              h2.tit COMPANY
+              .icoWrap.tableWrap
+                ul.icoList.row
+                  li.ico.col
+                    span.img
+                      img(src="assets/images/work/ico_01.png")
+
+                    span.value VALUE
+                    p.description
+                      | 국도가 달성하고자 노력하는
+                      br
+                      | 비전과 핵심가치입니다.
+                  li.ico.col
+                    span.img
+                      img(src="assets/images/work/ico_02.png")
+                    span.value HISTORY
+                    p.description
+                      | 최고의 화학소재 기업이라는
+                      br
+                      | 꿈과 현실이 됩니다.
+                  li.ico.col
+                    span.img
+                      img(src="assets/images/work/ico_03.png")
+                    span.value R&D
+                    p.description
+                      | 독자적인 핵심기술을 토대로
+                      br
+                      | 신성장 동력을 발굴하고 있습니다.
+          .section.subSection.animated(data-animate="animate02")
+            .inner
+              .txtWrap
+                h2.tit NEWS
+                p.txt
+                  | 국도화학의 최신소식을
+                  br
+                  | 전해드립니다.
+                button.btnMore(type="button")
+                  span 더 많은 뉴스 보기
+              ul.newsList
+                li.news
+                  a(href="javascript:void(0)")
+                    img(src="assets/images/work/news_01.png", alt)
+                    .box
+                li.news
+                  a(href="javascript:void(0)")
+                    img(src="assets/images/work/news_02.png", alt)
+                    .box
+              .stock
+                img(src="assets/images/work/stock.png", alt)
+                .box
+          .section.bgImage.section03
+            .inner
+              h2.tit PRODUCTS
+              .tab
+                img(src="assets/images/work/img_tab.png")
+              .productInfo.clfix.animated(data-animate="animate03")
+                .detail
+                  span.eng EPOXY
+                  span.name 에폭시
+                  p.description
+                    |국내를 넘어 세계를 대표하는 에폭시 기업으로서,
+                    br
+                    |국도화학은 지속적인 혁신을 통해 우리의 삶을
+                    br
+                    |더 편리하고 풍요롭게 바꾸어 나가고 있습니다.
+                  button.btnMore(type="button")
+                    span 자세히 보기
+                .thumb
+                  img(src="assets/images/work/img_thumb.png")
+                  .box
+          .section.section04
+            .inner
+              h2.tit RECRUIT
+              p.txt 국도의 혁신을 이끌어갈 여러분의 도전을 기다립니다.
+              .recruitWrap.tableWrap.animated(data-animate="animate04")
+                ul.recruitList.row
+                  li.recruit.col
+                    a(href="javascript:void(0)")
+                      span
+                        img(src="assets/images/work/thumb_01.png")
+                      p
+                        span.recruitTxt 채용공고
+                      .box
+                  li.recruit.col
+                    a(href="javascript:void(0)")
+                      span
+                        img(src="assets/images/work/thumb_02.png")
+                      p
+                        span.recruitTxt 직무소개
+                      .box
+                  li.recruit.col
+                    a(href="javascript:void(0)")
+                      span
+                        img(src="assets/images/work/thumb_03.png")
+                      p
+                        span.recruitTxt 국도인 인터뷰
+                      .box
+      #footer
+        .inner
+          img(src="assets/images/work/img_footer.png", alt)
+    .dim

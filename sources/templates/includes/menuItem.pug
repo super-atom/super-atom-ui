@@ -1,5 +1,6 @@
 mixin menuItem(page)
-  .nav
-    a(class=(page === 'index') ? 'active' : '' href='./', title='index') index
-    a(class=(page === 'about') ? 'active' : '' href='./about.html', title='about me') about me
-    a(class=(page === 'contact') ? 'active' : '' href='./contact.html', title='CONTACT') contact
+  nav.nav
+    a.nav__link(class=(page === 'index') ? 'active' : '' href='./' title='index') LOGO
+    a.nav__link(class=(page === 'about') ? 'active' : '' href='./about.html' title='about') about
+    a.nav__link(class=(page === 'about') ? 'active' : '' href='./work.html' title='work') work
+    a.nav__link(class=(page === 'contact') ? 'active' : '' href='./contact.html' title='CONTACT') contact

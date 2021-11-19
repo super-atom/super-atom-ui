@@ -13,6 +13,7 @@ module.exports = (api) => {
       'postcss-browser-reporter',
       'lost',
       'cssnano',
+      'postcss-mixins',
       'postcss-url',
       'postcss-short',
       'postcss-import',
