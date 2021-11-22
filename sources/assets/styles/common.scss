@@ -3,3 +3,30 @@
 @import './base/base';
 @import './_config';
 /* END : common.scss */
+
+@import '../../assets/styles/dev-core.scss';
+
+html {
+  --color: #eee;
+}
+
+body {
+  lost-utility: overlay 1600px 12 20px var(--color);
+}
+
+.nav {
+  z-index: 100;
+  position: absolute;
+  top: 100px;
+  background-color: #eee;
+
+  .nav__link {
+    display: flex;
+    display: block;
+    padding: 20px;
+  }
+}
+
+.img {
+  @include rwd-img();
+}

@@ -1,6 +1,6 @@
-import { gsap, TweenMax, Linear, TimelineMax, Power1, Power4 } from 'gsap';
+import { gsap, Linear, Power1, Power4 } from 'gsap';
 import Swiper from 'swiper';
-import _ from 'underscore';
+import _ from 'lodash';
 import './work.scss';
 
 var app = app || {};
@@ -19,12 +19,12 @@ app.illust = {
             this.nodeName === 'path'
           ) {
             var totalLen = Math.ceil(this.getTotalLength());
-            TweenMax.set(this, {
+            gsap.set(this, {
               'stroke-dasharray': totalLen,
               'stroke-dashoffset': totalLen,
             });
           } else {
-            TweenMax.set(this, { scale: 0, transformOrigin: '50% 50%' });
+            gsap.set(this, { scale: 0, transformOrigin: '50% 50%' });
           }
         });
     });
@@ -33,20 +33,19 @@ app.illust = {
     {
       name: 'illust01',
       func: function illust01() {
-        var tl = new TimelineMax();
+        var tl = gsap.timeline();
 
         var $container = $('.visual01');
 
         // app.mainSwiper.autoplay.stop();
 
         tl.add([
-          TweenMax.staggerTo(
+          gsap.to(
             [].slice.call($container.find('.line')).reverse(),
-            0.35,
-            { 'stroke-dashoffset': 0, ease: Power4.easeOut },
-            0.1
+            { duration: 0.1, 'stroke-dashoffset': 0, ease: Power4.easeOut },
           ),
-          TweenMax.to($container.find('.animateTxt01'), 0.55, {
+          gsap.to($container.find('.animateTxt01'), {
+            duration: 0.55,
             y: 0,
             opacity: 1,
             ease: Power1.easeOut,
@@ -55,18 +54,18 @@ app.illust = {
 
         tl.add(
           [
-            TweenMax.staggerTo(
+            gsap.to(
               [].slice.call($container.find('.circle')).reverse(),
-              0.55,
-              { scale: 1, ease: Linear.easeOut },
-              0.1
+              { duration: 0.55, scale: 1, ease: Linear.easeOut },
             ),
-            TweenMax.to($container.find('.animateTxt02'), 0.55, {
+            gsap.to($container.find('.animateTxt02'), {
+              duration: 0.55,
               y: 0,
               opacity: 1,
               ease: Power1.easeOut,
             }),
-            TweenMax.to($container.find('#circleLine01'), 0.95, {
+            gsap.to($container.find('#circleLine01'), {
+              duration: 0.95,
               'stroke-dashoffset': 0,
               ease: Power1.easeOut,
             }),
@@ -75,14 +74,13 @@ app.illust = {
         );
         tl.to(
           $container.find('.animateTxt03'),
-          0.55,
-          { y: 0, opacity: 1, ease: Linear.easeNone },
+          { duration: 0.55, y: 0, opacity: 1, ease: Linear.easeNone },
           '-=0.2'
         );
         tl.to(
           $container.find('.visualTxt'),
-          0.55,
           {
+            duration: 0.55,
             y: 0,
             opacity: 1,
             ease: Linear.easeNone,
@@ -99,42 +97,38 @@ app.illust = {
       func: function illust02() {
         // app.mainSwiper.autoplay.stop();
 
-        var tl = new TimelineMax();
+        var tl = gsap.timeline();
 
         var $container = $('.visual02');
 
-        tl.staggerTo(
+        tl.to(
           [].slice.call($container.find('.circle01')),
-          0.55,
-          { scale: 1, ease: Linear.easeOut },
-          0.15
+          { duration: 0.55, scale: 1, ease: Linear.easeOut },
         );
         tl.to(
           $container.find('#circleLine02'),
-          0.85,
-          { 'stroke-dashoffset': 0, ease: Linear.easeOut },
+          { duration: 0.85, 'stroke-dashoffset': 0, ease: Linear.easeOut },
           '0.1'
         ),
           tl.to(
             $container.find('.animateTxt01'),
-            0.55,
-            { y: 0, opacity: 1, ease: Power1.easeOut },
+            { duration: 0.55, y: 0, opacity: 1, ease: Power1.easeOut },
             '-=0.85'
           );
 
         tl.add([
-          TweenMax.staggerTo(
+          gsap.to(
             [].slice.call($container.find('.circle02')),
-            0.55,
-            { scale: 1, ease: Linear.easeOut },
-            0.1
+            { duration: 0.1, scale: 1, ease: Linear.easeOut },
           ),
-          TweenMax.to($container.find('#circleLine03'), 1, {
+          gsap.to($container.find('#circleLine03'), {
+            duration: 1,
             'stroke-dashoffset': 0,
             delay: 0.25,
             ease: Linear.easeOut,
           }),
-          TweenMax.to($container.find('.animateTxt02'), 0.55, {
+          gsap.to($container.find('.animateTxt02'), {
+            duration: 0.55,
             y: 0,
             opacity: 1,
             delay: 0.1,
@@ -143,14 +137,13 @@ app.illust = {
         ]);
         tl.to(
           $container.find('.animateTxt03'),
-          0.55,
-          { y: 0, opacity: 1, ease: Linear.easeNone },
+          { duration: 0.55, y: 0, opacity: 1, ease: Linear.easeNone },
           '-=0.2'
         );
         tl.to(
           $container.find('.visualTxt'),
-          0.55,
           {
+            duration: 0.55,
             y: 0,
             opacity: 1,
             ease: Linear.easeNone,
@@ -167,22 +160,21 @@ app.illust = {
       func: function illust03() {
         // app.mainSwiper.autoplay.stop();
 
-        var tl = new TimelineMax();
+        var tl = gsap.timeline();
 
         var $container = $('.visual03');
 
         tl.add([
-          TweenMax.to($container.find('#circleLine04'), 1, {
+          gsap.to($container.find('#circleLine04'), 1, {
             'stroke-dashoffset': 0,
             ease: Linear.easeOut,
           }),
-          TweenMax.staggerTo(
+          gsap.to(
             [].slice.call($container.find('.circle01')),
-            0.55,
-            { scale: 1, ease: Linear.easeOut },
-            0.15
+            { duration: 0.15, scale: 1, ease: Linear.easeOut },
           ),
-          TweenMax.to($container.find('.animateTxt01'), 0.55, {
+          gsap.to($container.find('.animateTxt01'), {
+            duration: 0.55,
             y: 0,
             opacity: 1,
             ease: Power1.easeOut,
@@ -191,38 +183,40 @@ app.illust = {
 
         tl.to(
           $container.find('.circle02'),
-          0.55,
-          { scale: 1, ease: Power1.easeOut },
+          { duration: 0.55, scale: 1, ease: Power1.easeOut },
           '-=0.25'
         ),
           tl.add(
             [
-              TweenMax.to($container.find('#circleLine05'), 0.45, {
+              gsap.to($container.find('#circleLine05'), {
+                duration: 0.45,
                 'stroke-dashoffset': 0,
                 ease: Linear.easeOut,
               }),
-              TweenMax.to($container.find('.animateTxt02'), 0.55, {
+              gsap.to($container.find('.animateTxt02'), {
+                duration: 0.55,
                 y: 0,
                 opacity: 1,
                 ease: Power1.easeOut,
               }),
-              TweenMax.to($container.find('.circle03'), 0.35, {
+              gsap.to($container.find('.circle03'), {
+                duration: 0.35,
                 scale: 1,
                 ease: Power1.easeOut,
               }),
             ],
             '-=0.2'
           );
-
-        tl.to($container.find('.animateTxt03'), 0.55, {
+        tl.to($container.find('.animateTxt03'), {
+          duration: 0.55,
           y: 0,
           opacity: 1,
           ease: Linear.easeNone,
         });
         tl.to(
           $container.find('.visualTxt'),
-          0.55,
           {
+            duration: 0.55,
             y: 0,
             opacity: 1,
             ease: Linear.easeNone,
@@ -271,7 +265,7 @@ app.initSwiper = function () {
 
         $(_this.slides[activeIndex]).find('video').get(0).play();
 
-        TweenMax.delayedCall(0.35, function () {
+        gsap.delayedCall(0.35, function () {
           app.illust._call(id);
         });
 
@@ -311,17 +305,16 @@ app.GNB = function () {
 
     app.$header.css({ overflow: 'visible' }).addClass('on');
 
-    TweenMax.to(app.$header.find('.bg'), 0.5, {
+    gsap.to(app.$header.find('.bg'), 0.5, {
       scaleY: 1,
       delay: 0.15,
       ease: Power1.easeOut,
       onStart: function () {
         app.$depth02.each(function () {
-          app.tweens = TweenMax.staggerTo(
+          app.tweens = gsap.to(
             [].slice.call($(this).find('li')),
             0.3,
-            { y: 0 + '%', autoAlpha: 1, ease: Power1.easeOut },
-            0.1
+            { duration: 0.1, y: 0 + '%', autoAlpha: 1, ease: Power1.easeOut },
           );
         });
       },
@@ -329,10 +322,10 @@ app.GNB = function () {
   });
 
   app.$header.on('mouseleave', function () {
-    TweenMax.killTweensOf(app.tweens);
-    TweenMax.set(app.$depth02.find('li'), { y: 100 + '%', autoAlpha: 0 });
+    gsap.killTweensOf(app.tweens);
+    gsap.set(app.$depth02.find('li'), { y: 100 + '%', autoAlpha: 0 });
 
-    TweenMax.to(app.$header.find('.bg'), 0.5, {
+    gsap.to(app.$header.find('.bg'), 0.5, {
       scaleY: 0,
       ease: Power1.easeOut,
       onComplete: function () {
@@ -349,14 +342,14 @@ app.GNB = function () {
 
 function animate01() {
   var $container = $('.section01');
-  var tl = new TimelineMax();
+  var tl = gsap.timeline();
 
-  tl.staggerTo($container.find('.value'), 0.45, {
+  tl.to($container.find('.value'), 0.45, {
     y: 0,
     opacity: 1,
     ease: Power1.easeOut,
   });
-  tl.staggerTo(
+  tl.to(
     $container.find('.description'),
     0.35,
     { y: 0, opacity: 1, ease: Power1.easeOut },
@@ -366,45 +359,41 @@ function animate01() {
 
 function animate02() {
   var $container = $('.subSection');
-  var tl = new TimelineMax();
-  tl.staggerTo(
+  var tl = gsap.timeline();
+  tl.to(
     [].slice.call($container.find('.txtWrap').children()),
     0.45,
     { y: 0, opacity: 1, ease: Power1.easeOut },
     0.1
   );
-  tl.staggerTo(
+  tl.to(
     [].slice.call($container.find('.news')),
     0.45,
-    { scaleY: 1, ease: Power4.easeOut },
+    { duration: '0.45', scaleY: 1, ease: Power4.easeOut },
     0.1,
-    '0.45'
   );
   tl.to(
     $container.find('.stock'),
     0.45,
-    { scaleY: 1, ease: Power4.easeOut },
-    '0.55'
+    { duration: 0.55, scaleY: 1, ease: Power4.easeOut },
   );
-  tl.staggerTo(
+  tl.to(
     [].slice.call($container.find('.news .box')),
     0.35,
-    { y: -100 + '%', ease: Power1.easeOut },
+    { duration: 0.85, y: -100 + '%', ease: Power1.easeOut },
     0.1,
-    '0.85'
   );
   tl.to(
     $container.find('.stock .box'),
     0.35,
-    { y: -100 + '%', delay: 0.15, ease: Power1.easeOut },
-    '0.95'
+    { duration: 0.95, y: -100 + '%', delay: 0.15, ease: Power1.easeOut },
   );
 }
 
 function animate03() {
   var $container = $('.productInfo');
-  var tl = new TimelineMax();
-  tl.staggerTo(
+  var tl = gsap.timeline();
+  tl.to(
     [].slice.call($container.find('.detail').children()),
     0.45,
     { y: 0, opacity: 1, ease: Power1.easeOut },
@@ -413,48 +402,43 @@ function animate03() {
   tl.to(
     $container.find('.thumb'),
     0.45,
-    { scaleY: 1, ease: Power4.easeOut, onComplete: function () {} },
-    '0.35'
+    { duration: 0.35, scaleY: 1, ease: Power4.easeOut, onComplete: function () { } },
   );
   tl.to(
     $container.find('.thumb .box'),
     0.35,
-    { y: -100 + '%', ease: Power1.easeOut },
-    '0.75'
+    { duration: 0.75, y: -100 + '%', ease: Power1.easeOut },
   );
 }
 
 function animate04() {
   var $container = $('.section04');
-  var tl = new TimelineMax();
+  var tl = gsap.timeline();
 
-  tl.staggerTo(
+  tl.to(
     $container.find('.recruit'),
     0.45,
-    { scaleY: 1, ease: Power4.easeOut },
+    { duration: 0, scaleY: 1, ease: Power4.easeOut },
     0.1,
-    0,
-    function () {
-      TweenMax.staggerTo(
-        $container.find('.recruit .box'),
-        0.35,
-        { y: -100 + '%', ease: Power1.easeOut },
-        0.1
-      );
-      TweenMax.staggerTo(
-        $container.find('.recruitTxt'),
-        0.35,
-        { y: 0, opacity: 1, delay: 0.1, ease: Power1.easeOut },
-        0.1
-      );
-    }
+  );
+  tl.to(
+    $container.find('.recruit .box'),
+    0.35,
+    { y: -100 + '%', ease: Power1.easeOut },
+    0.1
+  );
+  tl.to(
+    $container.find('.recruitTxt'),
+    0.35,
+    { y: 0, opacity: 1, delay: 0.1, ease: Power1.easeOut },
+    0.1
   );
 }
 
 function animate05() {
   var $container = $('.anime').eq(0);
 
-  var tl = new TimelineMax();
+  var tl = gsap.timeline();
   tl.to(
     $container.find('h3'),
     0.45,
@@ -479,7 +463,7 @@ function animate05() {
 function animate06() {
   var $container = $('.anime').last();
 
-  var tl = new TimelineMax();
+  var tl = gsap.timeline();
 
   tl.to(
     $container.find('h3'),
@@ -487,7 +471,7 @@ function animate06() {
     { y: 0, opacity: 1, ease: Power1.easeOut },
     '+=0.5'
   );
-  tl.staggerTo(
+  tl.to(
     [].slice.call($container.find('.title')),
     0.55,
     { y: 0, opacity: 1, ease: Power1.easeOut },
@@ -551,14 +535,14 @@ app.Scroll = function () {
       var viewTop = $(this).scrollTop();
 
       if (viewTop >= $('.contents').offset().top) {
-        TweenMax.set(app.$header, { y: -100 + '%' });
+        gsap.set(app.$header, { y: -100 + '%' });
         $('.locationWrap').css({ position: 'fixed', top: 0 });
         if (prevScrollTop > viewTop) {
-          TweenMax.set(app.$header, { y: 0 + '%' });
+          gsap.set(app.$header, { y: 0 + '%' });
           $('.locationWrap').css({ top: app.$header.outerHeight() });
         }
       } else {
-        TweenMax.set(app.$header, { y: 0 + '%' });
+        gsap.set(app.$header, { y: 0 + '%' });
         $('.locationWrap').css({ position: 'absolute', top: 0 });
       }
 
@@ -570,7 +554,7 @@ app.Scroll = function () {
 $('.btnTab').on('click', function () {
   $(this).parent('.tab').addClass('on').siblings().removeClass('on');
 
-  var tl = new TimelineMax();
+  var tl = gsap.timeline();
   var $tabCon = $(this).next();
 
   tl.to($tabCon.find('.tabTit'), 0.65, {
@@ -593,11 +577,11 @@ $('.btnTab').on('click', function () {
     );
 
   if ($tabCon.find('.scale').length > 0) {
-    tl.staggerTo($tabCon.find('.scale'), 0.45, {
+    tl.to($tabCon.find('.scale'), 0.45, {
       scaleY: 1,
       ease: Power4.easeOut,
     });
-    tl.staggerTo($tabCon.find('.scale .box'), 0.35, {
+    tl.to($tabCon.find('.scale .box'), 0.35, {
       y: -100 + '%',
       ease: Power1.easeOut,
     });
@@ -626,7 +610,7 @@ $(document).on('click', function (e) {
 });
 
 function ani() {
-  var tl = new TimelineMax();
+  var tl = gsap.timeline();
   var $container = $('.ani');
   tl.to($container.find('.tit'), 0.45, {
     y: 0,

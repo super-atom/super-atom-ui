@@ -4,7 +4,7 @@ module.exports.cssLoaders = [
   {
     loader: 'css-loader',
     options: {
-      importLoaders: 2,
+      importLoaders: 3,
     },
   },
   {
@@ -14,6 +14,9 @@ module.exports.cssLoaders = [
         config: path.resolve(__dirname, '../postcss.config.js'),
       },
     },
+  },
+  {
+    loader: 'resolve-url-loader',
   },
   {
     loader: 'sass-loader',
