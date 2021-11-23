@@ -1,7 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
-const baseConfig = require('./webpack.common.js');
 const { merge } = require('webpack-merge');
+const DashboardPlugin = require('webpack-dashboard/plugin');
+const baseConfig = require('./webpack.common.js');
 
 // common part for production and dev
 const { cssLoaders } = require('./util');
@@ -51,6 +52,7 @@ module.exports = merge(baseConfig, {
     // we use in pug and we can use in js
     // https://webpack.js.org/plugins/define-plugin/
     // In pug - var DATA = self.htmlWebpackPlugin.options.DATA
+    new DashboardPlugin(),
     new webpack.DefinePlugin({
       PRODUCTION: JSON.stringify(false),
     }),

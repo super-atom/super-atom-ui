@@ -25,6 +25,16 @@ const oneFileCss = {
         chunks: 'all',
         enforce: true,
       },
+      cacheGroups: {
+        polyfills: {
+          test: /[\\/]node_modules[\\/](@babel|core-js|regenerator-runtime)[\\/]/,
+          name: 'polyfills',
+          chunks: 'initial',
+          priority: 60,
+          enforce: true,
+          reuseExistingChunk: true,
+        },
+      },
     },
   },
 };

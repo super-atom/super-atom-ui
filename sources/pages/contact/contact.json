@@ -1,13 +1,13 @@
 {
   "head": {
-    "title": "title - index",
-    "description": "description - index"
+    "title": "title - contact",
+    "description": "description - contact"
   },
   "body": {
-    "image": "assets/images/index.jpg",
-    "mainText": "main text - index"
+    "image": "assets/images/contact.jpg",
+    "mainText": "main text - contact"
   },
   "content": {
-    "section": "section1"
+    "section": "contact"
   }
 }

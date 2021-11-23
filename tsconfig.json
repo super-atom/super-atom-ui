@@ -1,8 +1,19 @@
 {
   "compilerOptions": {
-    "target": "esnext",
     "module": "commonjs",
+    "target": "es5",
     "esModuleInterop": true,
     "sourceMap": true
-  }
+  },
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist",
+    "__mocks__",
+    "coverage",
+    "*.config.js",
+    "*.babel.js",
+    "specs"
+  ],
+  "types": ["/sources/assets/scripts/ts/global.d.ts"]
 }

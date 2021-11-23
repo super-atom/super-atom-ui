@@ -1,7 +1,7 @@
 {
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack serve --config ./config/webpack.dev.js --progress",
+    "dev": "cross-env NODE_ENV=development webpack-dashboard -- webpack serve --config ./config/webpack.dev.js --progress",
     "prod": "cross-env NODE_ENV=production webpack --config ./config/webpack.prod.js --progress",
     "pretty": "prettier --write \"./**/*.{js,scss}\"",
     "clean": "rimraf ./dist/*"
@@ -80,8 +80,8 @@
     "webpack": "^5.61.0",
     "webpack-bundle-analyzer": "^4.5.0",
     "webpack-cli": "^4.9.1",
+    "webpack-dashboard": "^3.3.6",
     "webpack-dev-server": "^4.4.0",
-    "webpack-jarvis": "^0.3.2",
     "webpack-merge": "^5.8.0",
     "webpack-node-externals": "^3.0.0",
     "webpack-notifier": "^1.14.1",
