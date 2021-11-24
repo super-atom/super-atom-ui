@@ -4,16 +4,6 @@
 @import './_config';
 /* END : common.scss */
 
-@import '../../assets/styles/dev-core.scss';
-
-html {
-  --color: #eee;
-}
-
-body {
-  lost-utility: overlay 1600px 12 20px var(--color);
-}
-
 .nav {
   z-index: 100;
   position: absolute;
@@ -26,8 +16,4 @@ body {
     display: block;
     padding: 20px;
   }
-}
-
-.img {
-  @include rwd-img();
 }

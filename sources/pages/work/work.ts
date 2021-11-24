@@ -1,3 +1,4 @@
+import "core-js/stable";
 import { gsap, Linear, Power1, Power4 } from 'gsap';
 import Swiper from 'swiper';
 import _ from 'lodash';
