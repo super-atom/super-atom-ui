@@ -4,7 +4,8 @@
     "dev": "cross-env NODE_ENV=development webpack-dashboard -- webpack serve --config ./config/webpack.dev.js --progress",
     "prod": "cross-env NODE_ENV=production webpack --config ./config/webpack.prod.js --progress",
     "pretty": "prettier --write \"./**/*.{js,scss}\"",
-    "clean": "rimraf ./dist/*"
+    "clean": "rimraf ./dist/*",
+    "create": "node scripts/create-page.js"
   },
   "dependencies": {
     "fullpage.js": "^2.9.7",
