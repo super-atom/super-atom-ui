@@ -1,108 +1,82 @@
-block variables
-- var DATA = self.htmlWebpackPlugin.options.DATA
+extends ../../templates/layouts/base
+block header
+  +header('sample')
 
-doctype html
-html(lang="pl" dir="ltr" class="index")
+block content
+  .c-accordion.test
+    .c-accordion__wrapper
+      .c-accordion__content-wrapper
+        .c-accordion__content.js-accordion
+          .c-accordion__content-title
+            span.c-accordion__plus
+            p.u-a1.
+              2012.
 
-  include ../../templates/includes/head.pug
-  include ../../templates/includes/menuItem.pug
+          .c-accordion__content-main.js-content.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices volutpat pellentesque. Nullam et consectetur enim. Sed at nulla vel quam lobortis fringilla in accumsan erat. Pellentesque mattis elit purus, nec volutpat mauris mattis eu. Nulla volutpat, tellus vitae consectetur sodales, mi eros volutpat dui, eu suscipit libero mi ac leo.
 
-  head
-    +head(DATA)
+        .c-accordion__content.js-accordion
+          .c-accordion__content-title
+            span.c-accordion__plus
+            p.u-a1.
+              2012.
 
-  body
-    header.header
-      +menuItem('index')
-      .c-accordion.test
-        .c-accordion__wrapper
-          .c-accordion__content-wrapper
-            .c-accordion__content.js-accordion
-              .c-accordion__content-title
-                span.c-accordion__plus
-                p.u-a1.
+          .c-accordion__content-main.js-content.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices volutpat pellentesque. Nullam et consectetur enim. Sed at nulla vel quam lobortis fringilla in accumsan erat. Pellentesque mattis elit purus, nec volutpat mauris mattis eu. Nulla volutpat, tellus vitae consectetur sodales, mi eros volutpat dui, eu suscipit libero mi ac leo.
 
-                  2012.
+        .c-accordion__content.js-accordion
+          .c-accordion__content-title
+            span.c-accordion__plus
+            p.u-a1.
+              2012.
 
-              .c-accordion__content-main.js-content.
+          .c-accordion__content-main.js-content.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices volutpat pellentesque. Nullam et consectetur enim. Sed at nulla vel quam lobortis fringilla in accumsan erat. Pellentesque mattis elit purus, nec volutpat mauris mattis eu. Nulla volutpat, tellus vitae consectetur sodales, mi eros volutpat dui, eu suscipit libero mi ac leo.
 
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices volutpat pellentesque. Nullam et consectetur enim. Sed at nulla vel quam lobortis fringilla in accumsan erat. Pellentesque mattis elit purus, nec volutpat mauris mattis eu. Nulla volutpat, tellus vitae consectetur sodales, mi eros volutpat dui, eu suscipit libero mi ac leo.
+        .c-accordion__content.js-accordion
+          .c-accordion__content-title
+            span.c-accordion__plus
+            p.u-a1.
+              2012.
 
-            .c-accordion__content.js-accordion
-              .c-accordion__content-title
-                span.c-accordion__plus
-                p.u-a1.
+          .c-accordion__content-main.js-content.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices volutpat pellentesque. Nullam et consectetur enim. Sed at nulla vel quam lobortis fringilla in accumsan erat. Pellentesque mattis elit purus, nec volutpat mauris mattis eu. Nulla volutpat, tellus vitae consectetur sodales, mi eros volutpat dui, eu suscipit libero mi ac leo.
+  p 테스트2
+  .c-accordion.test2
+    .c-accordion__wrapper
+      .c-accordion__content-wrapper
+        .c-accordion__content.js-accordion
+          .c-accordion__content-title
+            span.c-accordion__plus
+            p.u-a1.
+              2012.
 
-                  2012.
+          .c-accordion__content-main.js-content.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices volutpat pellentesque. Nullam et consectetur enim. Sed at nulla vel quam lobortis fringilla in accumsan erat. Pellentesque mattis elit purus, nec volutpat mauris mattis eu. Nulla volutpat, tellus vitae consectetur sodales, mi eros volutpat dui, eu suscipit libero mi ac leo.
 
-              .c-accordion__content-main.js-content.
+        .c-accordion__content.js-accordion
+          .c-accordion__content-title
+            span.c-accordion__plus
+            p.u-a1.
+              2012.
 
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices volutpat pellentesque. Nullam et consectetur enim. Sed at nulla vel quam lobortis fringilla in accumsan erat. Pellentesque mattis elit purus, nec volutpat mauris mattis eu. Nulla volutpat, tellus vitae consectetur sodales, mi eros volutpat dui, eu suscipit libero mi ac leo.
+          .c-accordion__content-main.js-content.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices volutpat pellentesque. Nullam et consectetur enim. Sed at nulla vel quam lobortis fringilla in accumsan erat. Pellentesque mattis elit purus, nec volutpat mauris mattis eu. Nulla volutpat, tellus vitae consectetur sodales, mi eros volutpat dui, eu suscipit libero mi ac leo.
 
-            .c-accordion__content.js-accordion
-              .c-accordion__content-title
-                span.c-accordion__plus
-                p.u-a1.
+        .c-accordion__content.js-accordion
+          .c-accordion__content-title
+            span.c-accordion__plus
+            p.u-a1.
+              2012.
 
-                  2012.
+          .c-accordion__content-main.js-content.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices volutpat pellentesque. Nullam et consectetur enim. Sed at nulla vel quam lobortis fringilla in accumsan erat. Pellentesque mattis elit purus, nec volutpat mauris mattis eu. Nulla volutpat, tellus vitae consectetur sodales, mi eros volutpat dui, eu suscipit libero mi ac leo.
 
-              .c-accordion__content-main.js-content.
+        .c-accordion__content.js-accordion
+          .c-accordion__content-title
+            span.c-accordion__plus
+            p.u-a1.
+              2012.
 
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices volutpat pellentesque. Nullam et consectetur enim. Sed at nulla vel quam lobortis fringilla in accumsan erat. Pellentesque mattis elit purus, nec volutpat mauris mattis eu. Nulla volutpat, tellus vitae consectetur sodales, mi eros volutpat dui, eu suscipit libero mi ac leo.
-
-            .c-accordion__content.js-accordion
-              .c-accordion__content-title
-                span.c-accordion__plus
-                p.u-a1.
-
-                  2012.
-
-              .c-accordion__content-main.js-content.
-
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices volutpat pellentesque. Nullam et consectetur enim. Sed at nulla vel quam lobortis fringilla in accumsan erat. Pellentesque mattis elit purus, nec volutpat mauris mattis eu. Nulla volutpat, tellus vitae consectetur sodales, mi eros volutpat dui, eu suscipit libero mi ac leo.
-      p 테스트2
-      .c-accordion.test2
-        .c-accordion__wrapper
-          .c-accordion__content-wrapper
-            .c-accordion__content.js-accordion
-              .c-accordion__content-title
-                span.c-accordion__plus
-                p.u-a1.
-
-                  2012.
-
-              .c-accordion__content-main.js-content.
-
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices volutpat pellentesque. Nullam et consectetur enim. Sed at nulla vel quam lobortis fringilla in accumsan erat. Pellentesque mattis elit purus, nec volutpat mauris mattis eu. Nulla volutpat, tellus vitae consectetur sodales, mi eros volutpat dui, eu suscipit libero mi ac leo.
-
-            .c-accordion__content.js-accordion
-              .c-accordion__content-title
-                span.c-accordion__plus
-                p.u-a1.
-
-                  2012.
-
-              .c-accordion__content-main.js-content.
-
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices volutpat pellentesque. Nullam et consectetur enim. Sed at nulla vel quam lobortis fringilla in accumsan erat. Pellentesque mattis elit purus, nec volutpat mauris mattis eu. Nulla volutpat, tellus vitae consectetur sodales, mi eros volutpat dui, eu suscipit libero mi ac leo.
-
-            .c-accordion__content.js-accordion
-              .c-accordion__content-title
-                span.c-accordion__plus
-                p.u-a1.
-
-                  2012.
-
-              .c-accordion__content-main.js-content.
-
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices volutpat pellentesque. Nullam et consectetur enim. Sed at nulla vel quam lobortis fringilla in accumsan erat. Pellentesque mattis elit purus, nec volutpat mauris mattis eu. Nulla volutpat, tellus vitae consectetur sodales, mi eros volutpat dui, eu suscipit libero mi ac leo.
-
-            .c-accordion__content.js-accordion
-              .c-accordion__content-title
-                span.c-accordion__plus
-                p.u-a1.
-
-                  2012.
-
-              .c-accordion__content-main.js-content.
-
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices volutpat pellentesque. Nullam et consectetur enim. Sed at nulla vel quam lobortis fringilla in accumsan erat. Pellentesque mattis elit purus, nec volutpat mauris mattis eu. Nulla volutpat, tellus vitae consectetur sodales, mi eros volutpat dui, eu suscipit libero mi ac leo.
+          .c-accordion__content-main.js-content.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices volutpat pellentesque. Nullam et consectetur enim. Sed at nulla vel quam lobortis fringilla in accumsan erat. Pellentesque mattis elit purus, nec volutpat mauris mattis eu. Nulla volutpat, tellus vitae consectetur sodales, mi eros volutpat dui, eu suscipit libero mi ac leo.

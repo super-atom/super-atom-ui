@@ -3,10 +3,6 @@
 
 @lost gutter 20px;
 
-.img {
-  @include rwd-img();
-}
-
 body {
   word-break: break-all;
   @include bp-min(xs) {
@@ -23,24 +19,6 @@ body {
   }
   @include bp-min(xl) {
     lost-utility: overlay $bp-min-xl 12 20px #ccc;
-  }
-}
-
-.header {
-  z-index: 100;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;
-  background-color: white;
-  border-bottom: 1px solid $grey-3;
-
-  .logo {
-    position: absolute;
-    left: 100px;
-    top: 50%;
-    transform: translateY(-50%);
   }
 }
 
@@ -89,10 +67,4 @@ body {
     text-align: center;
     transform: translate(-50%, -50%);
   }
-}
-
-.footer {
-  padding: 100px;
-  color: white;
-  background-color: #333;
 }

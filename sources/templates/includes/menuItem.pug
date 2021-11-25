@@ -1,7 +1,27 @@
 mixin menuItem(page)
   nav.nav
-    a.nav__link(class=(page === 'index') ? 'active' : '' href='./' title='index') LOGO
-    a.nav__link(class=(page === 'about') ? 'active' : '' href='./about.html' title='about') about
-    a.nav__link(class=(page === 'about') ? 'active' : '' href='./work.html' title='work') work
-    a.nav__link(class=(page === 'contact') ? 'active' : '' href='./contact.html' title='CONTACT') contact
-    a.nav__link(class=(page === 'sample') ? 'active' : '' href='./sample.html' title='sample') sample
+    a.nav__link(
+      class=page === "index" ? "nav__link--active" : "",
+      href='./',
+      title='index'
+    ) LOGO
+    a.nav__link(
+      class=page === "about" ? "nav__link--active" : "",
+      href='./about.html',
+      title='about'
+    ) about
+    a.nav__link(
+      class=page === "work" ? "nav__link--active" : "",
+      href='./work.html',
+      title='work'
+    ) work
+    a.nav__link(
+      class=page === "contact" ? "nav__link--active" : "",
+      href='./contact.html',
+      title='contact'
+    ) contact
+    a.nav__link(
+      class=page === "sample" ? "nav__link--active" : "",
+      href='./sample.html',
+      title='sample'
+    ) sample

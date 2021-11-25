@@ -6,7 +6,7 @@ export default class Accordion {
   private readonly itemClass: string = '.js-accordion';
   private readonly contentWrapperClass: string = '.js-content';
   private readonly css: object = {
-    open: 'is-open'
+    open: 'is-open',
   };
 
   constructor(el) {
@@ -22,7 +22,9 @@ export default class Accordion {
       this.items[i].addEventListener('click', (ev) => {
         ev.preventDefault();
         const current: HTMLElement = ev.currentTarget as HTMLElement;
-        const contentWrapper: HTMLElement = current.querySelector(this.contentWrapperClass) as HTMLElement;
+        const contentWrapper: HTMLElement = current.querySelector(
+          this.contentWrapperClass
+        ) as HTMLElement;
 
         if (!current.classList.contains(this.css['open'])) {
           this.slideDown(current, contentWrapper);
@@ -36,7 +38,9 @@ export default class Accordion {
 
   private getActiveElement(): HTMLElement | null {
     const target = this.el.classList[this.el.classList.length - 1];
-    const accordionItems: NodeListOf<Element> = document.querySelectorAll(`.${target} ${this.itemClass}`);
+    const accordionItems: NodeListOf<Element> = document.querySelectorAll(
+      `.${target} ${this.itemClass}`
+    );
     let active = null;
 
     for (let i = 0; i < accordionItems.length; i++) {
@@ -58,15 +62,17 @@ export default class Accordion {
     element.classList.add(this.css['open']);
 
     if (active) {
-      const activeContent: HTMLElement = active.querySelector(this.contentWrapperClass) as HTMLElement;
+      const activeContent: HTMLElement = active.querySelector(
+        this.contentWrapperClass
+      ) as HTMLElement;
       gsap.to(activeContent, {
         duration: 0.6,
         height: 0,
         onStart: () => {
           this.openItem(content, contentHeight);
-        }
+        },
       });
-      return
+      return;
     }
     // else
     this.openItem(content, contentHeight);
@@ -85,13 +91,13 @@ export default class Accordion {
               height: contentHeight,
               onComplete: () => {
                 gsap.set(content, {
-                  height: 'auto'
+                  height: 'auto',
                 });
-              }
+              },
             });
-          }
+          },
         });
-      }
+      },
     });
   }
 
@@ -99,7 +105,9 @@ export default class Accordion {
     const active: HTMLElement = this.getActiveElement() as HTMLElement;
 
     if (active) {
-      const activeContent: HTMLElement = active.querySelector(this.contentWrapperClass) as HTMLElement;
+      const activeContent: HTMLElement = active.querySelector(
+        this.contentWrapperClass
+      ) as HTMLElement;
       active.classList.remove(this.css['open']);
       gsap.to(activeContent, {
         duration: 0.6,

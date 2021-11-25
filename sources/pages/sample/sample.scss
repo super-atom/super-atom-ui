@@ -1,3 +1,4 @@
+@use 'sass:math';
 @import '../../assets/styles/common.scss';
 
 .c-accordion {
@@ -26,13 +27,13 @@
     transition: 0.3s;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: percentage(1/15);
+    padding-left: percentage(math.div(1, 15));
   }
 
   &__content-main {
     height: 0;
     overflow: hidden;
-    padding-left: percentage(1/15);
+    padding-left: percentage(math.div(1, 15));
     display: flex;
     flex-wrap: wrap;
 
@@ -77,9 +78,6 @@
       padding-top: 10px;
       padding-bottom: 20px;
       line-height: 1.38;
-    }
-
-    &:hover {
     }
 
     &.is-open {
@@ -139,14 +137,14 @@
   &__left {
     padding-top: 10px;
     padding-bottom: 75px;
-    width: percentage(6/14);
+    width: percentage(math.div(6, 14));
     padding-right: 10px;
   }
 
   &__right {
     padding-top: 10px;
     padding-bottom: 75px;
-    width: percentage(8/14);
+    width: percentage(math.div(8, 14));
     padding-right: 10px;
   }
 }

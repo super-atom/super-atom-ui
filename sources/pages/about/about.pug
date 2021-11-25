@@ -1,15 +1,4 @@
-block variables
-- var DATA = self.htmlWebpackPlugin.options.DATA
-
-doctype html
-html(lang="pl" dir="ltr" class="index")
-
-  include ../../templates/includes/head.pug
-  include ../../templates/includes/menuItem.pug
-
-  head
-    +head(DATA)
-
-  body
-    header.header
-      +menuItem('index')
+extends ../../templates/layouts/base
+include ../../templates/includes/header
+block content
+  +header('about')

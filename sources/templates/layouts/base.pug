@@ -1,0 +1,17 @@
+block variables
+- var DATA = self.htmlWebpackPlugin.options.DATA;
+
+doctype html
+html.index(lang='pl', dir='ltr')
+  include ../../templates/includes/head.pug
+  include ../../templates/includes/header.pug
+
+  head
+    block head
+      +head(DATA)
+
+  body
+    block header
+      +header
+    .content
+      block content
