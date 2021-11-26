@@ -6,8 +6,7 @@
     "pretty": "prettier --write \"./**/*.{ts,js,scss,pug,json}\"",
     "clean": "rimraf ./dist/*",
     "create": "node scripts/create-page.js",
-    "local": "npm-run-all clean prod",
-    "build": "npm-run-all clean prod && npx netlify build --prod",
+    "build": "npm-run-all clean prod",
     "deploy": "npx netlify build --prod"
   },
   "dependencies": {
