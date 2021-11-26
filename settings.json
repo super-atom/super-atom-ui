@@ -5,7 +5,15 @@
   "search.exclude": {
     "**/.git": true,
     "**/node_modules": true,
-    "**/bower_components": true,
     "**/tmp": true
+  },
+  "netlify.site_id": "<site_name|api_id>",
+  "netlify.api_token": "<personal_access_token>",
+  "netlify.set_interval": "<number>",
+  "netlify.build_status_colors": {
+    "building": "<hex|name>",
+    "enqueued": "<hex|name>",
+    "deploy-successful": "<hex|name>",
+    "error": "<hex|name>"
   }
 }

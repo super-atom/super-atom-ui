@@ -6,9 +6,7 @@
     "pretty": "prettier --write \"./**/*.{ts,js,scss,pug,json}\"",
     "clean": "rimraf ./dist/*",
     "create": "node scripts/create-page.js",
-    "local": "npm-run-all clean prod",
-    "build": "npm-run-all clean prod && npx netlify build --prod",
-    "deploy": "npx netlify build --prod"
+    "build": "npm-run-all clean prod"
   },
   "dependencies": {
     "fullpage.js": "^2.9.7",
@@ -56,6 +54,7 @@
     "intersection-observer": "^0.12.0",
     "lost": "^8.3.1",
     "mini-css-extract-plugin": "^2.4.3",
+    "netlify-cli": "^8.0.3",
     "node-static": "^0.7.11",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.3.11",
