@@ -6,7 +6,9 @@
     "pretty": "prettier --write \"./**/*.{ts,js,scss,pug,json}\"",
     "clean": "rimraf ./dist/*",
     "create": "node scripts/create-page.js",
-    "build": "npm-run-all clean prod"
+    "local": "npm-run-all clean prod",
+    "build": "npm-run-all clean prod && npx netlify build --prod",
+    "deploy": "npx netlify build --prod"
   },
   "dependencies": {
     "fullpage.js": "^2.9.7",
