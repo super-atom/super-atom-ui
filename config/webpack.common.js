@@ -8,22 +8,23 @@ const PATHS = require('../config/paths');
 const getDirectories = (source) =>
   readdirSync(source, { withFileTypes: true })
     .filter((dirent) => dirent.isDirectory())
-    .map((dirent) => dirent.name);
+    .map((dirent) => ({ page: dirent.name, common: 'common' }));
 
 // configure HtmlWebPackPlugin
 const PAGES = getDirectories(path.join(PATHS.source, '/pages'));
-const entryHtmlPlugins = PAGES.map((page) => {
+
+const entryHtmlPlugins = PAGES.map((config) => {
   return new HtmlWebPackPlugin({
-    filename: `${page}.html`,
+    filename: `${config.page}.html`,
 
     // template for individual pages index, about and contact
-    template: `./sources/pages/${page}/${page}.pug`,
+    template: `./sources/pages/${config.page}/${config.page}.pug`,
 
     // json data drawn into pug templates
-    DATA: require(`../sources/pages/${page}/${page}.json`),
+    DATA: require(`../sources/pages/${config.page}/${config.page}.json`),
 
     // injecting js and css files into
-    chunks: [page],
+    chunks: [config.page, config.common],
   });
 });
 
@@ -31,8 +32,13 @@ module.exports = {
   entry: (() => {
     const entries = {};
     PAGES.forEach(
-      (page) => (entries[page] = PATHS.source + `/pages/${page}/${page}.ts`)
+      (config) =>
+        (entries[config.page] = {
+          import: PATHS.source + `/pages/${config.page}/${config.page}.ts`,
+          dependOn: 'common',
+        })
     );
+    entries['common'] = PATHS.source + `/scripts/ts/common.ts`;
     return entries;
   })(),
   // configuration of output files
