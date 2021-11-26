@@ -1,12 +1,12 @@
 {
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dashboard -- webpack serve --config ./config/webpack.dev.js --progress",
-    "prod": "cross-env NODE_ENV=production webpack --config ./config/webpack.prod.js --progress",
+    "dev": "cross-env NODE_ENV=development webpack-dashboard -- webpack serve --config ./config/webpack.dev.js --mode development --progress",
+    "prod": "cross-env NODE_ENV=production webpack --config ./config/webpack.prod.js --mode production --progress",
     "pretty": "prettier --write \"./**/*.{ts,js,scss,pug,json}\"",
     "clean": "rimraf ./dist/*",
     "create": "node scripts/create-page.js",
-    "build": "npm-run-all clean pretty prod"
+    "build": "npm-run-all clean prod"
   },
   "dependencies": {
     "fullpage.js": "^2.9.7",

@@ -140,9 +140,9 @@ module.exports = merge(baseConfig, {
     }),
 
     // Visualization of the size of js files
-    new BundleAnalyzerPlugin({
-      analyzerPort: 8888,
-      openAnalyzer: false,
-    }),
+    // new BundleAnalyzerPlugin({
+    //   analyzerPort: 8888,
+    //   openAnalyzer: false,
+    // }),
   ],
 });
