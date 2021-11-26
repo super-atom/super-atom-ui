@@ -7,7 +7,7 @@
     "clean": "rimraf ./dist/*",
     "create": "node scripts/create-page.js",
     "build": "npm-run-all clean prod",
-    "deploy": "npx netlify build --prod"
+    "deploy": "npx netlify deploy --prod"
   },
   "dependencies": {
     "fullpage.js": "^2.9.7",
