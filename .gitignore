@@ -4,7 +4,3 @@ node_modules
 dist
 yarn-error.log
 sources/assets/fonts/*
-.env
-
-# Local Netlify folder
-.netlify
