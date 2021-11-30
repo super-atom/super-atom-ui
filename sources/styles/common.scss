@@ -2,7 +2,10 @@
 @import './dev-core';
 @import './base/base';
 @import './_config';
-/* END : common.scss */
+
+::-webkit-scrollbar {
+  display: none;
+}
 
 body {
   font-family: $main-font;
@@ -52,3 +55,4 @@ body {
   color: white;
   background-color: #333;
 }
+/* END : common.scss */

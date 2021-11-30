@@ -2,12 +2,5 @@
   "head": {
     "title": "title - contact",
     "description": "description - contact"
-  },
-  "body": {
-    "image": "assets/images/contact.jpg",
-    "mainText": "main text - contact"
-  },
-  "content": {
-    "section": "contact"
   }
 }

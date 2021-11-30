@@ -4,10 +4,6 @@
     "description": "description - index"
   },
   "body": {
-    "image": "assets/images/index.jpg",
-    "mainText": "main text - index"
-  },
-  "content": {
-    "section": "section1"
+    "image": "assets/images/index.jpg"
   }
 }

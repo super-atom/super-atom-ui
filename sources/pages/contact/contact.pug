@@ -1,3 +1,39 @@
 extends ../../templates/layouts/base
 block header
   +header('contact')
+
+  .container
+    section.data-scroll-section(
+      data-bgcolor='#bcb8ad',
+      data-textcolor='#032f35'
+    )
+      .main(data-scroll-container)
+        h1(data-scroll, data-scroll-speed='6', data-scroll-delay='0.6')
+          span Horizontal
+          |
+          span scroll
+          |
+          span section
+        p.desc(data-scroll, data-scroll-speed='1', data-scroll-delay='0.2') with GSAP ScrollTrigger & Locomotive Scroll
+    section#sectionPin
+      .pin-wrap
+        h2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        img(
+          src='https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900',
+          alt
+        )
+        img(
+          src='https://images.pexels.com/photos/3371358/pexels-photo-3371358.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900',
+          alt
+        )
+        img(
+          src='https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900',
+          alt
+        )
+    section(data-bgcolor='#e3857a', data-textcolor='#f1dba7')
+      img(
+        src='https://images.pexels.com/photos/4791474/pexels-photo-4791474.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+        alt
+      )
+      h2.credit(data-scroll, data-scroll-speed='1')
+        a(href='https://thisisadvantage.com', target='_blank') Made by Advantage

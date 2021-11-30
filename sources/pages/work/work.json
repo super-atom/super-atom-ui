@@ -2,12 +2,5 @@
   "head": {
     "title": "title - work",
     "description": "description - work"
-  },
-  "body": {
-    "image": "assets/images/index.jpg",
-    "mainText": "main text - work"
-  },
-  "content": {
-    "section": "section1"
   }
 }

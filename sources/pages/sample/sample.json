@@ -2,11 +2,5 @@
   "head": {
     "title": "title - sample",
     "description": "description - sample"
-  },
-  "body": {
-    "mainText": "main text - sample"
-  },
-  "content": {
-    "section": "sample"
   }
 }

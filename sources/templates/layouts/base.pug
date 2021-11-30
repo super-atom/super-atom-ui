@@ -5,12 +5,14 @@ doctype html
 html.index(lang='pl', dir='ltr')
   include ../../templates/includes/head.pug
   include ../../templates/includes/header.pug
+  include ../../templates/components/mouseStalker.pug
 
   head
     block head
       +head(DATA)
 
   body
+    +mouseStalker
     block header
       +header
     .content

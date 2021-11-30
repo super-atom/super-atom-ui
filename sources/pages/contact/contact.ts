@@ -1,7 +1,63 @@
 import './contact.scss';
+import 'locomotive-scroll/dist/locomotive-scroll.min.css';
+import LocomotiveScroll from 'locomotive-scroll';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-let a = Array.from(new Set([1, 2, 3, 2, 1])); // => [1, 2, 3]
-let b = [1, [2, 3], [4, [5]]].flat(2); // => [1, 2, 3, 4, 5]
-let c = Promise.resolve(32).then((x) => console.log(x)); // => 32
+gsap.registerPlugin(ScrollTrigger);
 
-console.log('console', a, b, c);
+const pageContainer: HTMLElement = document.querySelector('.container');
+
+/* SMOOTH SCROLL */
+const scroller = new LocomotiveScroll({
+  el: pageContainer,
+  smooth: true,
+});
+
+scroller.on('scroll', ScrollTrigger.update);
+
+ScrollTrigger.scrollerProxy(pageContainer, {
+  scrollTop(value) {
+    return arguments.length
+      ? scroller.scrollTo(value, 0, 0)
+      : scroller.scroll.instance.scroll.y;
+  },
+  getBoundingClientRect() {
+    return {
+      left: 0,
+      top: 0,
+      width: window.innerWidth,
+      height: window.innerHeight,
+    };
+  },
+  pinType: pageContainer.style.transform ? 'transform' : 'fixed',
+});
+
+////////////////////////////////////
+////////////////////////////////////
+window.addEventListener('load', function () {
+  let pinBoxes = document.querySelectorAll('.pin-wrap > *');
+  let pinWrap: HTMLElement = document.querySelector('.pin-wrap');
+  let pinWrapWidth = pinWrap.offsetWidth;
+  let horizontalScrollLength = pinWrapWidth - window.innerWidth;
+
+  // Pinning and horizontal scrolling
+
+  gsap.to('.pin-wrap', {
+    scrollTrigger: {
+      scroller: pageContainer, //locomotive-scroll
+      scrub: true,
+      trigger: '#sectionPin',
+      pin: true,
+      // anticipatePin: 1,
+      start: 'top top',
+      end: pinWrapWidth,
+    },
+    x: -horizontalScrollLength,
+    ease: 'none',
+  });
+
+  ScrollTrigger.addEventListener('refresh', () => scroller.update()); //locomotive-scroll
+
+  ScrollTrigger.refresh();
+});
