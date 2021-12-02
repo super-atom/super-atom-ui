@@ -1,0 +1,149 @@
+@use 'sass:math';
+
+.c-accordion {
+  max-width: 500px;
+  width: 100%;
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+  }
+
+  &__content-wrapper {
+    flex: 1 0 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+  }
+
+  &__content-title {
+    position: relative;
+    transition: 0.3s;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: percentage(math.div(1, 15));
+  }
+
+  &__content-main {
+    height: 0;
+    overflow: hidden;
+    padding-left: percentage(math.div(1, 15));
+    display: flex;
+    flex-wrap: wrap;
+
+    p {
+      max-width: 300px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    flex: 1 0 auto;
+
+    &:first-of-type {
+      &:before {
+        display: none;
+      }
+    }
+
+    &:before {
+      content: '';
+      width: 100%;
+      border-top: 1px solid lightgrey;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    &:last-child {
+      &:after {
+        content: '';
+        width: 100%;
+        border-top: 1px solid lightgrey;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+    }
+
+    &__text {
+      padding-top: 10px;
+      padding-bottom: 20px;
+      line-height: 1.38;
+    }
+
+    &.is-open {
+      transition: 0.3s;
+
+      .c-accordion {
+        &__plus {
+          transform: translateY(-50%) rotate(90deg);
+
+          &:after {
+            opacity: 0;
+          }
+        }
+
+        &__content-main {
+          height: auto;
+        }
+      }
+    }
+  }
+
+  &__plus {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left: 3px;
+    top: 50%;
+    cursor: pointer;
+    opacity: 1;
+    transform: translateY(-50%) rotate(0deg);
+    transition: 0.4s;
+
+    &:before {
+      content: '';
+      height: 100%;
+      border-left: 2px solid lightgrey;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+
+    &:after {
+      content: '';
+      width: 100%;
+      border-top: 2px solid lightgrey;
+      position: absolute;
+      opacity: 1;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: opacity 0.2s;
+    }
+  }
+
+  &__left {
+    padding-top: 10px;
+    padding-bottom: 75px;
+    width: percentage(math.div(6, 14));
+    padding-right: 10px;
+  }
+
+  &__right {
+    padding-top: 10px;
+    padding-bottom: 75px;
+    width: percentage(math.div(8, 14));
+    padding-right: 10px;
+  }
+}

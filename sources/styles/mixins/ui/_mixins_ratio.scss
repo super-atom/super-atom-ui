@@ -11,13 +11,6 @@
     height: $height;
   }
 
-  & > * {
-    @include position(absolute, 0);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-
   @if $pseudo {
     $padding: unquote(math.div($y, $x) * 100 + '%');
     &:before {

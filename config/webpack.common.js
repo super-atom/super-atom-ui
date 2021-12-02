@@ -5,11 +5,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const PATHS = require('../config/paths');
 
-// HtmlWebPackPlugin 함수 시그니처가 요구하는 대로 인자를 전달해주어야 한다.
 let arrayOfEntryDirectory = [];
-
-// 지정한 디렉토리 내의 모든 파일을 재귀적으로 조회한다.
-// 폴더 안에 폴더가 있다면, 그 폴더 이름을 다중 배열에 저장한다.
 const getDirectoriesAllFiles = (directory, arrayOfFiles) => {
   const files = fs.readdirSync(directory);
   arrayOfFiles = arrayOfFiles || [];
@@ -29,20 +25,14 @@ const getDirectoriesAllFiles = (directory, arrayOfFiles) => {
   return arrayOfFiles;
 };
 
-// 디렉토리 안의 모든 파일 주소가 담긴 배열이 들어온다.
 getDirectoriesAllFiles(path.join(PATHS.source, '/pages'));
 
 const entryHtmlPlugins = arrayOfEntryDirectory.map((page) => {
   // https://github.com/jantimon/html-webpack-plugin#options
-  // filename은 상위 디렉토리가 있다면 동적으로 디렉토리 경로를 입력한다.
-  // 만약 이전 문자열이 pages가 아니라면, 상위 디렉토리명이다.
   let obj = {
     filename: `${page[1]}`,
-    // template for individual pages index, about and contact
     template: `${path.join(page[0], page[1])}.pug`,
-    // json data drawn into pug templates
     DATA: require(`${path.join(page[0], page[1])}.json`),
-    // injecting js and css files into
     chunks: [`${path.join(page[1])}`, 'common'],
   };
 

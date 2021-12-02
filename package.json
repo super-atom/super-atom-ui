@@ -7,9 +7,11 @@
     "clean": "rimraf ./dist/*",
     "create": "node scripts/create-page.js",
     "build": "npm-run-all clean prod",
-    "deploy": "npx netlify deploy --prod"
+    "deploy": "netlify deploy --prod"
   },
   "dependencies": {
+    "@fontsource/open-sans": "^4.5.2",
+    "@fortawesome/fontawesome-free": "^6.0.0-beta3",
     "fullpage.js": "^2.9.7",
     "gsap": "^3.8.0",
     "jquery": "^1.12.4",

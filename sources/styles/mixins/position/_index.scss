@@ -14,3 +14,23 @@
     left: if($left-value, unitless-px($left-value), null);
   }
 }
+
+@mixin static {
+  @include position(static, null);
+}
+
+@mixin absolute($args: null) {
+  @include position(absolute, $args);
+}
+
+@mixin relative($args: null) {
+  @include position(relative, $args);
+}
+
+@mixin fixed($args: null) {
+  @include position(fixed, $args);
+}
+
+@mixin sticky($args: null) {
+  @include position(sticky, $args);
+}

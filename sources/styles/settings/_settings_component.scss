@@ -1,0 +1,26 @@
+@import '../dev-core';
+@include component($components-map);
+
+img.img {
+  @include rwd-img();
+}
+
+button.button {
+  border-radius: 5px;
+  &[disabled] {
+    cursor: not-allowed;
+    color: darken(alt-color(state-disabled, $main-color), 30%);
+    background-color: alt-color(state-disabled, $main-color);
+  }
+  &[data-type='outlined'],
+  &[data-type='text'] {
+    color: $main-color;
+    background-color: transparent;
+  }
+  &[data-type='outlined'] {
+    border-color: $main-color;
+  }
+  &[data-type='round'] {
+    border-radius: 50px;
+  }
+}

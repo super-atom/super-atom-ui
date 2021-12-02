@@ -1,149 +1,282 @@
-@use 'sass:math';
+@import '../../styles/dev-core.scss';
 
-.c-accordion {
-  max-width: 500px;
-  width: 100%;
+.content__title {
+  width: 600px;
+  padding: 10px 0;
+  margin: 180px auto 100px;
+  font-family: 'NotoSansCJKkr-Black';
+  font-size: 40px;
+  text-align: center;
+  letter-spacing: 14px;
+  text-transform: uppercase;
+  border: 3px solid $body-text-color;
+}
 
-  &__wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    height: auto;
+.section {
+  margin: 0 auto;
+  max-width: 1200px;
+
+  & + & {
+    margin-top: 50px;
   }
 
-  &__content-wrapper {
-    flex: 1 0 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: stretch;
-    align-content: stretch;
-  }
-
-  &__content-title {
-    position: relative;
-    transition: 0.3s;
-    padding-top: 10px;
+  .section__title {
+    font-family: 'NotoSansCJKkr-Medium';
+    @include base-font-sizes-title();
+    margin-bottom: 10px;
     padding-bottom: 10px;
-    padding-left: percentage(math.div(1, 15));
+    border-bottom: 1px solid #000;
   }
+}
 
-  &__content-main {
-    height: 0;
-    overflow: hidden;
-    padding-left: percentage(math.div(1, 15));
-    display: flex;
-    flex-wrap: wrap;
-
-    p {
-      max-width: 300px;
+.typo-section {
+  li {
+    font-size: 30px;
+    &:nth-of-type(1) {
+      font-family: 'NotoSansCJKkr-Black';
+    }
+    &:nth-of-type(2) {
+      font-family: 'NotoSansCJKkr-Bold';
+    }
+    &:nth-of-type(3) {
+      font-family: 'NotoSansCJKkr-DemiLight';
+    }
+    &:nth-of-type(4) {
+      font-family: 'NotoSansCJKkr-Light';
+    }
+    &:nth-of-type(5) {
+      font-family: 'NotoSansCJKkr-Medium';
+    }
+    &:nth-of-type(6) {
+      font-family: 'NotoSansCJKkr-Regular';
+    }
+    &:nth-of-type(7) {
+      font-family: 'NotoSansCJKkr-Thin';
     }
   }
+}
 
-  &__content {
+.color-section {
+  .color-wrap {
+    margin-top: 20px;
+
+    @include bp-min(xs) {
+      lost-center: $bp-min-xs;
+    }
+    @include bp-min(sm) {
+      lost-center: $bp-min-sm;
+    }
+    @include bp-min(md) {
+      lost-center: $bp-min-md;
+    }
+    @include bp-min(lg) {
+      lost-center: $bp-min-lg;
+    }
+    @include bp-min(xl) {
+      lost-center: $bp-min-xl;
+    }
+
+    li {
+      padding: 10px;
+
+      @include bp-min(sm) {
+        lost-column: 1/5;
+      }
+      @include bp-min(lg) {
+        lost-column: 1/10;
+      }
+    }
+  }
+  .grey {
+    &:nth-of-type(1) {
+      background-color: $grey-0;
+    }
+    &:nth-of-type(2) {
+      background-color: $grey-1;
+    }
+    &:nth-of-type(3) {
+      background-color: $grey-2;
+    }
+    &:nth-of-type(4) {
+      background-color: $grey-3;
+    }
+    &:nth-of-type(5) {
+      background-color: $grey-4;
+    }
+    &:nth-of-type(6) {
+      background-color: $grey-5;
+    }
+    &:nth-of-type(7) {
+      background-color: $grey-6;
+    }
+    &:nth-of-type(8) {
+      background-color: $grey-7;
+    }
+    &:nth-of-type(9) {
+      background-color: $grey-8;
+    }
+    &:nth-of-type(10) {
+      background-color: $grey-9;
+    }
+  }
+  .red {
+    &:nth-of-type(1) {
+      background-color: $red-0;
+    }
+    &:nth-of-type(2) {
+      background-color: $red-1;
+    }
+    &:nth-of-type(3) {
+      background-color: $red-2;
+    }
+    &:nth-of-type(4) {
+      background-color: $red-3;
+    }
+    &:nth-of-type(5) {
+      background-color: $red-4;
+    }
+    &:nth-of-type(6) {
+      background-color: $red-5;
+    }
+    &:nth-of-type(7) {
+      background-color: $red-6;
+    }
+    &:nth-of-type(8) {
+      background-color: $red-7;
+    }
+    &:nth-of-type(9) {
+      background-color: $red-8;
+    }
+    &:nth-of-type(10) {
+      background-color: $red-9;
+    }
+  }
+}
+
+.grid-section {
+  .section__content {
+    ul {
+      @include bp-min(xs) {
+        lost-center: $bp-min-xs;
+      }
+      @include bp-min(sm) {
+        lost-center: $bp-min-sm;
+      }
+      @include bp-min(md) {
+        lost-center: $bp-min-md;
+      }
+      @include bp-min(lg) {
+        lost-center: $bp-min-lg;
+      }
+      @include bp-min(xl) {
+        lost-center: $bp-min-xl;
+      }
+
+      li {
+        height: 200px;
+        text-align: center;
+        background-color: $grey-1;
+
+        @include bp-min(xs) {
+          lost-column: 1/1;
+        }
+        @include bp-min(sm) {
+          lost-column: 1/2;
+        }
+        @include bp-min(md) {
+          lost-column: 1/3;
+        }
+        @include bp-min(lg) {
+          lost-column: 1/6;
+        }
+        @include bp-min(xl) {
+          lost-column: 1/12;
+        }
+      }
+    }
+  }
+}
+
+.ratio-section {
+  ul {
     position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    flex: 1 0 auto;
+    @include flex-container(row wrap justify-center items-center);
+    li {
+      position: relative;
+      @include flex-container(row wrap justify-center items-center);
+      color: white;
+      text-align: center;
+      @include background(
+        'https://w.namu.la/s/379ef8ae4f12fc04481c2cb7a97c2bdc901727b137c38fd652cc7aea80f74e56185fa0fd62658554fc3e6e79861aec73782db1d7ab3943275607e6623a46d09fe63412410041cd4b2b6ea4e740e6a290c8022da99c4d567b5533c100da0ed814'
+      );
 
-    &:first-of-type {
-      &:before {
-        display: none;
+      @include bp-min(xs) {
+        lost-column: 1/1;
       }
-    }
+      @include bp-min(sm) {
+        lost-column: 1/2;
+      }
+      @include bp-min(md) {
+        lost-column: 1/3;
+      }
+      @include bp-min(xl) {
+        lost-column: 1/6;
+      }
 
-    &:before {
-      content: '';
-      width: 100%;
-      border-top: 1px solid lightgrey;
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
-
-    &:last-child {
-      &:after {
-        content: '';
-        width: 100%;
-        border-top: 1px solid lightgrey;
+      p {
         position: absolute;
-        left: 0;
-        bottom: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
-    }
 
-    &__text {
-      padding-top: 10px;
-      padding-bottom: 20px;
-      line-height: 1.38;
-    }
-
-    &.is-open {
-      transition: 0.3s;
-
-      .c-accordion {
-        &__plus {
-          transform: translateY(-50%) rotate(90deg);
-
-          &:after {
-            opacity: 0;
-          }
-        }
-
-        &__content-main {
-          height: auto;
-        }
+      &:nth-of-type(1) {
+        @include ratio('golden');
+      }
+      &:nth-of-type(2) {
+        @include ratio('golden-vertical');
+      }
+      &:nth-of-type(3) {
+        @include ratio('silver');
+      }
+      &:nth-of-type(4) {
+        @include ratio('silver-vertical');
+      }
+      &:nth-of-type(5) {
+        @include ratio('bronze');
+      }
+      &:nth-of-type(6) {
+        @include ratio('bronze-vertical');
       }
     }
   }
+}
 
-  &__plus {
-    width: 12px;
-    height: 12px;
-    position: absolute;
-    left: 3px;
-    top: 50%;
-    cursor: pointer;
-    opacity: 1;
-    transform: translateY(-50%) rotate(0deg);
-    transition: 0.4s;
+.theme-section {
+  .btn-wrap {
+    @include flex-container(row wrap justify-center items-center);
+  }
+}
 
-    &:before {
-      content: '';
-      height: 100%;
-      border-left: 2px solid lightgrey;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      opacity: 1;
-    }
-
-    &:after {
-      content: '';
-      width: 100%;
-      border-top: 2px solid lightgrey;
-      position: absolute;
-      opacity: 1;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      transition: opacity 0.2s;
-    }
+.form-section {
+  h2.item-title {
+    font-family: 'NotoSansCJKkr-DemiLight';
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-size: rem(16px);
+    border-bottom: 1px dashed $base-grey;
   }
 
-  &__left {
-    padding-top: 10px;
-    padding-bottom: 75px;
-    width: percentage(math.div(6, 14));
-    padding-right: 10px;
+  .section__content {
+    .item-wrap {
+      padding: 30px;
+      background-color: $light-blue-0;
+    }
   }
+}
 
-  &__right {
-    padding-top: 10px;
-    padding-bottom: 75px;
-    width: percentage(math.div(8, 14));
-    padding-right: 10px;
+.form-ui-section {
+  .checkbox {
+    @include checkbox();
   }
 }

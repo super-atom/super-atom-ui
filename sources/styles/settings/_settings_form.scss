@@ -1,5 +1,28 @@
 @import '../dev-core';
 
+button,
+input,
+textarea,
+select {
+  transition: 0.3s ease-out;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: 1px solid transparent;
+  text-decoration: none;
+
+  // Firefox 점선 제거
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
 input,
 textarea,
 select {
@@ -12,14 +35,7 @@ select {
   white-space: nowrap;
   vertical-align: middle;
   border-radius: 5px;
-  background-color: $white;
+  background-color: white;
   border: 1px solid $base-grey;
   cursor: pointer;
-}
-
-input,
-textarea,
-button,
-select {
-  @include transition;
 }

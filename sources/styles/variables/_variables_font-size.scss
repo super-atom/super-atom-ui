@@ -8,14 +8,13 @@ $root-font-size: unit(16px);
 
 // Body Default Settings
 $body-text-color: $base-color-grey-7;
-$body-font-size: unit(13px);
+$body-font-size: unit(16px);
 $body-font-weight: 400;
 $body-font-family: $base-font;
 $body-letter-spacing: $base-font-letter-spacing;
 $body-line-height: 1.5;
 $body-background-color: $white;
 
-// *Responsive Base Element Font Size
 $base-font-sizes: (
   $bp-min-xs: (
     unit(12px),
@@ -28,6 +27,21 @@ $base-font-sizes: (
   ),
   $bp-min-lg: (
     unit(16px),
+  ),
+);
+
+$base-font-sizes-heading: (
+  $bp-min-xs: (
+    unit(16px, rem),
+  ),
+  $bp-min-sm: (
+    unit(18px, rem),
+  ),
+  $bp-min-md: (
+    unit(20px, rem),
+  ),
+  $bp-min-lg: (
+    unit(24px, rem),
   ),
 );
 
@@ -46,23 +60,6 @@ $base-font-sizes-title: (
   ),
 );
 
-// *Responsive Base Element Font Size : Paragraph
-$base-font-sizes-p: (
-  $bp-min-xs: (
-    unit(12px),
-  ),
-  $bp-min-sm: (
-    unit(13px),
-  ),
-  $bp-min-md: (
-    unit(14px),
-  ),
-  $bp-min-lg: (
-    unit(16px),
-  ),
-);
-
-// Responsive Base Size Map
 $base-font-sizes-content: (
   $bp-min-xs: (
     unit(12px),

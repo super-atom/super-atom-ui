@@ -1,7 +1,4 @@
 /* START : reset.scss */
-/* _reset.scss
-   ========================================================================== */
-
 html,
 body,
 div,
@@ -103,7 +100,6 @@ body {
 }
 
 html {
-  overflow-y: scroll;
   line-height: 1;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -333,6 +329,10 @@ template {
 [type='radio'] {
   box-sizing: border-box;
   padding: 0;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
 }
 
 [type='number']::-webkit-inner-spin-button,
