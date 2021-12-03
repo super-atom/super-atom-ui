@@ -5,7 +5,7 @@ img.img {
   @include rwd-img();
 }
 
-button.button {
+.button {
   border-radius: 5px;
   &[disabled] {
     cursor: not-allowed;

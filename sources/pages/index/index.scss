@@ -1,46 +1,28 @@
 @import '../../styles/dev-core.scss';
-.section-main {
-  position: relative;
-  height: 800px;
 
-  .img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    text-align: center;
-    transform: translate(-50%, -50%);
+.section {
+  .inner {
+    max-width: $bp-max-xl;
+    margin: 0 auto;
   }
 }
 
-.section-second {
-  @include bp-min(xs) {
-    lost-center: $bp-min-xs;
-  }
-  @include bp-min(sm) {
-    lost-center: $bp-min-sm;
-  }
-  @include bp-min(md) {
-    lost-center: $bp-min-md;
-  }
-  @include bp-min(lg) {
-    lost-center: $bp-min-lg;
-  }
-  @include bp-min(xl) {
-    lost-center: $bp-min-xl;
+.section-main {
+  @include centering;
+  position: relative;
+  height: 50vh;
+
+  .img {
+    position: absolute;
+    @include centeringXY;
+    @include background('../../assets/images/index.jpg', $position: 50% 10%);
+    width: 300px;
+    height: 500px;
   }
 
-  .desc {
-    @include bp-min(xs) {
-      lost-column: 1/1;
-    }
-    @include bp-min(sm) {
-      lost-column: 1/2;
-    }
-    @include bp-min(md) {
-      lost-column: 1/3;
-    }
-    @include bp-min(xl) {
-      lost-column: 1/6;
-    }
+  .txt-wrap {
+    z-index: 1;
+    position: relative;
+    color: white;
   }
 }

@@ -1,17 +1,5 @@
 @import '../../styles/dev-core.scss';
 
-.content__title {
-  width: 600px;
-  padding: 10px 0;
-  margin: 180px auto 100px;
-  font-family: 'NotoSansCJKkr-Black';
-  font-size: 40px;
-  text-align: center;
-  letter-spacing: 14px;
-  text-transform: uppercase;
-  border: 3px solid $body-text-color;
-}
-
 .section {
   margin: 0 auto;
   max-width: 1200px;
@@ -26,6 +14,36 @@
     margin-bottom: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid #000;
+  }
+
+  .section__content {
+  }
+}
+
+.main-section {
+  position: relative;
+  height: 25vw;
+  max-width: 100%;
+
+  @include background(
+    'https://w.namu.la/s/379ef8ae4f12fc04481c2cb7a97c2bdc901727b137c38fd652cc7aea80f74e56185fa0fd62658554fc3e6e79861aec73782db1d7ab3943275607e6623a46d09fe63412410041cd4b2b6ea4e740e6a290c8022da99c4d567b5533c100da0ed814',
+    $position: 50% -400px
+  );
+
+  .section__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 600px;
+    padding: 10px 0;
+    font-family: 'NotoSansCJKkr-Black';
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 14px;
+    text-transform: uppercase;
+    border: 3px solid white;
+    color: white;
   }
 }
 
@@ -200,28 +218,15 @@
 .ratio-section {
   ul {
     position: relative;
-    @include flex-container(row wrap justify-center items-center);
+    @include flex-container(row nowrap justify-center items-center);
     li {
       position: relative;
-      @include flex-container(row wrap justify-center items-center);
+      margin: 0 10px;
       color: white;
       text-align: center;
       @include background(
         'https://w.namu.la/s/379ef8ae4f12fc04481c2cb7a97c2bdc901727b137c38fd652cc7aea80f74e56185fa0fd62658554fc3e6e79861aec73782db1d7ab3943275607e6623a46d09fe63412410041cd4b2b6ea4e740e6a290c8022da99c4d567b5533c100da0ed814'
       );
-
-      @include bp-min(xs) {
-        lost-column: 1/1;
-      }
-      @include bp-min(sm) {
-        lost-column: 1/2;
-      }
-      @include bp-min(md) {
-        lost-column: 1/3;
-      }
-      @include bp-min(xl) {
-        lost-column: 1/6;
-      }
 
       p {
         position: absolute;
@@ -258,6 +263,12 @@
   }
 }
 
+.table-section {
+  .table {
+    @include table;
+  }
+}
+
 .form-section {
   h2.item-title {
     font-family: 'NotoSansCJKkr-DemiLight';
@@ -269,7 +280,7 @@
 
   .section__content {
     .item-wrap {
-      padding: 30px;
+      padding: 10px;
       background-color: $light-blue-0;
     }
   }

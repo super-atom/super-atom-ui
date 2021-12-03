@@ -1,27 +1,42 @@
 mixin menuItem(page)
-  nav#nav.nav
-    a.nav__link(
-      class=page === "index" ? "nav__link--active" : "",
-      href='/index.html',
-      title='index'
-    ) LOGO
-    a.nav__link(
-      class=page === "about" ? "nav__link--active" : "",
-      href='/about.html',
-      title='about'
-    ) about
-    a.nav__link(
-      class=page === "work" ? "nav__link--active" : "",
-      href='/work.html',
-      title='work'
-    ) work
-    a.nav__link(
-      class=page === "contact" ? "nav__link--active" : "",
-      href='/contact.html',
-      title='contact'
-    ) contact
-    a.nav__link(
-      class=page === "sample" ? "nav__link--active" : "",
-      href='/sample.html',
-      title='sample'
-    ) sample
+  nav.nav
+    .nav__logo
+      a.nav__link(
+        class=page === "index" ? "nav__link--active" : "",
+        href='/index.html',
+        title='index'
+      ) LOGO
+
+    .nav__link-wrap
+      a.nav__link(
+        class=page === "about" ? "nav__link--active" : "",
+        href='/about.html',
+        title='about'
+      ) about
+      a.nav__link(
+        class=page === "docs" ? "nav__link--active" : "",
+        href='/docs.html',
+        title='docs'
+      ) docs
+      a.nav__link(
+        class=page === "example" ? "nav__link--active" : "",
+        href='/example.html',
+        title='example'
+      ) example
+        a.nav__link(
+          class=page === "sample" ? "nav__link--active" : "",
+          href='/sample.html',
+          title='sample'
+        ) sample
+      a.nav__link(
+        class=page === "contact" ? "nav__link--active" : "",
+        href='/contact.html',
+        title='contact'
+      ) contact
+    .nav__link-wrap
+      a.icon(
+        href='https://github.com/super-atom/super-atom-ui',
+        target='_blank'
+      )
+        i.fa-brands.fa-github
+      a.button(href='') download

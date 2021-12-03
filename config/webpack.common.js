@@ -86,7 +86,12 @@ module.exports = {
       },
       {
         test: /\.(woff(2)?|eot|ttf|otf)$/,
-        type: 'asset/inline',
+        type: 'asset',
+        parser: {
+          dataUrlCondition: {
+            maxSize: 50 * 1024, // 50kb
+          },
+        },
       },
       {
         test: /\.html$/i,

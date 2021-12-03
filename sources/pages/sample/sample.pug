@@ -3,7 +3,8 @@ block header
   +header('sample')
 
 block content
-  .content__title design system
+  section.section.main-section
+    h1.section__title Design System
   section.section.typo-section
     h1.section__title Typography
     .section__content
@@ -81,6 +82,27 @@ block content
         button.button(data-type='text') button
         button.button(data-type='round') button
         button.button(disabled) button
+  section.section.table-section
+    h1.section__title Table
+    .section__content
+      table.table
+        thead
+          tr
+            th Sites
+            th Views
+            th Clicks
+            th Average
+        tbody
+          tr
+            td Google
+            td 9518
+            td 6369
+            td 01:32:50
+          tr
+            td Google
+            td 9518
+            td 6369
+            td 01:32:50
   section.section.form-section
     h1.section__title Form
     .section__content
@@ -95,18 +117,17 @@ block content
       .item-wrap
         h2.item-title Checkbox
         .item-wrap
-          .item-title Horizontal Checkbox
           .item
             input#chk-01(type='checkbox', name='chk', checked)
             label(for='chk-01') 체크박스
-          .item-wrap
+          .item
             input#chk-02(type='checkbox', name='chk')
             label(for='chk-02') 체크박스
-          .item-wrap
+          .item
             input#chk-03(type='checkbox', name='chk', disabled)
             label(for='chk-03') 체크박스
+        h2.item-title Checklist
         .item-wrap
-          .item-title Checklist
           .chkBox
             input#check-05(type='checkbox', name='check')
             label(for='check-05')
@@ -117,7 +138,6 @@ block content
       .item-wrap
         h2.item-title Radio Box
         .radioWrap
-          p.item-title Horizontal Radio Button Group
           .radioBox
             input#radio-01(type='radio', name='radio', checked)
             label(for='radio-01') 라디오
