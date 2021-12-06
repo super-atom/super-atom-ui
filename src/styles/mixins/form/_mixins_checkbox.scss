@@ -1,0 +1,58 @@
+@import '../../variables/variables_color';
+@mixin checkbox($font-size: rem(14), $size: rem(18), $radius: rem(9)) {
+  position: absolute;
+  left: rem(-1000);
+
+  + label {
+    cursor: pointer;
+    position: relative;
+
+    margin-right: rem(15);
+    padding-left: rem(25);
+
+    font-size: $font-size;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+
+      height: $size;
+      width: $size;
+
+      border-radius: $radius;
+      background-color: $base-grey;
+      font-family: sans-serif;
+    }
+
+    &::after {
+      content: '';
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+  }
+
+  &:checked + label::after {
+  }
+
+  &:focus + label::before {
+    box-shadow: 0 rem(1) 0 $base-grey;
+  }
+
+  &:disabled {
+    + label {
+      cursor: not-allowed;
+
+      &::before {
+        background-color: $base-grey;
+      }
+    }
+
+    &:checked + label::after {
+      background-color: $base-grey;
+    }
+  }
+
+  @content;
+}

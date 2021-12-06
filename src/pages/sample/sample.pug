@@ -1,0 +1,229 @@
+extends ../../templates/layouts/base
+block header
+  +header('sample')
+
+block content
+  section.section.main-section
+    h1.section__title Design System
+  section.section.typo-section
+    h1.section__title Typography
+    .section__content
+      ul.txt-wrap
+        li Noto Sans Black
+        li Noto Sans Bold
+        li Noto Sans DemiLight
+        li Noto Sans Light
+        li Noto Sans Medium
+        li Noto Sans Regular
+        li Noto Sans Thin
+  section.section.color-section
+    h1.section__title Color
+    .section__content
+      ul.color-wrap
+        li.grey grey0
+        li.grey grey1
+        li.grey grey2
+        li.grey grey3
+        li.grey grey4
+        li.grey grey5
+        li.grey grey6
+        li.grey grey7
+        li.grey grey8
+        li.grey grey9
+      ul.color-wrap
+        li.red red0
+        li.red red1
+        li.red red2
+        li.red red3
+        li.red red4
+        li.red red5
+        li.red red6
+        li.red red7
+        li.red red8
+        li.red red9
+  section.section.grid-section
+    h1.section__title Grid
+    .section__content
+      ul.txt-wrap
+        li Grid
+        li Grid
+        li Grid
+        li Grid
+        li Grid
+        li Grid
+        li Grid
+        li Grid
+        li Grid
+        li Grid
+        li Grid
+        li Grid
+  section.section.ratio-section
+    h1.section__title Ratio
+    .section__content
+      ul.txt-wrap
+        li
+          p golden ratio
+        li
+          p golden ratio
+        li
+          p silver ratio
+        li
+          p silver ratio
+        li
+          p bronze ratio
+        li
+          p bronze ratio
+  section.section.theme-section
+    h1.section__title Varient
+    .section__content
+      .btn-wrap
+        button.button(data-type='contained') button
+        button.button(data-type='outlined') button
+        button.button(data-type='text') button
+        button.button(data-type='round') button
+        button.button(disabled) button
+  section.section.table-section
+    h1.section__title Table
+    .section__content
+      table.table
+        thead
+          tr
+            th Sites
+            th Views
+            th Clicks
+            th Average
+        tbody
+          tr
+            td Google
+            td 9518
+            td 6369
+            td 01:32:50
+          tr
+            td Google
+            td 9518
+            td 6369
+            td 01:32:50
+  section.section.form-section
+    h1.section__title Form
+    .section__content
+      .item-wrap
+        h2.item-title Input
+        input.input(type='text', placeholder)
+        .input-wrap
+          input.input(type='text', placeholder, data-state='error')
+          p.input__errorMsg 다시 확인해 주세요.
+        input.input(type='text', placeholder, disabled)
+        input.input(type='text', placeholder='텍스트 입력', value='입력내용', readonly)
+      .item-wrap
+        h2.item-title Checkbox
+        .item-wrap
+          .item
+            input#chk-01(type='checkbox', name='chk', checked)
+            label(for='chk-01') 체크박스
+          .item
+            input#chk-02(type='checkbox', name='chk')
+            label(for='chk-02') 체크박스
+          .item
+            input#chk-03(type='checkbox', name='chk', disabled)
+            label(for='chk-03') 체크박스
+        h2.item-title Checklist
+        .item-wrap
+          .chkBox
+            input#check-05(type='checkbox', name='check')
+            label(for='check-05')
+              strong 약관 전체동의 (필수)
+          .chkBox
+            input#check-06(type='checkbox', name='check')
+            label(for='check-06') 주문할 상품의 정보를 확인하였으며 해당 주문에 대한 구매에 동의합니다.
+      .item-wrap
+        h2.item-title Radio Box
+        .radioWrap
+          .radioBox
+            input#radio-01(type='radio', name='radio', checked)
+            label(for='radio-01') 라디오
+          .radioBox
+            input#radio-02(type='radio', name='radio')
+            label(for='radio-02') 라디오
+          .radioBox
+            input#radio-03(type='radio', name='radio', disabled)
+            label(for='radio-03') 라디오
+      .item-wrap
+        h2.item-title Select Box
+        .radioWrap
+          p.item-title Radio Button Group
+          .selectWrap
+            select(title='옵션')
+              option 전체
+              option 옵션1
+              option 옵션2
+              option 옵션3
+      .item-wrap
+        h2.item-title Form Group
+        div
+          label.label(for='field1') Full name
+          input#field1.input(
+            name='field1',
+            type='text',
+            value='',
+            size='8',
+            tabindex='1'
+          )
+        div
+          label.label(for='field2') Email
+          input#field2.input(
+            name='field2',
+            type='email',
+            value='',
+            maxlength='255',
+            tabindex='2'
+          )
+        div
+          label.label(for='field3') Message
+          textarea#field3.textarea(
+            name='field3',
+            spellcheck='true',
+            rows='10',
+            cols='50',
+            tabindex='3'
+          )
+        div
+          fieldset
+            legend select a choice
+            div
+              input.input(type='hidden', value='')
+              div
+                input#field4_1.input(
+                  name='field4',
+                  type='radio',
+                  value='first choice',
+                  tabindex='4',
+                  checked='checked'
+                )
+                label.label(for='field4_1') First Choice
+              div
+                input#field4_2.input(
+                  name='field4',
+                  type='radio',
+                  value='first choice',
+                  tabindex='5',
+                  checked='checked'
+                )
+                label.label(for='field4_2') Second Choice
+              div
+                input#field4_3.input(
+                  name='field4',
+                  type='radio',
+                  value='first choice',
+                  tabindex='6',
+                  checked='checked'
+                )
+                label.label(for='field4_3') Third Choice
+        div
+          label.label Select a Choice
+          div
+            select#field5.select(tabindex='7')
+              option(value='first choice') First Choice
+              option(value='second choice') Second Choice
+              option(value='third choice') Third Choice
+        div
+          input#saveForm.input(name='saveForm', type='submit', value='submit')

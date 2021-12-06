@@ -1,0 +1,26 @@
+@import '../themes/themes';
+@import '../mixins/form/mixins_button';
+
+@mixin component($component-map) {
+  @each $component, $map in $component-map {
+    .#{$component} {
+      @if ($component == button) {
+        @include button($padding: map-get($map, padding));
+      }
+    }
+  }
+}
+
+@mixin themable($theme-name, $theme-map) {
+  .#{$theme-name} {
+    @each $section, $map in $theme-map {
+      .#{$section} {
+        background-color: map-get($map, bg);
+        color: map-get($map, color);
+        @if ($section == button) {
+          background-color: map-get($map, bg);
+        }
+      }
+    }
+  }
+}

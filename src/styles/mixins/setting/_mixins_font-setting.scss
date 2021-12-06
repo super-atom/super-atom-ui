@@ -1,0 +1,18 @@
+@import '../../variables/_variables_font-size';
+
+// *Responsive Base Font Size
+@mixin base-font-sizes() {
+  @include font-size($base-font-sizes);
+}
+
+@mixin base-font-sizes-heading() {
+  @include font-size($base-font-sizes-heading);
+}
+
+@mixin base-font-sizes-title() {
+  @include font-size($base-font-sizes-title);
+}
+
+@mixin base-font-sizes-content() {
+  @include font-size($base-font-sizes-content);
+}

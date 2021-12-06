@@ -1,0 +1,29 @@
+@import '../../styles/dev-core.scss';
+
+.section {
+  .inner {
+    max-width: $bp-max-xl;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+}
+
+.section-main {
+  @include centering;
+  position: relative;
+  height: 50vh;
+
+  .img {
+    position: absolute;
+    @include centeringXY;
+    @include background('../../assets/images/index.jpg', $position: 50% 10%);
+    width: 300px;
+    height: 500px;
+  }
+
+  .txt-wrap {
+    z-index: 1;
+    position: relative;
+    color: white;
+  }
+}

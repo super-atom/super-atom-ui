@@ -1,40 +1,61 @@
-const { readdirSync } = require('fs');
+const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
-const ESLintPlugin = require('eslint-webpack-plugin');
 const PATHS = require('../config/paths');
 
-const getDirectories = (source) =>
-  readdirSync(source, { withFileTypes: true })
-    .filter((dirent) => dirent.isDirectory())
-    .map((dirent) => ({ page: dirent.name, common: 'common' }));
+let arrayOfEntryDirectory = [];
+const getDirectoriesAllFiles = (directory, arrayOfFiles) => {
+  const files = fs.readdirSync(directory);
+  arrayOfFiles = arrayOfFiles || [];
 
-// configure HtmlWebPackPlugin
-const PAGES = getDirectories(path.join(PATHS.source, '/pages'));
-
-const entryHtmlPlugins = PAGES.map((config) => {
-  return new HtmlWebPackPlugin({
-    filename: `${config.page}.html`,
-
-    // template for individual pages index, about and contact
-    template: `./sources/pages/${config.page}/${config.page}.pug`,
-
-    // json data drawn into pug templates
-    DATA: require(`../sources/pages/${config.page}/${config.page}.json`),
-
-    // injecting js and css files into
-    chunks: [config.page, config.common],
+  files.forEach((file) => {
+    let filepath = path.join(directory, '/', file);
+    if (fs.statSync(filepath).isDirectory()) {
+      arrayOfEntryDirectory.push([filepath, file]);
+      arrayOfFiles = getDirectoriesAllFiles(
+        directory + '/' + file,
+        arrayOfFiles
+      );
+    } else {
+      arrayOfFiles.push(file);
+    }
   });
+  return arrayOfFiles;
+};
+
+getDirectoriesAllFiles(path.join(PATHS.source, '/pages'));
+
+const entryHtmlPlugins = arrayOfEntryDirectory.map((page) => {
+  // https://github.com/jantimon/html-webpack-plugin#options
+  let obj = {
+    filename: `${page[1]}`,
+    template: `${path.join(page[0], page[1])}.pug`,
+    DATA: require(`${path.join(page[0], page[1])}.json`),
+    chunks: [`${path.join(page[1])}`, 'common'],
+  };
+
+  let arr = obj.template.split('\\');
+  let standard = arr.indexOf('pages');
+  let temp = [];
+  let result = '';
+  if (arr[standard + 3] !== 'undefined') {
+    for (let i = standard + 1; i < arr.length - 1; i++) {
+      temp.push(arr[i]);
+    }
+  }
+  result = temp.join('/');
+  obj.filename = result + '.html';
+  return new HtmlWebPackPlugin(obj);
 });
 
 module.exports = {
   entry: (() => {
     const entries = {};
-    PAGES.forEach(
-      (config) =>
-        (entries[config.page] = {
-          import: PATHS.source + `/pages/${config.page}/${config.page}.ts`,
+    arrayOfEntryDirectory.forEach(
+      (page) =>
+        (entries[page[1]] = {
+          import: `${path.join(page[0], page[1])}.ts`,
           dependOn: 'common',
         })
     );
@@ -49,6 +70,9 @@ module.exports = {
   },
   resolve: {
     extensions: ['.ts', '.js'],
+    alias: {
+      '~': path.resolve(__dirname, '../src'),
+    },
   },
   module: {
     rules: [
@@ -64,7 +88,12 @@ module.exports = {
       },
       {
         test: /\.(woff(2)?|eot|ttf|otf)$/,
-        type: 'asset/inline',
+        type: 'asset',
+        parser: {
+          dataUrlCondition: {
+            maxSize: 50 * 1024, // 50kb
+          },
+        },
       },
       {
         test: /\.html$/i,
@@ -88,7 +117,6 @@ module.exports = {
   },
   plugins: [
     ...entryHtmlPlugins,
-    new ESLintPlugin(),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',

@@ -1,4 +1,7 @@
 {
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": true
+  },
   "emmet.includeLanguages": {
     "postcss": "css"
   },
