@@ -8,7 +8,7 @@ try {
   fs.mkdirSync(path.join(PATHS.source, 'pages', folderName));
   const exts = ['json', 'pug', 'scss', 'ts'];
   for (const ext of exts) {
-    fs.writeFileSync(`sources/pages/${folderName}/${folderName}.${ext}`, '');
+    fs.writeFileSync(`src/pages/${folderName}/${folderName}.${ext}`, '');
   }
 } catch (err) {
   console.log(`Error!`);

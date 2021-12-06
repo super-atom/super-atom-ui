@@ -2,6 +2,8 @@ const path = require('path');
 const webpack = require('webpack');
 const { merge } = require('webpack-merge');
 const DashboardPlugin = require('webpack-dashboard/plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
+const StylelintPlugin = require('stylelint-webpack-plugin');
 const baseConfig = require('./webpack.common.js');
 
 // common part for production and dev
@@ -25,7 +27,8 @@ module.exports = merge(baseConfig, {
       watch: true,
     },
     client: {
-      overlay: true,
+      // !!! 웬만하면 true로 하고 에러를 마주해서 문제를 해결하려고 노력하자
+      overlay: false,
     },
     open: true,
     port: 3000,
@@ -53,6 +56,14 @@ module.exports = merge(baseConfig, {
     // https://webpack.js.org/plugins/define-plugin/
     // In pug - var DATA = self.htmlWebpackPlugin.options.DATA
     new DashboardPlugin(),
+    new ESLintPlugin({
+      extensions: 'ts',
+      emitWarning: true,
+      files: path.resolve(__dirname, '../src'),
+    }),
+    // new StylelintPlugin({
+    //   files: path.join('src', '**/*.s?(a|c)ss'),
+    // }),
     new webpack.DefinePlugin({
       PRODUCTION: JSON.stringify(false),
     }),

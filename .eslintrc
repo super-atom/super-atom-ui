@@ -1,18 +1,35 @@
 {
-  "plugins": ["prettier"],
-  "extends": ["eslint:recommended", "prettier/prettier"],
+  "plugins": ["prettier", "@typescript-eslint", "import", "simple-import-sort"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/prettier",
+    "plugin:import/recommended"
+  ],
   "parserOptions": {
     "sourceType": "module"
   },
   "rules": {
-    // "prettier/prettier": "error"
+    "prettier/prettier": "error",
     "no-undefined": 0,
-    "no-unused-vars": "off"
+    "no-unused-vars": "off",
+    "import/no-unresolved": "error",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error"
   },
   "env": {
     "browser": true,
     "es2021": true,
     "commonjs": true,
     "jquery": true
-  }
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true, // always try to resolve types under `<root>@types` directory even it doesn't contain any source code, like `@types/unist`
+        "project": "packages/*/tsconfig.json"
+      }
+    }
+  },
+  "ignorePatterns": [".gitignore", "config/", "dist/", "node_modules/"]
 }

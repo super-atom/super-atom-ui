@@ -2,7 +2,6 @@ const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
-const ESLintPlugin = require('eslint-webpack-plugin');
 const PATHS = require('../config/paths');
 
 let arrayOfEntryDirectory = [];
@@ -71,6 +70,9 @@ module.exports = {
   },
   resolve: {
     extensions: ['.ts', '.js'],
+    alias: {
+      '~': path.resolve(__dirname, '../src'),
+    },
   },
   module: {
     rules: [
@@ -115,7 +117,6 @@ module.exports = {
   },
   plugins: [
     ...entryHtmlPlugins,
-    new ESLintPlugin(),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',

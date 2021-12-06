@@ -1,16 +1,17 @@
 {
   "plugins": ["stylelint-prettier"],
   "rules": {
-    "prettier/prettier": true
+    "prettier/prettier": true,
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": ["function", "if", "each", "include", "mixin", "lost"]
+      }
+    ]
   },
   "extends": [
-    "stylelint-config-standard",
     "stylelint-config-standard-scss",
     "stylelint-config-prettier",
     "stylelint-prettier/recommended"
-  ],
-  "rules": {
-    "declaration-block-single-line-max-declarations": 1,
-    "declaration-block-multi-line-min-declarations": 1
-  }
+  ]
 }

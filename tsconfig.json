@@ -15,5 +15,5 @@
     "*.babel.js",
     "specs"
   ],
-  "types": ["/sources/assets/scripts/ts/global.d.ts"]
+  "types": ["/src/assets/scripts/ts/global.d.ts"]
 }

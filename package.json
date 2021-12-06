@@ -1,5 +1,7 @@
 {
-  "main": "index.js",
+  "name": "super-atom-ui",
+  "version": "0.0.1",
+  "description": "Ui Framework for ui developer",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dashboard -- webpack serve --config ./config/webpack.dev.js --mode development --progress",
     "prod": "cross-env NODE_ENV=production webpack --config ./config/webpack.prod.js --mode production --progress",
@@ -9,6 +11,22 @@
     "build": "npm-run-all clean prod",
     "deploy": "netlify deploy --prod"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/super-atom/super-atom-ui.git"
+  },
+  "keywords": [
+    "webpack",
+    "startkit",
+    "frontend",
+    "es6",
+    "javascript",
+    "typescript",
+    "webdev",
+    "boilerplate",
+    "pug",
+    "sass"
+  ],
   "dependencies": {
     "@fontsource/open-sans": "^4.5.2",
     "@fortawesome/fontawesome-free": "^6.0.0-beta3",
@@ -21,9 +39,16 @@
     "open-color": "^1.9.1",
     "swiper": "^7.3.0"
   },
+  "author": "super-atom",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wbkd/super-atom-ui/issues"
+  },
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@babel/eslint-parser": "^7.16.3",
+    "@babel/plugin-proposal-class-properties": "^7.16.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "@babel/plugin-transform-runtime": "^7.16.4",
     "@babel/preset-env": "^7.16.0",
     "@babel/preset-typescript": "^7.16.0",
@@ -32,6 +57,8 @@
     "@types/jquery": "^3.5.8",
     "@types/lodash": "^4.14.177",
     "@types/swiper": "^5.4.3",
+    "@typescript-eslint/eslint-plugin": "^5.5.0",
+    "@typescript-eslint/parser": "^5.5.0",
     "autoprefixer": "^10.4.0",
     "babel-loader": "^8.2.3",
     "babel-plugin-module-resolver": "^4.1.0",
@@ -50,7 +77,10 @@
     "dotenv-webpack": "^7.0.3",
     "eslint": "^8.1.0",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-webpack-plugin": "^3.1.1",
     "file-loader": "^6.2.0",
     "html-loader": "^3.0.1",
@@ -88,6 +118,7 @@
     "stylelint-config-standard": "^23.0.0",
     "stylelint-config-standard-scss": "^2.0.1",
     "stylelint-prettier": "^1.2.0",
+    "stylelint-webpack-plugin": "^3.1.0",
     "terser-webpack-plugin": "^5.2.4",
     "ts-loader": "^9.2.6",
     "typescript": "^4.5.2",
