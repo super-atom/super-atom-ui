@@ -1,1 +1,59 @@
 @import '../../styles/dev-core.scss';
+
+.section-main {
+  .title-wrap {
+    position: relative;
+    height: 500px;
+    @include background(
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolution_32x16.jpg/1200px-The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolution_32x16.jpg'
+    );
+    &::before {
+      @include pseudo();
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #000000, $alpha: 0.3);
+    }
+    .section__title {
+      @include centeringXY;
+      padding: 10px 20px;
+      color: white;
+      font-size: 40px;
+      text-transform: uppercase;
+      background-color: black;
+      border: 5px solid white;
+    }
+  }
+  .inner {
+    @include bp-min(xs) {
+      lost-center: $bp-min-xs;
+    }
+    @include bp-min(sm) {
+      lost-center: $bp-min-sm;
+    }
+    @include bp-min(md) {
+      lost-center: $bp-min-md;
+    }
+    @include bp-min(lg) {
+      lost-center: $bp-min-lg;
+    }
+    @include bp-min(xl) {
+      lost-center: $bp-min-xl;
+    }
+    .txt-wrap {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      @include bp-min(sm) {
+        padding-right: 15px;
+        padding-left: 15px;
+        lost-column: 1/1;
+      }
+      @include bp-min(lg) {
+        lost-column: 1/2;
+      }
+
+      p + p {
+        margin-top: 10px;
+      }
+    }
+  }
+}

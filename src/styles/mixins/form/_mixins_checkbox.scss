@@ -4,32 +4,32 @@
   left: rem(-1000);
 
   + label {
-    cursor: pointer;
     position: relative;
 
     margin-right: rem(15);
     padding-left: rem(25);
 
     font-size: $font-size;
+    cursor: pointer;
 
     &::before {
-      content: '';
       position: absolute;
-      left: 0;
       bottom: 0;
-
-      height: $size;
+      left: 0;
       width: $size;
 
-      border-radius: $radius;
-      background-color: $base-grey;
+      height: $size;
       font-family: sans-serif;
+      background-color: $base-grey;
+
+      border-radius: $radius;
+      content: '';
     }
 
     &::after {
-      content: '';
       opacity: 0;
       transition: opacity 0.3s;
+      content: '';
     }
   }
 

@@ -52,6 +52,7 @@ const entryHtmlPlugins = arrayOfEntryDirectory.map((page) => {
 module.exports = {
   entry: (() => {
     const entries = {};
+    entries['common'] = PATHS.source + `/scripts/ts/common.ts`;
     arrayOfEntryDirectory.forEach(
       (page) =>
         (entries[page[1]] = {
@@ -59,7 +60,6 @@ module.exports = {
           dependOn: 'common',
         })
     );
-    entries['common'] = PATHS.source + `/scripts/ts/common.ts`;
     return entries;
   })(),
   // configuration of output files
@@ -69,10 +69,7 @@ module.exports = {
     // assetModuleFilename: 'images/static/[name].[hash][ext]',
   },
   resolve: {
-    extensions: ['.ts', '.js'],
-    alias: {
-      '~': path.resolve(__dirname, '../src'),
-    },
+    extensions: ['.ts', '.js', '.scss'],
   },
   module: {
     rules: [

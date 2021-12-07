@@ -1,8 +1,8 @@
 @use 'sass:math';
 
 @mixin ratio($x, $y: 0, $pseudo: false, $width: 100%, $height: false) {
-  display: block;
   position: relative;
+  display: block;
   overflow: hidden;
   @if $width {
     width: $width;
@@ -47,16 +47,5 @@
       @include pseudo($pos: relative);
       padding-top: 330.3333333333333%;
     }
-  }
-}
-
-@mixin ratio-fix($size: 32px, $radius: false) {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: $size;
-  height: $size;
-  @if $radius {
-    border-radius: $radius;
   }
 }

@@ -1,15 +1,15 @@
 // Autoprefixer 옵션에서 미지원 속성 자동 제거 옵션 꺼서 오류 막아놓음
 // require('autoprefixer')({grid: true, remove: false}); webpack.common.js
 @mixin ellipsis($lines: 2, $line-height: 1.7) {
-  overflow: hidden !important;
   // display: block;
   display: -webkit-box !important;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: $lines !important; // Solution for Opera
   height: calc(1em * #{$line-height} * #{$lines}) !important;
+  overflow: hidden !important;
   line-height: $line-height;
   text-overflow: ellipsis !important;
   text-overflow: -o-ellipsis-lastline !important;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines !important; // Solution for Opera
 
   @supports (-webkit-line-clamp: $lines) {
     &:after {
@@ -18,18 +18,18 @@
   }
 
   &:after {
-    content: '...';
-    text-align: right;
+    position: absolute;
     top: 0;
     right: 0;
-    width: 25%;
     display: block;
-    position: absolute;
+    width: 25%;
     height: calc(1em * #{$line-height});
+    text-align: right;
     background: linear-gradient(
       to right,
       rgba(255, 255, 255, 0),
       rgba(255, 255, 255, 1) 75%
     );
+    content: '...';
   }
 }

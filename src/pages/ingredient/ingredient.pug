@@ -1,14 +1,15 @@
 extends ../../templates/layouts/base
 block header
-  +header('sample')
+  +header('ingredient')
 
 block content
   section.section.main-section
-    h1.section__title Design System
+    .title-wrap
+      h1.section__title Design System
   section.section.typo-section
     h1.section__title Typography
     .section__content
-      ul.txt-wrap
+      ul.txt-wrap.typeface-wrap
         li Noto Sans Black
         li Noto Sans Bold
         li Noto Sans DemiLight
@@ -16,11 +17,17 @@ block content
         li Noto Sans Medium
         li Noto Sans Regular
         li Noto Sans Thin
+      ul.txt-wrap.heading-wrap
+        h1 Heading 1
+        h2 Heading 2
+        h3 Heading 3
+        h4 Heading 4
+        h5 Heading 5
+        h6 Heading 6
   section.section.color-section
     h1.section__title Color
     .section__content
       ul.color-wrap
-        li.grey grey0
         li.grey grey1
         li.grey grey2
         li.grey grey3
@@ -30,17 +37,18 @@ block content
         li.grey grey7
         li.grey grey8
         li.grey grey9
+        li.grey grey10
       ul.color-wrap
-        li.red red0
-        li.red red1
-        li.red red2
-        li.red red3
-        li.red red4
-        li.red red5
-        li.red red6
-        li.red red7
-        li.red red8
-        li.red red9
+        li.material-red red1
+        li.material-red red2
+        li.material-red red3
+        li.material-red red4
+        li.material-red red5
+        li.material-red red6
+        li.material-red red7
+        li.material-red red8
+        li.material-red red9
+        li.material-red red10
   section.section.grid-section
     h1.section__title Grid
     .section__content
@@ -62,6 +70,10 @@ block content
     .section__content
       ul.txt-wrap
         li
+          p 1:1 ratio
+        li
+          p 3:4 ratio
+        li
           p golden ratio
         li
           p golden ratio
@@ -77,11 +89,13 @@ block content
     h1.section__title Varient
     .section__content
       .btn-wrap
-        button.button(data-type='contained') button
-        button.button(data-type='outlined') button
-        button.button(data-type='text') button
-        button.button(data-type='round') button
-        button.button(disabled) button
+        button.button(data-type='contained') contained button
+        button.button(data-type='outlined') outlined button
+        button.button(data-type='outlined-reverse') outlined-reverse button
+        button.button(data-type='text') text button
+        button.button(data-type='round') round button
+        button.button(data-type='round-reverse') round-reverse button
+        button.button(disabled) disabled button
   section.section.table-section
     h1.section__title Table
     .section__content
@@ -226,4 +240,8 @@ block content
               option(value='second choice') Second Choice
               option(value='third choice') Third Choice
         div
-          input#saveForm.input(name='saveForm', type='submit', value='submit')
+          input#saveForm.input.button(
+            name='saveForm',
+            type='submit',
+            value='submit'
+          )

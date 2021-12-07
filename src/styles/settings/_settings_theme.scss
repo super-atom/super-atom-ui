@@ -1,2 +1,3 @@
 @import '../dev-core';
-@include themable('theme-atom', $theme-atom);
+@include themable('', $theme-base);
+@include themable('atom', $theme-atom);

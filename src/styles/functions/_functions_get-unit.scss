@@ -1,0 +1,5 @@
+@use 'sass:math';
+
+@function getUnit($value) {
+  @return str-slice($value * 0 + '', 2, -1);
+}

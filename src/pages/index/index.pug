@@ -4,42 +4,41 @@ block header
 block content
   section.section.section-main
     .inner
+      .img
       .txt-wrap
-        h1 SUPER-ATOM-UI
+        h1.section__title SUPER-ATOM-UI
         p UI framework for ui developer
         p Not for general users
-      .img
   section.section.section-installation
     .inner
-      h2 Installation
-      p Package managed installs don’t include documentation or our full build scripts.
+      .txt-wrap
+        h2.section__title Installation
+        p Package managed installs don’t include documentation or our full build scripts.
+        a.button(href='/docs.html', data-type='outlined') Read installation docs
+      .code-wrap
+        code git clone https://github.com/super-atom/super-atom-ui
+        button.button(data-type='outlined') copy
   section.section.section-feature
     .inner
-      h2 SUPER-ATOM-UI feature
       .txt-wrap
+        h2.section__title SUPER-ATOM-UI feature
         ul
           li Modern Frontend ToolKits
           li Easy Customization
-          li Lots of useful mixins. Anti Utility Class. Decoupling html & css. Using mixin!
+          li Anti Utility Class. Decoupling html & css. Lots of useful mixins. Using mixin!
   section.section.section-boilerplate
     .inner
-      h2 Boilerplate
-      .txt-wrap
+      .txt-wrap.js-gsap-target
+        h2.section__title Boilerplate
         ul
           li Typescript + ESnext (with Babel)
           li Webpack v5
           li Pug
           li Sass + PostCSS
           li Stylelint + Prettier + ESLint
-  section.section.section-design
+  section.section.section-guide
     .inner
-      h2 Design
-      .txt-wrap
-        ul
-          li Super Atomic Design
-          li Theme
-  section.section.section-design
-    .inner
-      h2 Guide
-      p SUPER-ATOM-UI is just modern frontend boilerplate + 'SUPER ATOMIC DESIGN' guide. That's All!
-      p Use the rest and make the rules.
+      .txt-wrap.js-gsap-target
+        h2.section__title Guide
+        p SUPER-ATOM-UI is just modern frontend boilerplate + 'SUPER ATOMIC DESIGN' guide. That's All!
+        p Use the rest and make the rules.

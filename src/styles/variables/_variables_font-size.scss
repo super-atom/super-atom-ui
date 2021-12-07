@@ -1,76 +1,108 @@
 @import './_variables_breakpoint.scss';
 @import './_variables_typeface';
-@import '../functions/_functions_unit';
 
 // *Root Font Size
 // Root
-$root-font-size: unit(16px);
+$root-font-size: rem(16px);
 
 // Body Default Settings
 $body-text-color: $base-color-grey-7;
-$body-font-size: unit(16px);
+$body-font-size: rem(16px);
 $body-font-weight: 400;
 $body-font-family: $base-font;
 $body-letter-spacing: $base-font-letter-spacing;
 $body-line-height: 1.5;
 $body-background-color: $white;
 
-$base-font-sizes: (
+// *Responsive Base Heading Element Font Size
+$base-font-sizes-h1: (
   $bp-min-xs: (
-    unit(12px),
-  ),
-  $bp-min-sm: (
-    unit(13px),
+    1rem
   ),
   $bp-min-md: (
-    unit(14px),
+    1.5rem
   ),
   $bp-min-lg: (
-    unit(16px),
+    2rem
+  ),
+);
+$base-font-sizes-h2: (
+  $bp-min-xs: (
+    0.8rem
+  ),
+  $bp-min-md: (
+    1.2rem
+  ),
+  $bp-min-lg: (
+    1.5rem
+  ),
+);
+$base-font-sizes-h3: (
+  $bp-min-xs: (
+    0.7rem
+  ),
+  $bp-min-md: (
+    0.8rem
+  ),
+  $bp-min-lg: (
+    1.17rem
+  ),
+);
+$base-font-sizes-h4: (
+  $bp-min-xs: (
+    0.7rem
+  ),
+  $bp-min-md: (
+    0.8rem
+  ),
+  $bp-min-lg: (
+    1.17rem
+  ),
+);
+$base-font-sizes-h5: (
+  $bp-min-xs: (
+    0.6rem
+  ),
+  $bp-min-md: (
+    0.7rem
+  ),
+  $bp-min-lg: (
+    0.8rem
+  ),
+);
+$base-font-sizes-h6: (
+  $bp-min-xs: (
+    0.5rem
+  ),
+  $bp-min-md: (
+    0.6rem
+  ),
+  $bp-min-lg: (
+    0.67rem
   ),
 );
 
-$base-font-sizes-heading: (
+// *Responsive Base Custom Font Size
+$base-font-sizes: (
   $bp-min-xs: (
-    unit(16px, rem),
-  ),
-  $bp-min-sm: (
-    unit(18px, rem),
+    rem(12px),
   ),
   $bp-min-md: (
-    unit(20px, rem),
+    rem(14px)
   ),
   $bp-min-lg: (
-    unit(24px, rem),
+    rem(16px)
   ),
 );
 
 $base-font-sizes-title: (
   $bp-min-xs: (
-    unit(16px),
-  ),
-  $bp-min-sm: (
-    unit(18px),
+    rem(16px)
   ),
   $bp-min-md: (
-    unit(20px),
+    rem(20px)
   ),
   $bp-min-lg: (
-    unit(24px),
-  ),
-);
-
-$base-font-sizes-content: (
-  $bp-min-xs: (
-    unit(12px),
-  ),
-  $bp-min-sm: (
-    unit(12px),
-  ),
-  $bp-min-md: (
-    unit(13px),
-  ),
-  $bp-min-lg: (
-    unit(13px),
+    rem(24px)
   ),
 );

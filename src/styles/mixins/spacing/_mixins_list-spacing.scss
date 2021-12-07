@@ -74,9 +74,9 @@
     margin-right: (-$value);
 
     & > * {
-      margin-left: $value;
       margin-right: $value;
       margin-bottom: $value * 2;
+      margin-left: $value;
     }
   }
 

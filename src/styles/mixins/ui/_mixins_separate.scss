@@ -3,9 +3,9 @@
   height: auto;
 
   > * {
+    position: relative;
     display: flex;
     align-items: center;
-    position: relative;
     padding: 0 8px;
 
     &:first-child {
@@ -15,12 +15,12 @@
     & + * {
       &:before {
         @include pseudo();
-        width: 1px;
-        height: 60%;
         top: 50%;
         left: 0;
-        transform: translateY(-50%);
+        width: 1px;
+        height: 60%;
         background-color: $base-grey;
+        transform: translateY(-50%);
       }
     }
   }

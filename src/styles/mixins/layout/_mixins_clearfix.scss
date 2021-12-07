@@ -3,11 +3,11 @@
 
   &:before,
   &:after {
-    visibility: hidden;
     display: block;
-    font-size: 0;
-    content: ' ';
     clear: both;
     height: 0;
+    font-size: 0;
+    visibility: hidden;
+    content: ' ';
   }
 }

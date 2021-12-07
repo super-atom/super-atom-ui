@@ -1,81 +1,95 @@
 @import '../../styles/dev-core.scss';
 
 .section {
-  margin: 0 auto;
   max-width: 1200px;
+  margin: 0 auto;
 
   & + & {
     margin-top: 50px;
   }
 
   .section__title {
-    font-family: 'NotoSansCJKkr-Medium';
-    @include base-font-sizes-title();
     margin-bottom: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid #000;
-  }
-
-  .section__content {
+    @include base-font-sizes-title();
   }
 }
 
 .main-section {
   position: relative;
-  height: 25vw;
   max-width: 100%;
 
-  @include background(
-    'https://w.namu.la/s/379ef8ae4f12fc04481c2cb7a97c2bdc901727b137c38fd652cc7aea80f74e56185fa0fd62658554fc3e6e79861aec73782db1d7ab3943275607e6623a46d09fe63412410041cd4b2b6ea4e740e6a290c8022da99c4d567b5533c100da0ed814',
-    $position: 50% -400px
-  );
+  .title-wrap {
+    position: relative;
+    height: 500px;
+    @include background(
+      'https://w.namu.la/s/379ef8ae4f12fc04481c2cb7a97c2bdc901727b137c38fd652cc7aea80f74e56185fa0fd62658554fc3e6e79861aec73782db1d7ab3943275607e6623a46d09fe63412410041cd4b2b6ea4e740e6a290c8022da99c4d567b5533c100da0ed814'
+    );
+    &::before {
+      @include pseudo();
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #000000, $alpha: 0.3);
+    }
+    @include bp-min(md) {
+      background-position: 50% -100px;
+    }
+    @include bp-min(lg) {
+      background-position: 50% -200px;
+    }
+    @include bp-min(xl) {
+      background-position: 50% -400px;
+    }
 
-  .section__title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 600px;
-    padding: 10px 0;
-    font-family: 'NotoSansCJKkr-Black';
-    font-size: 40px;
-    text-align: center;
-    letter-spacing: 14px;
-    text-transform: uppercase;
-    border: 3px solid white;
-    color: white;
+    .section__title {
+      @include centeringXY;
+      padding: 10px 20px;
+      color: white;
+      font-size: 40px;
+      text-transform: uppercase;
+      background-color: black;
+      border: 5px solid white;
+    }
   }
 }
 
 .typo-section {
-  li {
-    font-size: 30px;
-    &:nth-of-type(1) {
-      font-family: 'NotoSansCJKkr-Black';
-    }
-    &:nth-of-type(2) {
-      font-family: 'NotoSansCJKkr-Bold';
-    }
-    &:nth-of-type(3) {
-      font-family: 'NotoSansCJKkr-DemiLight';
-    }
-    &:nth-of-type(4) {
-      font-family: 'NotoSansCJKkr-Light';
-    }
-    &:nth-of-type(5) {
-      font-family: 'NotoSansCJKkr-Medium';
-    }
-    &:nth-of-type(6) {
-      font-family: 'NotoSansCJKkr-Regular';
-    }
-    &:nth-of-type(7) {
-      font-family: 'NotoSansCJKkr-Thin';
+  .section__content {
+    @include flex-container(row nowrap justify-evenly items-start);
+
+    .typeface-wrap {
+      li {
+        font-size: 30px;
+        &:nth-of-type(1) {
+          font-family: 'NotoSansCJKkr-Black';
+        }
+        &:nth-of-type(2) {
+          font-family: 'NotoSansCJKkr-Bold';
+        }
+        &:nth-of-type(3) {
+          font-family: 'NotoSansCJKkr-DemiLight';
+        }
+        &:nth-of-type(4) {
+          font-family: 'NotoSansCJKkr-Light';
+        }
+        &:nth-of-type(5) {
+          font-family: 'NotoSansCJKkr-Medium';
+        }
+        &:nth-of-type(6) {
+          font-family: 'NotoSansCJKkr-Regular';
+        }
+        &:nth-of-type(7) {
+          font-family: 'NotoSansCJKkr-Thin';
+        }
+      }
     }
   }
 }
 
 .color-section {
   .color-wrap {
+    position: relative;
     margin-top: 20px;
 
     @include bp-min(xs) {
@@ -95,12 +109,40 @@
     }
 
     li {
-      padding: 10px;
+      min-height: 40px;
+      font-size: 13px;
+      text-align: center;
+      border-radius: 5px;
 
-      @include bp-min(sm) {
+      &:nth-of-type(6),
+      &:nth-of-type(7),
+      &:nth-of-type(8),
+      &:nth-of-type(9),
+      &:nth-of-type(10) {
+        color: white;
+      }
+
+      @include bp-max(sm) {
+        height: 40px;
+        line-height: 40px;
+        border-radius: 0;
+        lost-column: 1/1;
+      }
+      @include bp-only(md) {
+        height: 50px;
+        line-height: 50px;
         lost-column: 1/5;
+        &:nth-of-type(6),
+        &:nth-of-type(7),
+        &:nth-of-type(8),
+        &:nth-of-type(9),
+        &:nth-of-type(10) {
+          margin-top: 20px;
+        }
       }
       @include bp-min(lg) {
+        height: 100px;
+        line-height: 100px;
         lost-column: 1/10;
       }
     }
@@ -137,7 +179,7 @@
       background-color: $grey-9;
     }
   }
-  .red {
+  .material-red {
     &:nth-of-type(1) {
       background-color: $red-0;
     }
@@ -219,6 +261,9 @@
   ul {
     position: relative;
     @include flex-container(row nowrap justify-center items-center);
+    @include bp-max(md) {
+      flex-wrap: wrap;
+    }
     li {
       position: relative;
       margin: 0 10px;
@@ -228,6 +273,18 @@
         'https://w.namu.la/s/379ef8ae4f12fc04481c2cb7a97c2bdc901727b137c38fd652cc7aea80f74e56185fa0fd62658554fc3e6e79861aec73782db1d7ab3943275607e6623a46d09fe63412410041cd4b2b6ea4e740e6a290c8022da99c4d567b5533c100da0ed814'
       );
 
+      @include bp-max(sm) {
+        width: 50%;
+
+        & + li {
+          margin-top: 10px;
+        }
+      }
+
+      @include bp-only(md) {
+        width: 25% !important;
+      }
+
       p {
         position: absolute;
         top: 50%;
@@ -236,21 +293,27 @@
       }
 
       &:nth-of-type(1) {
-        @include ratio('golden');
+        @include ratio(100, 100, true);
       }
       &:nth-of-type(2) {
-        @include ratio('golden-vertical');
+        @include ratio(300, 400, true);
       }
       &:nth-of-type(3) {
-        @include ratio('silver');
+        @include ratio('golden');
       }
       &:nth-of-type(4) {
-        @include ratio('silver-vertical');
+        @include ratio('golden-vertical');
       }
       &:nth-of-type(5) {
-        @include ratio('bronze');
+        @include ratio('silver');
       }
       &:nth-of-type(6) {
+        @include ratio('silver-vertical');
+      }
+      &:nth-of-type(7) {
+        @include ratio('bronze');
+      }
+      &:nth-of-type(8) {
         @include ratio('bronze-vertical');
       }
     }
@@ -271,10 +334,10 @@
 
 .form-section {
   h2.item-title {
-    font-family: 'NotoSansCJKkr-DemiLight';
-    padding-bottom: 10px;
     margin-bottom: 10px;
+    padding-bottom: 10px;
     font-size: rem(16px);
+    font-family: 'NotoSansCJKkr-DemiLight';
     border-bottom: 1px dashed $base-grey;
   }
 

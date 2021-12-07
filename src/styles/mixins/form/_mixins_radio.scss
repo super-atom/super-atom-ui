@@ -2,41 +2,41 @@
   @include absolute(left rem(-1000));
 
   + label {
-    cursor: pointer;
     position: relative;
 
     margin-right: rem(15);
     padding-left: rem(25);
 
     font-size: $font-size;
+    cursor: pointer;
 
     &::before {
-      content: '';
-      @include absolute(left 0 bottom 0);
-
-      height: $size;
       width: $size;
 
-      border-radius: $radius;
-      background-color: alt-color(state-normal, #707070);
+      height: $size;
       font-family: sans-serif;
+      background-color: alt-color(state-normal, #707070);
+
+      border-radius: $radius;
+      content: '';
+      @include absolute(left 0 bottom 0);
     }
 
     &::after {
-      content: '';
       transition: background-color 0.3s;
+      content: '';
     }
   }
 
   &:checked + label::after {
-    content: '';
-    @include absolute(left rem(5) top rem(3));
+    width: rem(8);
 
     height: rem(8);
-    width: rem(8);
-    border-radius: rem(15);
-    background-color: alt-color(state-active, #185158);
     text-align: center;
+    background-color: alt-color(state-active, #185158);
+    border-radius: rem(15);
+    content: '';
+    @include absolute(left rem(5) top rem(3));
   }
 
   &:focus + label::before {

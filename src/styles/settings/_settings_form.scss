@@ -4,6 +4,7 @@
 button {
   display: inline-block;
   height: 40px;
+  line-height: 40px;
 }
 
 .button,
@@ -16,10 +17,10 @@ select {
 
 .button,
 button {
-  cursor: pointer;
-  outline: none;
-  border: 1px solid transparent;
   text-decoration: none;
+  border: 1px solid transparent;
+  outline: none;
+  cursor: pointer;
 
   // Firefox 점선 제거
   &::-moz-focus-inner {
@@ -35,15 +36,13 @@ input,
 textarea,
 select {
   display: inline-block;
-  min-height: 40px;
   padding: $base-input-padding;
-  text-align: left;
-  user-select: none;
   font-weight: normal;
   white-space: nowrap;
+  text-align: left;
   vertical-align: middle;
-  border-radius: 5px;
   background-color: white;
   border: 1px solid $base-grey;
   cursor: pointer;
+  user-select: none;
 }

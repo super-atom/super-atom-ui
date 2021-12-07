@@ -9,21 +9,12 @@ html {
 // Setting Base Body
 body {
   color: $body-text-color;
-  font-family: $body-font-family;
-  font-size: $body-font-size;
   font-weight: $body-font-weight;
-  letter-spacing: $body-letter-spacing;
+  font-size: $body-font-size;
+  font-family: $body-font-family;
   line-height: $body-line-height;
-  background-color: $body-background-color;
+  letter-spacing: $body-letter-spacing;
   word-wrap: break-word;
   word-break: keep-all;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  @include base-font-sizes-heading();
+  background-color: $body-background-color;
 }

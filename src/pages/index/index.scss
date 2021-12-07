@@ -1,29 +1,71 @@
 @import '../../styles/dev-core.scss';
 
-.section {
-  .inner {
-    max-width: $bp-max-xl;
-    margin: 0 auto;
-    padding: 20px 0;
-  }
-}
-
-.section-main {
-  @include centering;
-  position: relative;
-  height: 50vh;
-
-  .img {
-    position: absolute;
-    @include centeringXY;
-    @include background('../../assets/images/index.jpg', $position: 50% 10%);
-    width: 300px;
-    height: 500px;
+#content {
+  .section {
+    .inner {
+      max-width: $bp-max-xl;
+      height: 100%;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
   }
 
-  .txt-wrap {
-    z-index: 1;
+  .section-main {
     position: relative;
-    color: white;
+    height: 50vh;
+    margin-top: 100px;
+
+    .img {
+      position: absolute;
+      width: 300px;
+      height: 100%;
+      border-radius: 10px;
+      @include centeringXY;
+      @include background('../../assets/images/index.jpg', $position: 50% 10%);
+    }
+
+    .txt-wrap {
+      @include centeringXY;
+      color: white;
+      text-align: center;
+    }
+  }
+
+  .section-installation {
+    .inner {
+      @include flex-container(row wrap justify-center items-center);
+
+      div {
+        width: 50%;
+      }
+    }
+
+    .txt-wrap {
+      .button {
+        margin-top: 10px;
+      }
+    }
+
+    .code-wrap {
+      position: relative;
+      padding: 20px;
+      background-color: $base-color-grey-0;
+
+      code {
+        position: relative;
+        padding-left: 15px;
+        &::before {
+          @include pseudo($content: '$');
+          left: 0;
+        }
+      }
+
+      .button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: white;
+      }
+    }
   }
 }

@@ -1,7 +1,9 @@
+@import './theme-base';
 @import './theme-atom';
 
 $components-map: (
   button: (
     padding: rem(8px),
+    radius: rem(5px),
   ),
 );

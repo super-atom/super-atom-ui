@@ -106,6 +106,7 @@
     "prettier": "^2.4.1",
     "prettier-eslint": "^13.0.0",
     "prettier-eslint-cli": "^5.0.1",
+    "prettier-plugin-style-order": "^0.2.2",
     "pug": "^2.0.4",
     "pug-loader": "^2.4.0",
     "resolve-url-loader": "^4.0.0",

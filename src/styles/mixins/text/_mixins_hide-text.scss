@@ -1,6 +1,6 @@
 @mixin hide-text($indent: 150%) {
-  text-indent: $indent;
-  white-space: nowrap;
-  direction: ltr;
   overflow: hidden;
+  direction: ltr;
+  white-space: nowrap;
+  text-indent: $indent;
 }

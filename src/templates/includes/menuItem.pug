@@ -5,38 +5,42 @@ mixin menuItem(page)
         class=page === "index" ? "nav__link--active" : "",
         href='/index.html',
         title='index'
-      ) LOGO
+      )
 
     .nav__link-wrap
       a.nav__link(
         class=page === "about" ? "nav__link--active" : "",
         href='/about.html',
         title='about'
-      ) about
+      ) ABOUT
       a.nav__link(
         class=page === "docs" ? "nav__link--active" : "",
         href='/docs.html',
         title='docs'
-      ) docs
+      ) DOCS
+      a.nav__link(
+        class=page === "ingredient" ? "nav__link--active" : "",
+        href='/ingredient.html',
+        title='ingredient'
+      ) INGREDIENT
       a.nav__link(
         class=page === "example" ? "nav__link--active" : "",
         href='/example.html',
         title='example'
-      ) example
-        a.nav__link(
-          class=page === "sample" ? "nav__link--active" : "",
-          href='/sample.html',
-          title='sample'
-        ) sample
+      ) EXAMPLE
       a.nav__link(
         class=page === "contact" ? "nav__link--active" : "",
         href='/contact.html',
         title='contact'
-      ) contact
-    .nav__link-wrap
+      ) CONTACT
+    .nav__download-wrap
       a.icon(
         href='https://github.com/super-atom/super-atom-ui',
         target='_blank'
       )
         i.fa-brands.fa-github
-      a.button(href='') download
+      a.button(
+        href='https://github.com/super-atom/super-atom-ui',
+        target='_blank',
+        data-type='outlined-reverse'
+      ) download

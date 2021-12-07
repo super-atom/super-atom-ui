@@ -13371,6 +13371,14 @@
   "resolved" "https://registry.npmjs.org/postcss-simple-vars/-/postcss-simple-vars-6.0.3.tgz"
   "version" "6.0.3"
 
+"postcss-sorting@5.0.1":
+  "integrity" "sha512-Y9fUFkIhfrm6i0Ta3n+89j56EFqaNRdUKqXyRp6kvTcSXnmgEjaVowCXH+JBe9+YKWqd4nc28r2sgwnzJalccA=="
+  "resolved" "https://registry.npmjs.org/postcss-sorting/-/postcss-sorting-5.0.1.tgz"
+  "version" "5.0.1"
+  dependencies:
+    "lodash" "^4.17.14"
+    "postcss" "^7.0.17"
+
 "postcss-svgo@^5.0.3":
   "integrity" "sha512-41XZUA1wNDAZrQ3XgWREL/M2zSw8LJPvb5ZWivljBsUQAGoEKMYm6okHsTjJxKYI4M75RQEH4KYlEM52VwdXVA=="
   "resolved" "https://registry.npmjs.org/postcss-svgo/-/postcss-svgo-5.0.3.tgz"
@@ -13468,6 +13476,14 @@
     "source-map-js" "^0.6.2"
 
 "postcss@^7.0.14", "postcss@^7.0.17", "postcss@^7.0.2", "postcss@^7.0.32", "postcss@^7.0.5":
+  "integrity" "sha512-yioayjNbHn6z1/Bywyb2Y4s3yvDAeXGOyxqD+LnVOinq6Mdmd++SW2wUNVzavyyHxd6+DxzWGIuosg6P1Rj8uA=="
+  "resolved" "https://registry.npmjs.org/postcss/-/postcss-7.0.39.tgz"
+  "version" "7.0.39"
+  dependencies:
+    "picocolors" "^0.2.1"
+    "source-map" "^0.6.1"
+
+"postcss@^7.0.17":
   "integrity" "sha512-yioayjNbHn6z1/Bywyb2Y4s3yvDAeXGOyxqD+LnVOinq6Mdmd++SW2wUNVzavyyHxd6+DxzWGIuosg6P1Rj8uA=="
   "resolved" "https://registry.npmjs.org/postcss/-/postcss-7.0.39.tgz"
   "version" "7.0.39"
@@ -13636,12 +13652,20 @@
   dependencies:
     "fast-diff" "^1.1.2"
 
+"prettier-plugin-style-order@^0.2.2":
+  "integrity" "sha512-4rASdHONhHLNX0arKqEvjGOEAbkSZE3+GQPSaS8mf3en/spjeN0le5fV1yKltWwQeM4UPn7CkKzeD97a4Az/6w=="
+  "resolved" "https://registry.npmjs.org/prettier-plugin-style-order/-/prettier-plugin-style-order-0.2.2.tgz"
+  "version" "0.2.2"
+  dependencies:
+    "postcss-sorting" "5.0.1"
+    "resolve-cwd" "^3.0.0"
+
 "prettier@^1.7.0":
   "integrity" "sha512-s7PoyDv/II1ObgQunCbB9PdLmUcBZcnWOcxDh7O0N/UwDEsHyqkW+Qh28jW+mVuCdx7gLB0BotYI1Y6uI9iyew=="
   "resolved" "https://registry.npmjs.org/prettier/-/prettier-1.19.1.tgz"
   "version" "1.19.1"
 
-"prettier@^2.0.0", "prettier@^2.3.0", "prettier@^2.4.1", "prettier@>= 0.11.0", "prettier@>=2.0.0":
+"prettier@^2.0.0", "prettier@^2.3.0", "prettier@^2.4.1", "prettier@>= 0.11.0", "prettier@>= 1.13", "prettier@>=2.0.0":
   "integrity" "sha512-9fbDAXSBcc6Bs1mZrDYb3XKzDLm4EXXL9sC1LqKP5rZkT6KRr/rf9amVUcODVXgguK/isJz0d0hP72WeaKWsvA=="
   "resolved" "https://registry.npmjs.org/prettier/-/prettier-2.4.1.tgz"
   "version" "2.4.1"

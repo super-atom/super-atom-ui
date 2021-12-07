@@ -13,9 +13,9 @@
     "prettier/prettier": "error",
     "no-undefined": 0,
     "no-unused-vars": "off",
-    "import/no-unresolved": "error",
-    "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error"
+    "import/no-unresolved": "error"
+    // "simple-import-sort/imports": "error",
+    // "simple-import-sort/exports": "error"
   },
   "env": {
     "browser": true,

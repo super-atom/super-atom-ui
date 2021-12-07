@@ -21,14 +21,14 @@
   $props: align align-last indent transform letter-spacing ls word-spacing ws
     line-break lb word-break wb word-wrap ww overflow-wrap ow white-space
     tab-size ts hyphens;
+  // https://developer.mozilla.org/ko/docs/Web/CSS/overflow-wrap
+  // word-wrap과 유사
+  word-wrap: break-word;
 
   // 참고: https://wit.nts-corp.com/2017/07/25/4675
   //
   // https://developer.mozilla.org/ko/docs/Web/CSS/word-break
   word-break: keep-all;
-  // https://developer.mozilla.org/ko/docs/Web/CSS/overflow-wrap
-  // word-wrap과 유사
-  word-wrap: break-word;
   overflow-wrap: break-word;
 
   @each $prop in $props {

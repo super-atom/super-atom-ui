@@ -79,52 +79,56 @@
 
 // max breakpoint set
 @mixin bp-max-set() {
-  width: 100%;
-  margin: 0 auto;
-
   @include bp-max(xl) {
     max-width: $bp-max-xl;
+    @content;
   }
 
   @include bp-max(lg) {
     max-width: $bp-max-lg;
+    @content;
   }
 
   @include bp-max(md) {
     max-width: $bp-max-md;
+    @content;
   }
 
   @include bp-max(sm) {
     max-width: $bp-max-sm;
+    @content;
   }
 
   @include bp-max(xs) {
     max-width: $bp-max-xs;
+    @content;
   }
 }
 
 // min breakpoint set
 @mixin bp-min-set() {
-  width: 100%;
-  margin: 0 auto;
-
   @include bp-min(xs) {
-    max-width: $bp-min-xs;
+    min-width: $bp-min-xs;
+    @content;
   }
 
   @include bp-min(sm) {
-    max-width: $bp-min-sm;
+    min-width: $bp-min-sm;
+    @content;
   }
 
   @include bp-min(md) {
-    max-width: $bp-min-md;
+    min-width: $bp-min-md;
+    @content;
   }
 
   @include bp-min(lg) {
-    max-width: $bp-min-lg;
+    min-width: $bp-min-lg;
+    @content;
   }
 
   @include bp-min(xl) {
-    max-width: $bp-min-xl;
+    min-width: $bp-min-xl;
+    @content;
   }
 }
