@@ -14,24 +14,65 @@
 
   .section-main {
     position: relative;
-    height: 50vh;
-    margin-top: 100px;
+    height: 80vh;
     margin-bottom: 15px;
+    @include background(
+      'https://www.artandobject.com/sites/default/files/styles/gallery_item/public/davincivitruvelucviatour-edited.jpg?itok=4Eu82Kyn'
+    );
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+      content: '';
+    }
+
+    .inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
     .img {
       position: relative;
-      top: 50%;
-      left: 50%;
       width: 300px;
-      height: 100%;
+      height: 400px;
       border-radius: 10px;
-      transform: translate(-50%, -50%);
-      @include background('../../assets/images/index.jpg', $position: 50% 10%);
+      box-shadow: 0px 1px 5px black;
+      transform: rotate3d(0);
+      transition-timing-function: ease-out;
+      transition-duration: 300ms;
+      transition-property: transform, box-shadow;
+      @include background('../../assets/images/index.jpg');
+
+      &:hover {
+        box-shadow: 0 5px 20px 5px #00000044;
+        transition-duration: 150ms;
+      }
+
+      .glow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        background-image: radial-gradient(
+          circle at 50% -20%,
+          #ffffff22,
+          #0000000f
+        );
+        border-radius: 10px;
+      }
     }
 
     .txt-wrap {
       position: absolute;
-      top: 50%;
+      top: 85%;
       left: 50%;
       color: white;
       text-align: center;

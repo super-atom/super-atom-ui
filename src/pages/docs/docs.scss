@@ -1,0 +1,16 @@
+@import '../../styles/dev-core';
+
+.wrapper {
+  @include flex-container(row nowrap justify-content align-center);
+}
+
+.aside {
+  width: 300px;
+  padding: 15px;
+  background-color: $grey-1;
+}
+
+.view {
+  width: calc(100vw - 300px);
+  padding: 15px;
+}
