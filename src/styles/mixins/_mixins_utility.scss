@@ -1,0 +1,21 @@
+@mixin container {
+  padding: 15px;
+}
+
+@mixin lost-center-set {
+  @include bp-min(xs) {
+    lost-center: $bp-max-xs;
+  }
+  @include bp-min(sm) {
+    lost-center: $bp-max-sm;
+  }
+  @include bp-min(md) {
+    lost-center: $bp-max-md;
+  }
+  @include bp-min(lg) {
+    lost-center: $bp-max-lg;
+  }
+  @include bp-min(xl) {
+    lost-center: $bp-max-xl;
+  }
+}

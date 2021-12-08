@@ -1,5 +1,6 @@
 @mixin radio($font-size: rem(14), $size: rem(18), $radius: rem(9)) {
-  @include absolute(left rem(-1000));
+  position: absolute;
+  left: rem(-1000);
 
   + label {
     position: relative;
@@ -11,6 +12,9 @@
     cursor: pointer;
 
     &::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
       width: $size;
 
       height: $size;
@@ -19,7 +23,6 @@
 
       border-radius: $radius;
       content: '';
-      @include absolute(left 0 bottom 0);
     }
 
     &::after {
@@ -29,6 +32,9 @@
   }
 
   &:checked + label::after {
+    position: absolute;
+    top: rem(3);
+    left: rem(5);
     width: rem(8);
 
     height: rem(8);
@@ -36,7 +42,6 @@
     background-color: alt-color(state-active, #185158);
     border-radius: rem(15);
     content: '';
-    @include absolute(left rem(5) top rem(3));
   }
 
   &:focus + label::before {

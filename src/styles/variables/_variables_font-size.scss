@@ -1,6 +1,10 @@
 @import './_variables_breakpoint.scss';
 @import './_variables_typeface';
 
+//* Unit Base Font Size
+$base-em-size: 16px !default;
+$base-rem-size: 16px !default;
+
 // *Root Font Size
 // Root
 $root-font-size: rem(16px);
@@ -17,7 +21,7 @@ $body-background-color: $white;
 // *Responsive Base Heading Element Font Size
 $base-font-sizes-h1: (
   $bp-min-xs: (
-    1rem
+    1.2rem
   ),
   $bp-min-md: (
     1.5rem
@@ -28,7 +32,7 @@ $base-font-sizes-h1: (
 );
 $base-font-sizes-h2: (
   $bp-min-xs: (
-    0.8rem
+    1rem
   ),
   $bp-min-md: (
     1.2rem

@@ -1,4 +1,4 @@
-@import '../../styles/dev-core.scss';
+@import '../../styles/dev-core';
 
 .section {
   max-width: 1200px;
@@ -13,6 +13,21 @@
     padding-bottom: 10px;
     border-bottom: 1px solid #000;
     @include base-font-sizes-title();
+  }
+}
+
+.ui-form-section {
+  .test-input {
+    @include input();
+  }
+  .test-input-radiobox {
+    @include radio();
+  }
+  .test-input-checkbox {
+    @include checkbox();
+  }
+  .test-textarea {
+    @include textarea();
   }
 }
 
@@ -43,13 +58,16 @@
     }
 
     .section__title {
-      @include centeringXY;
+      position: absolute;
+      top: 50%;
+      left: 50%;
       padding: 10px 20px;
       color: white;
       font-size: 40px;
       text-transform: uppercase;
       background-color: black;
       border: 5px solid white;
+      transform: translate(-50%, -50%);
     }
   }
 }
@@ -92,21 +110,7 @@
     position: relative;
     margin-top: 20px;
 
-    @include bp-min(xs) {
-      lost-center: $bp-min-xs;
-    }
-    @include bp-min(sm) {
-      lost-center: $bp-min-sm;
-    }
-    @include bp-min(md) {
-      lost-center: $bp-min-md;
-    }
-    @include bp-min(lg) {
-      lost-center: $bp-min-lg;
-    }
-    @include bp-min(xl) {
-      lost-center: $bp-min-xl;
-    }
+    @include lost-center-set;
 
     li {
       min-height: 40px;
@@ -128,6 +132,7 @@
         border-radius: 0;
         lost-column: 1/1;
       }
+
       @include bp-only(md) {
         height: 50px;
         line-height: 50px;
@@ -216,21 +221,7 @@
 .grid-section {
   .section__content {
     ul {
-      @include bp-min(xs) {
-        lost-center: $bp-min-xs;
-      }
-      @include bp-min(sm) {
-        lost-center: $bp-min-sm;
-      }
-      @include bp-min(md) {
-        lost-center: $bp-min-md;
-      }
-      @include bp-min(lg) {
-        lost-center: $bp-min-lg;
-      }
-      @include bp-min(xl) {
-        lost-center: $bp-min-xl;
-      }
+      @include lost-center-set;
 
       li {
         height: 200px;
@@ -342,6 +333,10 @@
   }
 
   .section__content {
+    .input[type='text'] {
+      @include input();
+    }
+
     .item-wrap {
       padding: 10px;
       background-color: $light-blue-0;

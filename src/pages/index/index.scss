@@ -2,11 +2,13 @@
 
 #content {
   .section {
+    @include container;
+
     .inner {
       max-width: $bp-max-xl;
       height: 100%;
       margin: 0 auto;
-      padding: 20px 0;
+      overflow: hidden;
     }
   }
 
@@ -14,32 +16,42 @@
     position: relative;
     height: 50vh;
     margin-top: 100px;
+    margin-bottom: 15px;
 
     .img {
-      position: absolute;
+      position: relative;
+      top: 50%;
+      left: 50%;
       width: 300px;
       height: 100%;
       border-radius: 10px;
-      @include centeringXY;
+      transform: translate(-50%, -50%);
       @include background('../../assets/images/index.jpg', $position: 50% 10%);
     }
 
     .txt-wrap {
-      @include centeringXY;
+      position: absolute;
+      top: 50%;
+      left: 50%;
       color: white;
       text-align: center;
+      transform: translate(-50%, -50%);
     }
   }
 
   .section-installation {
     .inner {
-      @include flex-container(row wrap justify-center items-center);
-
-      div {
-        width: 50%;
+      @include lost-center-set;
+      & > div {
+        @include bp-max(sm) {
+          margin-bottom: 15px;
+          lost-column: 1/1;
+        }
+        @include bp-min(md) {
+          lost-column: 1/2;
+        }
       }
     }
-
     .txt-wrap {
       .button {
         margin-top: 10px;

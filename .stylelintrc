@@ -2,12 +2,8 @@
   "plugins": ["stylelint-prettier"],
   "rules": {
     "prettier/prettier": true,
-    "at-rule-no-unknown": [
-      true,
-      {
-        "ignoreAtRules": ["function", "if", "each", "include", "mixin", "lost"]
-      }
-    ]
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true
   },
   "extends": [
     "stylelint-config-standard-scss",

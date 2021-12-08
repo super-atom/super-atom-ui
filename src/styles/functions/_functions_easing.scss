@@ -1,0 +1,24 @@
+@use 'sass:meta';
+@use 'sass:map';
+
+@function ease($keyword) {
+  @if map-has-key($easings, $keyword) {
+    @return map-get($easings, $keyword);
+  } @else {
+    @error 'ease() 함수에 전달 가능한 값은 다음 중 하나입니다 → #{map-keys($easings)}';
+  }
+}
+
+@function ease-add($keyword, $easing-function) {
+  @if not meta.global-variable-exists('easings') {
+    @error '$easings 이징 함수 맵 글로벌 변수가 존재하지 않습니다.';
+  }
+  @return map.set($easings, $keyword, $easing-function);
+}
+
+@function ease-merge($extend-easings: ()) {
+  @if not meta.global-variable-exists('easings') {
+    @error '$easings 이징 함수 맵 글로벌 변수가 존재하지 않습니다.';
+  }
+  @return map.deep-merge($easings, $extend-easings);
+}
