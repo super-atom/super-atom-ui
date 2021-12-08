@@ -14,31 +14,21 @@
       background-color: rgba($color: #000000, $alpha: 0.3);
     }
     .section__title {
-      @include centeringXY;
+      position: absolute;
+      top: 50%;
+      left: 50%;
       padding: 10px 20px;
       color: white;
       font-size: 40px;
       text-transform: uppercase;
       background-color: black;
       border: 5px solid white;
+      transform: translate(-50%, -50%);
     }
   }
   .inner {
-    @include bp-min(xs) {
-      lost-center: $bp-min-xs;
-    }
-    @include bp-min(sm) {
-      lost-center: $bp-min-sm;
-    }
-    @include bp-min(md) {
-      lost-center: $bp-min-md;
-    }
-    @include bp-min(lg) {
-      lost-center: $bp-min-lg;
-    }
-    @include bp-min(xl) {
-      lost-center: $bp-min-xl;
-    }
+    @include lost-center-set;
+
     .txt-wrap {
       padding-top: 20px;
       padding-bottom: 20px;

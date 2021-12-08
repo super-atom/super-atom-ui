@@ -25,6 +25,20 @@ $base-black: $base-color-grey-9 !default;
 $main-color: #6937a1 !default;
 $sub-color: yellow !default;
 
+// Color Map  ======================================== //
+$colors: (
+  black: #010101,
+  white: #fefefe,
+  gray: #787878,
+  state-normal: #707070,
+  state-hover: #35a1af,
+  state-focus: #1870d4,
+  state-active: #185158,
+  state-disabled: #dedede,
+  state-valid: #219c5e,
+  state-invalid: #e72e6c,
+) !default;
+
 // Google Material Color  ======================================== //
 // Google Material Grey
 $grey-0: map-deep-get($color-palette, 'material-grey', 50) !default;

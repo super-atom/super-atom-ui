@@ -1,3 +1,4 @@
+@use 'sass:list';
 @function _compact-shorthand($values) {
   $output: null;
 

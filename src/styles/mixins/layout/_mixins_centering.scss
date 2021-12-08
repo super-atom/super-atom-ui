@@ -1,5 +1,4 @@
-@mixin centering {
-  position: absolute;
+@mixin centeringFlex {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,7 +8,7 @@
 }
 
 @mixin centeringXY($horizontal: true, $vertical: true) {
-  position: absolute;
+  text-align: center;
   @if ($horizontal and $vertical) {
     top: 50%;
     left: 50%;

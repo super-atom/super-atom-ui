@@ -9906,10 +9906,10 @@
   dependencies:
     "jquery" ">=1.8.0 <4.0.0"
 
-"jquery@^1.12.4", "jquery@>=1.6.0", "jquery@>=1.8.0 <4.0.0":
-  "integrity" "sha1-AeHfuikP5z3rp3zurLD5ui/sngw="
-  "resolved" "https://registry.npmjs.org/jquery/-/jquery-1.12.4.tgz"
-  "version" "1.12.4"
+"jquery@^3.6.0", "jquery@>=1.6.0", "jquery@>=1.8.0 <4.0.0":
+  "integrity" "sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw=="
+  "resolved" "https://registry.npmjs.org/jquery/-/jquery-3.6.0.tgz"
+  "version" "3.6.0"
 
 "js-base64@^2.1.8", "js-base64@^2.1.9":
   "integrity" "sha512-pZe//GGmwJndub7ZghVHz7vjb2LgC1m8B07Au3eYqeqv9emhESByMXxaEgkUkEqJe87oBbSniGYoQNIBklc7IQ=="
