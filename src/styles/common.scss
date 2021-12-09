@@ -1,5 +1,6 @@
 /* START : common.scss */
 @import './dev-core';
+// 사전 정의한 CSS 를 생성합니다.
 @import './base/base';
 @import './settings/settings';
 
@@ -43,7 +44,7 @@ body {
           top: 80px;
 
           .nav__link {
-            color: white;
+            color: $white;
           }
         }
       }
@@ -95,7 +96,7 @@ body {
           color: transparent;
         }
         @include bp-min(md) {
-          color: white;
+          color: $white;
         }
       }
     }
@@ -159,8 +160,8 @@ body {
 
 .footer {
   @include container;
-  color: white;
-  background-color: black;
+  color: $white;
+  background-color: $black;
 
   .inner {
     max-width: $bp-max-xl;

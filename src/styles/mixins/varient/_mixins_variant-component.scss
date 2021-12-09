@@ -1,0 +1,11 @@
+@import '../form/mixins_button';
+
+@mixin component($component-map) {
+  @each $component, $map in $component-map {
+    .#{$component} {
+      @if ($component == button) {
+        @include button($radius: map-deep-get($component-map, button, radius));
+      }
+    }
+  }
+}

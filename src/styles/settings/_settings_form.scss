@@ -15,34 +15,10 @@ select {
   transition: 0.3s ease-out;
 }
 
-.button,
-button {
-  text-decoration: none;
-  border: 1px solid transparent;
-  outline: none;
-  cursor: pointer;
-
-  // Firefox 점선 제거
-  &::-moz-focus-inner {
-    border: 0;
-  }
-
-  &:disabled {
-    cursor: not-allowed;
-  }
-}
-
 input,
 textarea,
 select {
-  display: inline-block;
   padding: $base-input-padding;
-  font-weight: normal;
-  white-space: nowrap;
-  text-align: left;
-  vertical-align: middle;
-  background-color: white;
+  background-color: $white;
   border: 1px solid $base-grey;
-  cursor: pointer;
-  user-select: none;
 }

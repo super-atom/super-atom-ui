@@ -1,15 +1,4 @@
-@import '../themes/themes';
-@import '../mixins/form/mixins_button';
-
-@mixin component($component-map) {
-  @each $component, $map in $component-map {
-    .#{$component} {
-      @if ($component == button) {
-        @include button($radius: map-deep-get($component-map, button, radius));
-      }
-    }
-  }
-}
+@import '../../themes/themes';
 
 @mixin themable($theme-name, $theme-map) {
   body[data-theme='#{$theme-name}'] {
@@ -22,13 +11,10 @@
           border: 1px solid $base-grey;
           &[disabled] {
             color: darken(
-              alt-color(state-disabled, map-deep-get($theme-map, color, sub)),
+              alt-color($state-disabled, map-deep-get($theme-map, color, sub)),
               30%
             );
-            background-color: alt-color(
-              state-disabled,
-              map-deep-get($theme-map, color, main)
-            );
+            background-color: $state-disabled;
             cursor: not-allowed;
           }
           &[data-type='contained'] {
@@ -40,7 +26,8 @@
             border-color: transparent;
           }
           &[data-type='text'],
-          &[data-type='outlined'] {
+          &[data-type='outlined'],
+          &[data-type='round-reverse'] {
             background-color: transparent;
           }
           &[data-type='outlined'] {

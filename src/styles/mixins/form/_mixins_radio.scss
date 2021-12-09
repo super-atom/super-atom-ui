@@ -19,7 +19,7 @@
 
       height: $size;
       font-family: sans-serif;
-      background-color: alt-color(state-normal, #707070);
+      background-color: $white;
 
       border-radius: $radius;
       content: '';
@@ -39,13 +39,13 @@
 
     height: rem(8);
     text-align: center;
-    background-color: alt-color(state-active, #185158);
+    background-color: $state-active;
     border-radius: rem(15);
     content: '';
   }
 
   &:focus + label::before {
-    box-shadow: 0 rem(1) 0 darken(alt-color(state-focus, #1870d4), 30%);
+    box-shadow: 0 rem(1) 0 darken($state-focus, 30%);
   }
 
   &:disabled {
@@ -53,12 +53,12 @@
       cursor: not-allowed;
 
       &::before {
-        background-color: alt-color(state-disabled, #dedede);
+        background-color: $state-disabled;
       }
     }
 
     &:checked + label::after {
-      background-color: darken(alt-color(state-disabled, #dedede), 30%);
+      background-color: darken($state-disabled, 30%);
     }
   }
 

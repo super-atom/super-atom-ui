@@ -4,7 +4,7 @@
 
 // Base  ======================================== //
 // Base Grey
-$white: #fff !default;
+$white: #fefefe !default;
 $base-color-grey-0: #eee !default;
 $base-color-grey-1: #ddd !default;
 $base-color-grey-2: #bbb !default;
@@ -15,29 +15,16 @@ $base-color-grey-6: #555 !default;
 $base-color-grey-7: #333 !default;
 $base-color-grey-8: #222 !default;
 $base-color-grey-9: #111 !default;
-$black: #000 !default;
+$black: #010101 !default;
 
 // Common  ======================================== //
+$base-white: $white !default;
 $base-grey: $base-color-grey-1 !default;
 $base-black: $base-color-grey-9 !default;
 
-// Custom  ======================================== //
-$main-color: #6937a1 !default;
-$sub-color: yellow !default;
-
-// Color Map  ======================================== //
-$colors: (
-  black: #010101,
-  white: #fefefe,
-  gray: #787878,
-  state-normal: #707070,
-  state-hover: #35a1af,
-  state-focus: #1870d4,
-  state-active: #185158,
-  state-disabled: #dedede,
-  state-valid: #219c5e,
-  state-invalid: #e72e6c,
-) !default;
+// User Color Palette  ======================================== //
+$main-color: $black !default;
+$sub-color: $white !default;
 
 // Google Material Color  ======================================== //
 // Google Material Grey
@@ -563,3 +550,14 @@ $blue-grey-6: map-deep-get($color-palette, 'material-blue-grey', 600) !default;
 $blue-grey-7: map-deep-get($color-palette, 'material-blue-grey', 700) !default;
 $blue-grey-8: map-deep-get($color-palette, 'material-blue-grey', 800) !default;
 $blue-grey-9: map-deep-get($color-palette, 'material-blue-grey', 900) !default;
+
+// Form  ======================================== //
+$form-border-color: $base-grey;
+$form-background-color: $white;
+$state-normal: $base-color-grey-5;
+$state-hover: transparent;
+$state-focus: $blue-7;
+$state-active: $teal-7;
+$state-disabled: $grey-7;
+$state-valid: $green-7;
+$state-invalid: $red-7;

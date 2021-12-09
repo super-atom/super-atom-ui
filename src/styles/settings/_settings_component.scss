@@ -4,3 +4,20 @@
 img.img {
   @include rwd-img();
 }
+
+input.input[type='text'],
+input.input[type='email'] {
+  @include input;
+}
+
+input.input[type='radio'] {
+  @include radio;
+}
+
+input.input[type='checkbox'] {
+  @include checkbox;
+}
+
+textarea.textarea {
+  @include textarea;
+}
