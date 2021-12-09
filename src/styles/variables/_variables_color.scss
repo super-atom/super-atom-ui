@@ -554,10 +554,10 @@ $blue-grey-9: map-deep-get($color-palette, 'material-blue-grey', 900) !default;
 // Form  ======================================== //
 $form-border-color: $base-grey;
 $form-background-color: $white;
-$state-normal: $base-color-grey-5;
+$state-normal: $base-color-grey-3;
 $state-hover: transparent;
 $state-focus: $blue-7;
 $state-active: $teal-7;
-$state-disabled: $grey-7;
+$state-disabled: $grey-3;
 $state-valid: $green-7;
 $state-invalid: $red-7;

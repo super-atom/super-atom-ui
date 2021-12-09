@@ -2,26 +2,93 @@
 
 .wrapper {
   @include flex-container(row nowrap justify-content align-center);
+  @include bp-max(sm) {
+    flex-wrap: wrap;
+  }
 }
 
 .aside {
   width: 300px;
   height: 100vh;
-  background-color: $grey-1;
-  @include container;
+  padding-top: 0 !important;
+  background-color: $grey-2;
+
+  @include bp-max(sm) {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid $base-grey;
+  }
+
+  .aside__nav {
+    .aside__nav__bar {
+      position: relative;
+      padding: 15px;
+      @include flex-container(row nowrap justify-between align-center);
+
+      .input[type='search'] {
+        width: 100%;
+      }
+
+      & > :nth-child(2) {
+        margin-right: 5px;
+        margin-left: 5px;
+      }
+    }
+
+    .nav__subject-title {
+      width: 100%;
+      padding: 0;
+      padding-left: 15px;
+      font-weight: 600;
+      font-family: 'Open Sans';
+      text-align: left;
+      background-color: $grey-3;
+      @include base-font-sizes-h3;
+      .icon {
+        padding-right: 16px;
+        font-size: 16px;
+      }
+    }
+
+    .nav__link-depth-1-wrap {
+      background-color: $grey-2;
+
+      @include bp-max(sm) {
+        position: absolute;
+        top: -100%;
+        z-index: 1;
+        width: 100%;
+        &.on {
+          top: 155px;
+        }
+      }
+
+      .nav__link-depth-1 {
+        position: relative;
+        height: 40px;
+        overflow: hidden;
+        &.on {
+          height: auto;
+        }
+      }
+    }
+
+    .nav__link-depth-2-wrap {
+      @include container;
+    }
+  }
 }
 
 .view {
   width: calc(100vw - 300px);
-}
+  @include bp-max(sm) {
+    width: 100%;
+  }
 
-.section {
-  .section__title-wrap {
+  .page__title-wrap {
     position: relative;
-    height: 300px;
-    @include background(
-      'https://t1.daumcdn.net/cfile/tistory/994C2F4B5F97A98705'
-    );
+    height: 500px;
+    @include background('../../assets/images/vitruvius.jpg');
 
     &:before {
       @include pseudo;
@@ -30,14 +97,26 @@
       background-color: rgba(black, 0.2);
     }
 
-    .section__title {
+    .page__title {
       position: absolute;
+      padding: 10px 20px;
       color: $white;
+      font-weight: 700;
+      font-size: 40px;
+      font-family: 'Open Sans';
+      text-transform: uppercase;
+      background-color: $black;
+      border: 5px solid $white;
       @include centeringXY;
+      @include base-font-sizes-title;
     }
   }
 
-  .section__content {
+  .inner {
     @include container;
+    .section {
+      .section__content {
+      }
+    }
   }
 }

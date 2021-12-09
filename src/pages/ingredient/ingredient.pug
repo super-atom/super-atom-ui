@@ -4,8 +4,8 @@ block header
 
 block content
   section.section.main-section
-    .title-wrap
-      h1.section__title Design System
+    .page__title-wrap
+      h1.page__title Design System
   section.section.typo-section
     h1.section__title Typography
     .section__content
@@ -120,12 +120,15 @@ block content
   section.section.ui-form-section
     h1.section__title UI form
     .section__content
-      input.input.test-input(placeholder='placeholder')
-      input.input.test-input-checkbox(type='checkbox')
-      label 체크박스 라벨
-      input.input.test-input-radiobox(type='radiobox')
-      label 라디오박스 라벨
-      textarea.textarea.test-textarea textarea
+      input.input.test-input(type='input')(placeholder='placeholder')
+      .form-check
+        input.input.test-input-checkbox(type='checkbox')
+      .form-check
+        label 체크박스 라벨
+        input.input.test-input-radiobox(type='radio')
+      .form-check
+        label 라디오박스 라벨
+        textarea.textarea.test-textarea textarea
   section.section.form-section
     h1.section__title Form
     .section__content
@@ -175,7 +178,7 @@ block content
         .radioWrap
           p.item-title Radio Button Group
           .selectWrap
-            select(title='옵션')
+            select.select(title='옵션')
               option 전체
               option 옵션1
               option 옵션2

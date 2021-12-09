@@ -1,5 +1,5 @@
-@import '../validators/_validators_contains-falsy';
-@import '../functions/_functions_compact-shorthand';
+@import '../../validators/_validators_contains-falsy';
+@import '../../functions/_functions_compact-shorthand';
 
 @mixin _directional-property($property, $suffix, $values) {
   $top: $property + '-top' + if($suffix, '-#{$suffix}', '');

@@ -5,34 +5,98 @@ block header
 block content
   .wrapper
     aside.aside
-      nav.nav
-        ul
-          li
-            button Getting started
-            div
-              ul
-                li
-                  a(href='#introduction') Introduction
-                li
-                  a(href='#ESnext') ESnext(with Babel)
-                li
-                  a(href='#TypeScript') TypeScript
-                li
-                  a(href='#Webpack') Webpack
-          li
-            button Customize
-            div
-              ul
-                li
-                  a(href='#introduction') Sass
-                li
-                  a(href='#introduction') Component
-                li
-                  a(href='#introduction') Option
+      nav.aside__nav
+        .aside__nav__bar
+          input.input(type='search', placeholder='search')
+          select.select
+            option v0.1
+          button.button.js_aside_nav_btn(type='button')
+            i.fa-solid.fa-up-down
+        ul.nav__link-depth-1-wrap.js_nav__link_depth_1_wrap
+          li.nav__link-depth-1
+            button.nav__subject-title.js_button(
+              type='button',
+              data-type='text'
+            )
+              i.icon.fa-solid.fa-chevron-down
+              | Getting started
+            ul.nav__link-depth-2-wrap
+              li.nav__link-depth-2
+                a(href='#introduction') Introduction
+              li.nav__link-depth-2
+                a(href='#structure') Structure
+              li.nav__link-depth-2
+                a(href='#dependencySettings') Dependency settings
+          li.nav__link-depth-1
+            button.nav__subject-title.js_button(
+              type='button',
+              data-type='text'
+            )
+              i.icon.fa-solid.fa-chevron-down
+              | Pug Mixins
+            ul.nav__link-depth-2-wrap
+              li.nav__link-depth-2
+                a(href='#itemList') ItemList
+          li.nav__link-depth-1
+            button.nav__subject-title.js_button(
+              type='button',
+              data-type='text'
+            )
+              i.icon.fa-solid.fa-chevron-down
+              | Sass Mixins
+            ul.nav__link-depth-2-wrap
+              li.nav__link-depth-2
+                a(href='#a11y') A11y
+              li.nav__link-depth-2
+                a(href='#boxAlignment') Box-alignment
+              li.nav__link-depth-2
+                a(href='#cssGrid') Css-grid
+              li.nav__link-depth-2
+                a(href='#flexBox') Flexbox
+              li.nav__link-depth-2
+                a(href='#font') Font
+              li.nav__link-depth-2
+                a(href='#form') Form
+              li.nav__link-depth-2
+                a(href='#inheritance') Inheritance
+              li.nav__link-depth-2
+                a(href='#layout') Layout
+              li.nav__link-depth-2
+                a(href='#responsiveWeb') Responsive-web
+              li.nav__link-depth-2
+                a(href='#setting') Setting
+              li.nav__link-depth-2
+                a(href='#text') Text
+              li.nav__link-depth-2
+                a(href='#ui') Ui
+              li.nav__link-depth-2
+                a(href='#utility') Utility
+              li.nav__link-depth-2
+                a(href='#varient') Varient
+          li.nav__link-depth-1
+            button.nav__subject-title.js_button(
+              type='button',
+              data-type='text'
+            )
+              i.icon.fa-solid.fa-chevron-down
+              | Customize
+            ul.nav__link-depth-2-wrap
+              li.nav__link-depth-2
+                a(href='#variables') Variables
+              li.nav__link-depth-2
+                a(href='#components') Components
+              li.nav__link-depth-2
+                a(href='#options') Options
     .view
-      #introduction
-        section.section.section-introduction
-          .section__title-wrap
-            h1.section__title Introduction
+      .page__title-wrap
+        h1.page__title DOCUMENTATION
+      .inner
+        section#introduction.section
+          h1.section__title Introduction
           .section__content
             p Let's get started.
+            code var test = 'test'; console.log(test);
+        section#structure.section
+          h1.section__title Structure
+          .section__content
+            p structure.

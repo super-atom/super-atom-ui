@@ -5,6 +5,7 @@ img.img {
   @include rwd-img();
 }
 
+input.input[type='search'],
 input.input[type='text'],
 input.input[type='email'] {
   @include input;
@@ -12,6 +13,10 @@ input.input[type='email'] {
 
 input.input[type='radio'] {
   @include radio;
+}
+
+select.select {
+  @include select;
 }
 
 input.input[type='checkbox'] {
