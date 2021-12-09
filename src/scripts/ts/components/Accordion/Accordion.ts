@@ -52,7 +52,7 @@ export default class Accordion {
   }
 
   private slideDown(element: HTMLElement, content: HTMLElement): void {
-    let contentHeight: number = 0;
+    const contentHeight = 0;
     const active: HTMLElement = this.getActiveElement() as HTMLElement;
 
     for (let i = 0; i < this.items.length; i++) {

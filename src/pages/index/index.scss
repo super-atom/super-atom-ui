@@ -16,9 +16,7 @@
     position: relative;
     height: 80vh;
     margin-bottom: 15px;
-    @include background(
-      'https://www.artandobject.com/sites/default/files/styles/gallery_item/public/davincivitruvelucviatour-edited.jpg?itok=4Eu82Kyn'
-    );
+    @include background('../../assets/images/vitruvius.jpg');
     &::before {
       position: absolute;
       top: 0;
@@ -42,12 +40,12 @@
       width: 300px;
       height: 400px;
       border-radius: 10px;
-      box-shadow: 0px 1px 5px black;
+      box-shadow: 0px 1px 5px $black;
       transform: rotate3d(0);
       transition-timing-function: ease-out;
       transition-duration: 300ms;
       transition-property: transform, box-shadow;
-      @include background('../../assets/images/index.jpg');
+      @include background('../../assets/images/monalisa.jpg');
 
       &:hover {
         box-shadow: 0 5px 20px 5px #00000044;
@@ -74,7 +72,7 @@
       position: absolute;
       top: 85%;
       left: 50%;
-      color: white;
+      color: $white;
       text-align: center;
       transform: translate(-50%, -50%);
     }
@@ -117,7 +115,7 @@
         position: absolute;
         top: 10px;
         right: 10px;
-        background-color: white;
+        background-color: $white;
       }
     }
   }

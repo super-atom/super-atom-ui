@@ -5,6 +5,9 @@ $typeface-noto-sans-letter-spacing: -0.5px;
 $typeface-nanum-gothic: 'Nanum Gothic', sans-serif;
 $typeface-nanum-gothic-letter-spacing: -0.1px;
 
+$typeface-open-sans: 'Open Sans', sans-serif;
+$typeface-open-sans-letter-spacing: -0.1px;
+
 // *Typeface Setting
 // Base
 $base-font: $typeface-nanum-gothic;
@@ -13,3 +16,7 @@ $base-font-letter-spacing: $typeface-nanum-gothic-letter-spacing;
 // Main Font
 $main-font: $typeface-noto-sans;
 $main-font-letter-spacing: $typeface-noto-sans-letter-spacing;
+
+// Title Font
+$title-font: $typeface-open-sans;
+$title-font-letter-spacing: $typeface-open-sans-letter-spacing;

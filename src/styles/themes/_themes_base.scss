@@ -1,0 +1,17 @@
+// 새로운 테마를 만든다면, 키를 일치시켜야 합니다.
+// 아래의 키를 바꾸고 싶다면 mixins_variant.scss 파일과 함께 수정하세요.
+$theme-base: (
+  color: (
+    main: $main-color,
+    sub: $sub-color,
+  ),
+  body: (
+    bg: $sub-color,
+  ),
+  header: (
+    bg: $main-color,
+  ),
+  button: (
+    data-type: map-get($buttons, data-type),
+  ),
+);

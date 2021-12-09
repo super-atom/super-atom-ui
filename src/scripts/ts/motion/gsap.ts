@@ -17,7 +17,7 @@ const options = {
   //Change View: use DebugMode
 };
 
-const targets: any = document.querySelectorAll('.js-gsap-target');
+const targets: any = document.querySelectorAll('.js_gsap_target');
 // a loop: create the individual target timelines
 targets.forEach(function (target) {
   const action = gsap

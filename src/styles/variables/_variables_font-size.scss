@@ -43,21 +43,21 @@ $base-font-sizes-h2: (
 );
 $base-font-sizes-h3: (
   $bp-min-xs: (
-    0.7rem
+    0.9rem
   ),
   $bp-min-md: (
-    0.8rem
+    1.1rem
   ),
   $bp-min-lg: (
-    1.17rem
+    1.3rem
   ),
 );
 $base-font-sizes-h4: (
   $bp-min-xs: (
-    0.7rem
+    0.8rem
   ),
   $bp-min-md: (
-    0.8rem
+    1rem
   ),
   $bp-min-lg: (
     1.17rem
@@ -65,25 +65,13 @@ $base-font-sizes-h4: (
 );
 $base-font-sizes-h5: (
   $bp-min-xs: (
-    0.6rem
-  ),
-  $bp-min-md: (
-    0.7rem
-  ),
-  $bp-min-lg: (
     0.8rem
-  ),
+  )
 );
 $base-font-sizes-h6: (
   $bp-min-xs: (
-    0.5rem
-  ),
-  $bp-min-md: (
-    0.6rem
-  ),
-  $bp-min-lg: (
-    0.67rem
-  ),
+    0.8rem
+  )
 );
 
 // *Responsive Base Custom Font Size
@@ -104,9 +92,9 @@ $base-font-sizes-title: (
     rem(16px)
   ),
   $bp-min-md: (
-    rem(20px)
+    rem(24px)
   ),
   $bp-min-lg: (
-    rem(24px)
+    rem(32px)
   ),
 );

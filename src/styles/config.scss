@@ -1,33 +1,23 @@
-// em, rem 단위 기본 값 설정
-$base-em-size: 16px;
-$base-rem-size: 16px;
-
+// 이 파일은 오버라이드 하는 것이 의미있는 모든 변수를 명시해야합니다.
+// 이 파일의 변수를 조정하는 것으로 UI 프레임워크의 커스텀이 쉽게 이루어집니다.
+// 사전 정의된 변수는 바꾸지 않는 것이 좋습니다.
+// 사용자 정의 변수를 추가하고자 하면 변수를 담은 map을 만들어 get함수로 불러와서 사용하는 것이 좋습니다.
 //* --------------------------------------------------------------------------
-// 컬러 스킴 설정 (`컬러-이름: 값`을 임의로 추가해 사용)
+// User Color Scheme
 $colors: (
-  black: #010101,
-  white: #fefefe,
-  gray: #787878,
-  state-normal: #707070,
-  state-hover: #35a1af,
-  state-focus: #1870d4,
-  state-active: #185158,
-  state-disabled: #dedede,
-  state-valid: #219c5e,
-  state-invalid: #e72e6c,
+  main: $main-color,
+  sub: $sub-color,
+  black: $black,
+  white: $white,
+  grey: $base-grey,
 );
 
-$main-color: black;
-$sub-color: white;
 //* --------------------------------------------------------------------------
 // 박스 정렬 설정
 // justify-*, align-* 대신 place-* 속성 사용하고자 할 경우 true 설정
 $using-place-layout: false;
 
 //* --------------------------------------------------------------------------
-// 이징 함수 설정
-
-// 커스텀 이징 함수 설정 (확장)
 $easings: ease-merge(
   (
     in-euid: cubic-bezier(0.43, 0.16, 0.7, 0.52),

@@ -1,7 +1,13 @@
 /* START : common.scss */
 @import './dev-core';
+// 사전 정의한 CSS 를 생성합니다.
 @import './base/base';
 @import './settings/settings';
+
+$fa-font-path: '../../node_modules/@fortawesome/fontawesome-free/webfonts';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss';
 
 body {
   @include scrollbar(rem(10), black);
@@ -43,10 +49,25 @@ body {
           top: 80px;
 
           .nav__link {
-            color: white;
+            color: $white;
           }
         }
+        .nav__dim {
+          opacity: 1;
+          width: 100vw;
+          height: 100vh;
+        }
       }
+    }
+
+    .nav__dim {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 0;
+      height: 0;
+      background-color: rgba($black, 0.5);
+      opacity: 0;
     }
 
     .nav__logo {
@@ -71,7 +92,6 @@ body {
         position: absolute;
         top: -400px;
         left: 0;
-        z-index: -1;
         align-self: flex-start;
         width: 100%;
         overflow: hidden;
@@ -79,9 +99,11 @@ body {
         background-color: $main-color;
         transition: 0.3s ease-in-out;
       }
+
       @include bp-min(md) {
         @include flex-container(row wrap flex-start items-center);
       }
+
       .nav__link {
         padding: 0 20px;
         line-height: 80px;
@@ -95,7 +117,7 @@ body {
           color: transparent;
         }
         @include bp-min(md) {
-          color: white;
+          color: $white;
         }
       }
     }
@@ -159,8 +181,8 @@ body {
 
 .footer {
   @include container;
-  color: white;
-  background-color: black;
+  color: $white;
+  background-color: $black;
 
   .inner {
     max-width: $bp-max-xl;

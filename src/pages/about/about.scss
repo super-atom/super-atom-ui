@@ -4,25 +4,23 @@
   .title-wrap {
     position: relative;
     height: 500px;
-    @include background(
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolution_32x16.jpg/1200px-The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolution_32x16.jpg'
-    );
+    @include background('../../assets/images/the-last-supper.jpg');
     &::before {
       @include pseudo();
       width: 100%;
       height: 100%;
-      background-color: rgba($color: #000000, $alpha: 0.3);
+      background-color: rgba($color: $black, $alpha: 0.3);
     }
     .section__title {
       position: absolute;
       top: 50%;
       left: 50%;
       padding: 10px 20px;
-      color: white;
+      color: $white;
       font-size: 40px;
       text-transform: uppercase;
-      background-color: black;
-      border: 5px solid white;
+      background-color: $black;
+      border: 5px solid $white;
       transform: translate(-50%, -50%);
     }
   }

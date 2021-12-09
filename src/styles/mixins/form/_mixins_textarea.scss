@@ -1,5 +1,6 @@
 @mixin textarea {
   display: block;
   overflow: auto;
+  resize: none;
   @include input;
 }

@@ -1,4 +1,5 @@
 /* START : reset.scss */
+// 이 파일은 브라우저 엔진의 기본 값을 오버라이딩합니다.
 html,
 body,
 div,
@@ -242,9 +243,18 @@ select:-internal-autofill-selected {
 button {
   padding: 0;
   line-height: 0;
-  background-color: transparent;
+  text-decoration: none;
   border: 0;
-  cursor: pointer;
+  outline: none;
+
+  // Firefox 점선 제거
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
 }
 
 button,
@@ -256,6 +266,23 @@ input {
 button,
 select {
   text-transform: none;
+}
+
+button,
+input,
+textarea,
+select {
+  cursor: pointer;
+}
+
+input,
+textarea,
+select {
+  font-weight: normal;
+  white-space: nowrap;
+  text-align: left;
+  vertical-align: middle;
+  user-select: none;
 }
 
 button,

@@ -1,22 +1,21 @@
-@mixin input($font-size: rem(14), $padding: rem(10), $radius: rem(3)) {
+@mixin input($font-size: rem(14), $radius: rem(5)) {
   box-sizing: border-box;
-  min-height: rem(39);
-  margin-bottom: rem(10);
-  padding: $padding;
+  min-height: 40px;
   font-size: $font-size;
   font-family: inherit;
+  line-height: 40px;
   vertical-align: middle;
-  background-color: white;
-  border: rem(1) solid lighten(alt-color(state-normal, #707070), 10%);
+  background-color: $white;
+  border: 1px solid $state-normal;
   border-radius: $radius;
   outline: none;
 
   &:focus {
-    border-color: alt-color(state-focus, #1870d4);
+    border-color: $state-focus;
   }
 
   &:disabled {
-    background-color: alt-color(state-disabled, #dedede);
+    background-color: $state-disabled;
     cursor: not-allowed;
   }
 

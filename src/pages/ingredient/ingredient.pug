@@ -4,8 +4,8 @@ block header
 
 block content
   section.section.main-section
-    .title-wrap
-      h1.section__title Design System
+    .page__title-wrap
+      h1.page__title Design System
   section.section.typo-section
     h1.section__title Typography
     .section__content
@@ -120,15 +120,15 @@ block content
   section.section.ui-form-section
     h1.section__title UI form
     .section__content
-      input.input.test-input
-      input.input(type='checkbox')
-      label 체크박스 라벨
-      input.input.test-input-checkbox(type='checkbox')
-      label 체크박스 라벨
-      input.input.test-input-radiobox(type='radiobox')
-      label 라디오박스 라벨
-      input.input.test-input-placeholder(placeholder='placeholder')
-      textarea.textarea.test-textarea textarea
+      input.input.test-input(type='input')(placeholder='placeholder')
+      .form-check
+        input.input.test-input-checkbox(type='checkbox')
+      .form-check
+        label 체크박스 라벨
+        input.input.test-input-radiobox(type='radio')
+      .form-check
+        label 라디오박스 라벨
+        textarea.textarea.test-textarea textarea
   section.section.form-section
     h1.section__title Form
     .section__content
@@ -144,41 +144,41 @@ block content
         h2.item-title Checkbox
         .item-wrap
           .item
-            input#chk-01(type='checkbox', name='chk', checked)
+            input#chk-01.input(type='checkbox', name='chk', checked)
             label(for='chk-01') 체크박스
           .item
-            input#chk-02(type='checkbox', name='chk')
+            input#chk-02.input(type='checkbox', name='chk')
             label(for='chk-02') 체크박스
           .item
-            input#chk-03(type='checkbox', name='chk', disabled)
+            input#chk-03.input(type='checkbox', name='chk', disabled)
             label(for='chk-03') 체크박스
         h2.item-title Checklist
         .item-wrap
           .chkBox
-            input#check-05(type='checkbox', name='check')
+            input#check-05.input(type='checkbox', name='check')
             label(for='check-05')
               strong 약관 전체동의 (필수)
           .chkBox
-            input#check-06(type='checkbox', name='check')
+            input#check-06.input(type='checkbox', name='check')
             label(for='check-06') 주문할 상품의 정보를 확인하였으며 해당 주문에 대한 구매에 동의합니다.
       .item-wrap
         h2.item-title Radio Box
         .radioWrap
           .radioBox
-            input#radio-01(type='radio', name='radio', checked)
+            input#radio-01.input(type='radio', name='radio', checked)
             label(for='radio-01') 라디오
           .radioBox
-            input#radio-02(type='radio', name='radio')
+            input#radio-02.input(type='radio', name='radio')
             label(for='radio-02') 라디오
           .radioBox
-            input#radio-03(type='radio', name='radio', disabled)
+            input#radio-03.input(type='radio', name='radio', disabled)
             label(for='radio-03') 라디오
       .item-wrap
         h2.item-title Select Box
         .radioWrap
           p.item-title Radio Button Group
           .selectWrap
-            select(title='옵션')
+            select.select(title='옵션')
               option 전체
               option 옵션1
               option 옵션2
