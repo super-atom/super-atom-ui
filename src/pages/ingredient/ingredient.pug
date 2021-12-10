@@ -3,257 +3,280 @@ block header
   +header('ingredient')
 
 block content
-  section.section.main-section
+  .inner
     .page__title-wrap
       h1.page__title Design System
-  section.section.typo-section
-    h1.section__title Typography
-    .section__content
-      ul.txt-wrap.typeface-wrap
-        li Noto Sans Black
-        li Noto Sans Bold
-        li Noto Sans DemiLight
-        li Noto Sans Light
-        li Noto Sans Medium
-        li Noto Sans Regular
-        li Noto Sans Thin
-      ul.txt-wrap.heading-wrap
-        h1 Heading 1
-        h2 Heading 2
-        h3 Heading 3
-        h4 Heading 4
-        h5 Heading 5
-        h6 Heading 6
-  section.section.color-section
-    h1.section__title Color
-    .section__content
-      ul.color-wrap
-        li.grey grey1
-        li.grey grey2
-        li.grey grey3
-        li.grey grey4
-        li.grey grey5
-        li.grey grey6
-        li.grey grey7
-        li.grey grey8
-        li.grey grey9
-        li.grey grey10
-      ul.color-wrap
-        li.material-red red1
-        li.material-red red2
-        li.material-red red3
-        li.material-red red4
-        li.material-red red5
-        li.material-red red6
-        li.material-red red7
-        li.material-red red8
-        li.material-red red9
-        li.material-red red10
-  section.section.grid-section
-    h1.section__title Grid
-    .section__content
-      ul.txt-wrap
-        li Grid
-        li Grid
-        li Grid
-        li Grid
-        li Grid
-        li Grid
-        li Grid
-        li Grid
-        li Grid
-        li Grid
-        li Grid
-        li Grid
-  section.section.ratio-section
-    h1.section__title Ratio
-    .section__content
-      ul.txt-wrap
-        li
-          p 1:1 ratio
-        li
-          p 3:4 ratio
-        li
-          p golden ratio
-        li
-          p golden ratio
-        li
-          p silver ratio
-        li
-          p silver ratio
-        li
-          p bronze ratio
-        li
-          p bronze ratio
-  section.section.theme-section
-    h1.section__title Varient
-    .section__content
-      .btn-wrap
-        button.button(data-type='contained') contained button
-        button.button(data-type='outlined') outlined button
-        button.button(data-type='outlined-reverse') outlined-reverse button
-        button.button(data-type='text') text button
-        button.button(data-type='round') round button
-        button.button(data-type='round-reverse') round-reverse button
-        button.button(disabled) disabled button
-  section.section.table-section
-    h1.section__title Table
-    .section__content
-      table.table
-        thead
-          tr
-            th Sites
-            th Views
-            th Clicks
-            th Average
-        tbody
-          tr
-            td Google
-            td 9518
-            td 6369
-            td 01:32:50
-          tr
-            td Google
-            td 9518
-            td 6369
-            td 01:32:50
-  section.section.ui-form-section
-    h1.section__title UI form
-    .section__content
-      input.input.test-input(type='input')(placeholder='placeholder')
-      .form-check
-        input.input.test-input-checkbox(type='checkbox')
-      .form-check
-        label 체크박스 라벨
-        input.input.test-input-radiobox(type='radio')
-      .form-check
-        label 라디오박스 라벨
-        textarea.textarea.test-textarea textarea
-  section.section.form-section
-    h1.section__title Form
-    .section__content
-      .item-wrap
-        h2.item-title Input
-        input.input(type='text', placeholder)
-        .input-wrap
-          input.input(type='text', placeholder, data-state='error')
-          p.input__errorMsg 다시 확인해 주세요.
-        input.input(type='text', placeholder, disabled)
-        input.input(type='text', placeholder='텍스트 입력', value='입력내용', readonly)
-      .item-wrap
-        h2.item-title Checkbox
+    section.section.typo-section
+      h1.section__title Typography
+      .section__content
+        ul.txt-wrap.typeface-wrap
+          li Noto Sans Black
+          li Noto Sans Bold
+          li Noto Sans DemiLight
+          li Noto Sans Light
+          li Noto Sans Medium
+          li Noto Sans Regular
+          li Noto Sans Thin
+        ul.txt-wrap.heading-wrap
+          h1 Heading 1
+          h2 Heading 2
+          h3 Heading 3
+          h4 Heading 4
+          h5 Heading 5
+          h6 Heading 6
+    section.section.color-section
+      h1.section__title Color
+      .section__content
+        ul.color-wrap
+          li.grey grey-1
+          li.grey grey-2
+          li.grey grey-3
+          li.grey grey-4
+          li.grey grey-5
+          li.grey grey-6
+          li.grey grey-7
+          li.grey grey-8
+          li.grey grey-9
+          li.grey grey-10
+        ul.color-wrap
+          li.material-red red-1
+          li.material-red red-2
+          li.material-red red-3
+          li.material-red red-4
+          li.material-red red-5
+          li.material-red red-6
+          li.material-red red-7
+          li.material-red red-8
+          li.material-red red-9
+          li.material-red red-10
+        ul.color-map-wrap
+          li.material-pink pink-5
+          li.material-purple purple-5
+          li.material-deep-purple deep-purple-5
+          li.material-indigo indigo-5
+          li.material-blue blue-5
+          li.material-light-blue light-blue-5
+          li.material-cyan cyan-5
+          li.material-green green-5
+          li.material-light-green light-green-5
+          li.material-lime lime-5
+        ul.color-map-wrap
+          li.material-yellow yellow-5
+          li.material-amber amber-5
+          li.material-orange orange-5
+          li.material-deep-orange deep-orange-5
+          li.material-brown brown-5
+          li.material-blue-grey blue-grey-5
+    section.section.grid-section
+      h1.section__title Grid
+      .section__content
+        ul.txt-wrap
+          li Grid
+          li Grid
+          li Grid
+          li Grid
+          li Grid
+          li Grid
+          li Grid
+          li Grid
+          li Grid
+          li Grid
+          li Grid
+          li Grid
+    section.section.ratio-section
+      h1.section__title Ratio
+      .section__content
+        ul.txt-wrap
+          li
+            p 1:1 ratio
+          li
+            p 3:4 ratio
+          li
+            p golden ratio
+          li
+            p golden ratio
+          li
+            p silver ratio
+          li
+            p silver ratio
+          li
+            p bronze ratio
+          li
+            p bronze ratio
+    section.section.theme-section
+      h1.section__title Varient
+      .section__content
+        .btn-wrap
+          button.button(data-type='contained') contained button
+          button.button(data-type='outlined') outlined button
+          button.button(data-type='outlined-reverse') outlined-reverse button
+          button.button(data-type='text') text button
+          button.button(data-type='round') round button
+          button.button(data-type='round-reverse') round-reverse button
+          button.button(disabled) disabled button
+    section.section.table-section
+      h1.section__title Table
+      .section__content
+        table.table
+          thead
+            tr
+              th Sites
+              th Views
+              th Clicks
+              th Average
+          tbody
+            tr
+              td Google
+              td 9518
+              td 6369
+              td 01:32:50
+            tr
+              td Google
+              td 9518
+              td 6369
+              td 01:32:50
+    section.section.ui-form-section
+      h1.section__title UI form
+      .section__content
+        input.input.test-input(type='input', placeholder='placeholder')
+        .form-check
+          input.input.test-input-checkbox(type='checkbox')
+        .form-check
+          label 체크박스 라벨
+          input.input.test-input-radiobox(type='radio')
+        .form-check
+          label 라디오박스 라벨
+          textarea.textarea.test-textarea textarea
+    section.section.form-section
+      h1.section__title Form
+      .section__content
         .item-wrap
-          .item
-            input#chk-01.input(type='checkbox', name='chk', checked)
-            label(for='chk-01') 체크박스
-          .item
-            input#chk-02.input(type='checkbox', name='chk')
-            label(for='chk-02') 체크박스
-          .item
-            input#chk-03.input(type='checkbox', name='chk', disabled)
-            label(for='chk-03') 체크박스
-        h2.item-title Checklist
-        .item-wrap
-          .chkBox
-            input#check-05.input(type='checkbox', name='check')
-            label(for='check-05')
-              strong 약관 전체동의 (필수)
-          .chkBox
-            input#check-06.input(type='checkbox', name='check')
-            label(for='check-06') 주문할 상품의 정보를 확인하였으며 해당 주문에 대한 구매에 동의합니다.
-      .item-wrap
-        h2.item-title Radio Box
-        .radioWrap
-          .radioBox
-            input#radio-01.input(type='radio', name='radio', checked)
-            label(for='radio-01') 라디오
-          .radioBox
-            input#radio-02.input(type='radio', name='radio')
-            label(for='radio-02') 라디오
-          .radioBox
-            input#radio-03.input(type='radio', name='radio', disabled)
-            label(for='radio-03') 라디오
-      .item-wrap
-        h2.item-title Select Box
-        .radioWrap
-          p.item-title Radio Button Group
-          .selectWrap
-            select.select(title='옵션')
-              option 전체
-              option 옵션1
-              option 옵션2
-              option 옵션3
-      .item-wrap
-        h2.item-title Form Group
-        div
-          label.label(for='field1') Full name
-          input#field1.input(
-            name='field1',
+          h2.item-title Input
+          input.input(type='text', placeholder)
+          .input-wrap
+            input.input(type='text', placeholder, data-state='error')
+            p.input__errorMsg 다시 확인해 주세요.
+          input.input(type='text', placeholder, disabled)
+          input.input(
             type='text',
-            value='',
-            size='8',
-            tabindex='1'
+            placeholder='텍스트 입력',
+            value='입력내용',
+            readonly
           )
-        div
-          label.label(for='field2') Email
-          input#field2.input(
-            name='field2',
-            type='email',
-            value='',
-            maxlength='255',
-            tabindex='2'
-          )
-        div
-          label.label(for='field3') Message
-          textarea#field3.textarea(
-            name='field3',
-            spellcheck='true',
-            rows='10',
-            cols='50',
-            tabindex='3'
-          )
-        div
-          fieldset
-            legend select a choice
-            div
-              input.input(type='hidden', value='')
-              div
-                input#field4_1.input(
-                  name='field4',
-                  type='radio',
-                  value='first choice',
-                  tabindex='4',
-                  checked='checked'
-                )
-                label.label(for='field4_1') First Choice
-              div
-                input#field4_2.input(
-                  name='field4',
-                  type='radio',
-                  value='first choice',
-                  tabindex='5',
-                  checked='checked'
-                )
-                label.label(for='field4_2') Second Choice
-              div
-                input#field4_3.input(
-                  name='field4',
-                  type='radio',
-                  value='first choice',
-                  tabindex='6',
-                  checked='checked'
-                )
-                label.label(for='field4_3') Third Choice
-        div
-          label.label Select a Choice
+        .item-wrap
+          h2.item-title Checkbox
+          .item-wrap
+            .item
+              input#chk-01.input(type='checkbox', name='chk', checked)
+              label(for='chk-01') 체크박스
+            .item
+              input#chk-02.input(type='checkbox', name='chk')
+              label(for='chk-02') 체크박스
+            .item
+              input#chk-03.input(type='checkbox', name='chk', disabled)
+              label(for='chk-03') 체크박스
+          h2.item-title Checklist
+          .item-wrap
+            .chkBox
+              input#check-05.input(type='checkbox', name='check')
+              label(for='check-05')
+                strong 약관 전체동의 (필수)
+            .chkBox
+              input#check-06.input(type='checkbox', name='check')
+              label(for='check-06') 주문할 상품의 정보를 확인하였으며 해당 주문에 대한 구매에 동의합니다.
+        .item-wrap
+          h2.item-title Radio Box
+          .radioWrap
+            .radioBox
+              input#radio-01.input(type='radio', name='radio', checked)
+              label(for='radio-01') 라디오
+            .radioBox
+              input#radio-02.input(type='radio', name='radio')
+              label(for='radio-02') 라디오
+            .radioBox
+              input#radio-03.input(type='radio', name='radio', disabled)
+              label(for='radio-03') 라디오
+        .item-wrap
+          h2.item-title Select Box
+          .radioWrap
+            p.item-title Radio Button Group
+            .selectWrap
+              select.select(title='옵션')
+                option 전체
+                option 옵션1
+                option 옵션2
+                option 옵션3
+        .item-wrap
+          h2.item-title Form Group
           div
-            select#field5.select(tabindex='7')
-              option(value='first choice') First Choice
-              option(value='second choice') Second Choice
-              option(value='third choice') Third Choice
-        div
-          input#saveForm.input.button(
-            name='saveForm',
-            type='submit',
-            value='submit'
-          )
+            label.label(for='field1') Full name
+            input#field1.input(
+              name='field1',
+              type='text',
+              value='',
+              size='8',
+              tabindex='1'
+            )
+          div
+            label.label(for='field2') Email
+            input#field2.input(
+              name='field2',
+              type='email',
+              value='',
+              maxlength='255',
+              tabindex='2'
+            )
+          div
+            label.label(for='field3') Message
+            textarea#field3.textarea(
+              name='field3',
+              spellcheck='true',
+              rows='10',
+              cols='50',
+              tabindex='3'
+            )
+          div
+            fieldset
+              legend select a choice
+              div
+                input.input(type='hidden', value='')
+                div
+                  input#field4_1.input(
+                    name='field4',
+                    type='radio',
+                    value='first choice',
+                    tabindex='4',
+                    checked='checked'
+                  )
+                  label.label(for='field4_1') First Choice
+                div
+                  input#field4_2.input(
+                    name='field4',
+                    type='radio',
+                    value='first choice',
+                    tabindex='5',
+                    checked='checked'
+                  )
+                  label.label(for='field4_2') Second Choice
+                div
+                  input#field4_3.input(
+                    name='field4',
+                    type='radio',
+                    value='first choice',
+                    tabindex='6',
+                    checked='checked'
+                  )
+                  label.label(for='field4_3') Third Choice
+          div
+            label.label Select a Choice
+            div
+              select#field5.select(tabindex='7')
+                option(value='first choice') First Choice
+                option(value='second choice') Second Choice
+                option(value='third choice') Third Choice
+          div
+            input#saveForm.input.button(
+              name='saveForm',
+              type='submit',
+              value='submit'
+            )

@@ -1,5 +1,5 @@
 /* START : common.scss */
-@import './dev-core';
+@import './core';
 // 사전 정의한 CSS 를 생성합니다.
 @import './base/base';
 @import './settings/settings';
@@ -15,6 +15,11 @@ body {
     color: $sub-color;
     background-color: $main-color;
   }
+}
+
+.section__title {
+  font-weight: 600;
+  font-family: 'Open Sans';
 }
 
 #header {
@@ -168,18 +173,28 @@ body {
       margin: 0 auto;
     }
   }
+
+  .code-wrap {
+    position: relative;
+    padding: 15px;
+    background-color: $base-color-grey-0;
+
+    code {
+      position: relative;
+      padding-left: 15px;
+    }
+
+    .button {
+      color: $black;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: $white;
+    }
+  }
 }
 
-.section__title {
-  font-weight: 600;
-  font-family: 'Open Sans';
-}
-
-.button + .button {
-  margin-left: 10px;
-}
-
-.footer {
+#footer {
   @include container;
   color: $white;
   background-color: $black;

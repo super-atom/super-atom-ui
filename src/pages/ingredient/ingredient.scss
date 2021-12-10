@@ -1,6 +1,12 @@
-@import '../../styles/dev-core';
+@import '../../styles/core';
+
+.inner {
+  position: relative;
+  max-width: 100%;
+}
 
 .section {
+  @include container;
   max-width: 1200px;
   margin: 0 auto;
 
@@ -16,45 +22,40 @@
   }
 }
 
-.main-section {
+.page__title-wrap {
   position: relative;
-  max-width: 100%;
+  height: 500px;
+  @include background('../../assets/images/monalisa.jpg');
+  &::before {
+    @include pseudo();
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.3);
+  }
+  @include bp-min(md) {
+    background-position: 50% -100px;
+  }
+  @include bp-min(lg) {
+    background-position: 50% -200px;
+  }
+  @include bp-min(xl) {
+    background-position: 50% -400px;
+  }
 
-  .page__title-wrap {
-    position: relative;
-    height: 500px;
-    @include background('../../assets/images/monalisa.jpg');
-    &::before {
-      @include pseudo();
-      width: 100%;
-      height: 100%;
-      background-color: rgba($color: #000000, $alpha: 0.3);
-    }
-    @include bp-min(md) {
-      background-position: 50% -100px;
-    }
-    @include bp-min(lg) {
-      background-position: 50% -200px;
-    }
-    @include bp-min(xl) {
-      background-position: 50% -400px;
-    }
-
-    .page__title {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      padding: 10px 20px;
-      color: $white;
-      font-weight: 700;
-      font-size: 40px;
-      font-family: 'Open Sans';
-      text-transform: uppercase;
-      background-color: $black;
-      border: 5px solid $white;
-      transform: translate(-50%, -50%);
-      @include base-font-sizes-h1();
-    }
+  .page__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 10px 20px;
+    color: $white;
+    font-weight: 700;
+    font-size: 40px;
+    font-family: 'Open Sans';
+    text-transform: uppercase;
+    background-color: $black;
+    border: 5px solid $white;
+    transform: translate(-50%, -50%);
+    @include base-font-sizes-h1();
   }
 }
 
@@ -137,69 +138,179 @@
         lost-column: 1/10;
       }
     }
+
+    .grey {
+      &:nth-of-type(1) {
+        background-color: $grey-0;
+      }
+      &:nth-of-type(2) {
+        background-color: $grey-1;
+      }
+      &:nth-of-type(3) {
+        background-color: $grey-2;
+      }
+      &:nth-of-type(4) {
+        background-color: $grey-3;
+      }
+      &:nth-of-type(5) {
+        background-color: $grey-4;
+      }
+      &:nth-of-type(6) {
+        background-color: $grey-5;
+      }
+      &:nth-of-type(7) {
+        background-color: $grey-6;
+      }
+      &:nth-of-type(8) {
+        background-color: $grey-7;
+      }
+      &:nth-of-type(9) {
+        background-color: $grey-8;
+      }
+      &:nth-of-type(10) {
+        background-color: $grey-9;
+      }
+    }
+    .material-red {
+      &:nth-of-type(1) {
+        background-color: $red-0;
+      }
+      &:nth-of-type(2) {
+        background-color: $red-1;
+      }
+      &:nth-of-type(3) {
+        background-color: $red-2;
+      }
+      &:nth-of-type(4) {
+        background-color: $red-3;
+      }
+      &:nth-of-type(5) {
+        background-color: $red-4;
+      }
+      &:nth-of-type(6) {
+        background-color: $red-5;
+      }
+      &:nth-of-type(7) {
+        background-color: $red-6;
+      }
+      &:nth-of-type(8) {
+        background-color: $red-7;
+      }
+      &:nth-of-type(9) {
+        background-color: $red-8;
+      }
+      &:nth-of-type(10) {
+        background-color: $red-9;
+      }
+    }
   }
-  .grey {
-    &:nth-of-type(1) {
-      background-color: $grey-0;
+  .color-map-wrap {
+    position: relative;
+    margin-top: 20px;
+    @include lost-center-set;
+
+    &:last-child {
+      @include bp-max(sm) {
+        margin-top: 0;
+      }
     }
-    &:nth-of-type(2) {
-      background-color: $grey-1;
+
+    li {
+      min-height: 40px;
+      font-size: 13px;
+      text-align: center;
+      border-radius: 5px;
+
+      @include bp-max(sm) {
+        height: 40px;
+        line-height: 40px;
+        border-radius: 0;
+        lost-column: 1/1;
+      }
+
+      @include bp-only(md) {
+        height: 50px;
+        line-height: 50px;
+        lost-column: 1/5;
+        &:nth-of-type(6),
+        &:nth-of-type(7),
+        &:nth-of-type(8),
+        &:nth-of-type(9),
+        &:nth-of-type(10) {
+          margin-top: 20px;
+        }
+      }
+      @include bp-min(lg) {
+        height: 100px;
+        line-height: 100px;
+        lost-column: 1/10;
+      }
     }
-    &:nth-of-type(3) {
-      background-color: $grey-2;
-    }
-    &:nth-of-type(4) {
-      background-color: $grey-3;
-    }
-    &:nth-of-type(5) {
-      background-color: $grey-4;
-    }
-    &:nth-of-type(6) {
-      background-color: $grey-5;
-    }
-    &:nth-of-type(7) {
-      background-color: $grey-6;
-    }
-    &:nth-of-type(8) {
-      background-color: $grey-7;
-    }
-    &:nth-of-type(9) {
-      background-color: $grey-8;
-    }
-    &:nth-of-type(10) {
-      background-color: $grey-9;
-    }
-  }
-  .material-red {
-    &:nth-of-type(1) {
-      background-color: $red-0;
-    }
-    &:nth-of-type(2) {
-      background-color: $red-1;
-    }
-    &:nth-of-type(3) {
-      background-color: $red-2;
-    }
-    &:nth-of-type(4) {
-      background-color: $red-3;
-    }
-    &:nth-of-type(5) {
-      background-color: $red-4;
-    }
-    &:nth-of-type(6) {
-      background-color: $red-5;
-    }
-    &:nth-of-type(7) {
-      background-color: $red-6;
-    }
-    &:nth-of-type(8) {
-      background-color: $red-7;
-    }
-    &:nth-of-type(9) {
-      background-color: $red-8;
-    }
-    &:nth-of-type(10) {
-      background-color: $red-9;
+
+    .material {
+      &-pink {
+        background-color: $pink-5;
+      }
+
+      &-purple {
+        background-color: $purple-5;
+      }
+
+      &-deep-purple {
+        background-color: $deep-purple-5;
+      }
+
+      &-indigo {
+        background-color: $indigo-5;
+      }
+
+      &-blue {
+        background-color: $blue-5;
+      }
+
+      &-light-blue {
+        background-color: $light-blue-5;
+      }
+
+      &-cyan {
+        background-color: $cyan-5;
+      }
+
+      &-green {
+        background-color: $green-5;
+      }
+
+      &-light-green {
+        background-color: $light-green-5;
+      }
+
+      &-lime {
+        background-color: $lime-5;
+      }
+
+      &-yellow {
+        background-color: $yellow-5;
+      }
+
+      &-amber {
+        background-color: $amber-5;
+      }
+
+      &-orange {
+        background-color: $orange-5;
+      }
+
+      &-deep-orange {
+        background-color: $deep-orange-5;
+      }
+
+      &-brown {
+        background-color: $brown-5;
+      }
+
+      &-blue-grey {
+        background-color: $blue-grey-5;
+      }
     }
   }
 }

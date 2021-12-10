@@ -1,4 +1,4 @@
-@import '../../styles/dev-core.scss';
+@import '../../styles/core.scss';
 
 #content {
   .section {
@@ -42,6 +42,7 @@
       border-radius: 10px;
       box-shadow: 0px 1px 5px $black;
       transform: rotate3d(0);
+      cursor: pointer;
       transition-timing-function: ease-out;
       transition-duration: 300ms;
       transition-property: transform, box-shadow;
@@ -98,24 +99,11 @@
     }
 
     .code-wrap {
-      position: relative;
-      padding: 20px;
-      background-color: $base-color-grey-0;
-
       code {
-        position: relative;
-        padding-left: 15px;
         &::before {
           @include pseudo($content: '$');
           left: 0;
         }
-      }
-
-      .button {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        background-color: $white;
       }
     }
   }
