@@ -1,6 +1,6 @@
 @import '../../themes/themes';
 
-@mixin themable($theme-name, $theme-map) {
+@mixin themable($theme-name: null, $theme-map) {
   body[data-theme='#{$theme-name}'] {
     @each $section, $map in $theme-map {
       .#{$section} {
@@ -8,47 +8,32 @@
           background-color: map-get($map, bg);
         }
         @if ($section == button) {
-          border: 1px solid $base-grey;
+          border-color: $base-grey;
           &[disabled] {
             color: darken(
               alt-color($state-disabled, map-deep-get($theme-map, color, sub)),
               30%
             );
             background-color: $state-disabled;
-            cursor: not-allowed;
           }
           &[data-type='contained'] {
             color: map-deep-get($theme-map, color, sub);
             background-color: map-deep-get($theme-map, color, main);
             border-color: map-deep-get($theme-map, color, main);
           }
-          &[data-type='text'] {
-            border-color: transparent;
-          }
-          &[data-type='text'],
-          &[data-type='outlined'],
-          &[data-type='round-reverse'] {
-            background-color: transparent;
-          }
+
           &[data-type='outlined'] {
             color: map-deep-get($theme-map, color, main);
             border-color: map-deep-get($theme-map, color, main);
-          }
-          &[data-type='outlined-reverse'] {
-            color: map-deep-get($theme-map, color, sub);
-            background-color: map-deep-get($theme-map, color, main);
-            border-color: map-deep-get($theme-map, color, sub);
           }
           &[data-type='round'] {
             color: map-deep-get($theme-map, color, sub);
             background-color: map-deep-get($theme-map, color, main);
             border-color: map-deep-get($theme-map, color, main);
-            border-radius: 50px;
           }
           &[data-type='round-reverse'] {
             color: map-deep-get($theme-map, color, main);
             border-color: map-deep-get($theme-map, color, main);
-            border-radius: 50px;
           }
         }
       }

@@ -1,4 +1,4 @@
-extends ../../templates/layouts/base
+extends ../../layouts/base
 block header
   +header('ingredient')
 
@@ -103,7 +103,7 @@ block content
             p bronze ratio
           li
             p bronze ratio
-    section.section.theme-section
+    section.section.varient-section
       h1.section__title Varient
       .section__content
         .btn-wrap
@@ -114,6 +114,15 @@ block content
           button.button(data-type='round') round button
           button.button(data-type='round-reverse') round-reverse button
           button.button(disabled) disabled button
+    section.section.theme-section
+      h1.section__title Theme
+      .section__content
+        .btn-wrap.theme-base
+          button.button.js_themeless_btn(data-type='contained') themeless button
+        .btn-wrap.theme-base
+          button.button.js_base_theme_btn(data-type='contained') base theme button
+        .btn-wrap.theme-atom
+          button.button.js_atom_theme_btn(data-type='contained') atom theme button
     section.section.table-section
       h1.section__title Table
       .section__content
@@ -135,18 +144,6 @@ block content
               td 9518
               td 6369
               td 01:32:50
-    section.section.ui-form-section
-      h1.section__title UI form
-      .section__content
-        input.input.test-input(type='input', placeholder='placeholder')
-        .form-check
-          input.input.test-input-checkbox(type='checkbox')
-        .form-check
-          label 체크박스 라벨
-          input.input.test-input-radiobox(type='radio')
-        .form-check
-          label 라디오박스 라벨
-          textarea.textarea.test-textarea textarea
     section.section.form-section
       h1.section__title Form
       .section__content

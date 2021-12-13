@@ -1,4 +1,4 @@
-@import '../../styles/core.scss';
+@import '../../../styles/core.scss';
 
 #content {
   .section {
@@ -16,7 +16,7 @@
     position: relative;
     height: 80vh;
     margin-bottom: 15px;
-    @include background('../../assets/images/vitruvius.jpg');
+    @include background('../../../assets/images/vitruvius.jpg');
     &::before {
       position: absolute;
       top: 0;
@@ -46,7 +46,7 @@
       transition-timing-function: ease-out;
       transition-duration: 300ms;
       transition-property: transform, box-shadow;
-      @include background('../../assets/images/monalisa.jpg');
+      @include background('../../../assets/images/monalisa.jpg');
 
       &:hover {
         box-shadow: 0 5px 20px 5px #00000044;

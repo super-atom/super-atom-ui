@@ -26,6 +26,7 @@
 }
 
 @mixin base-font-sizes-title() {
+  font-weight: 700;
   font-family: $title-font;
   letter-spacing: $title-font-letter-spacing;
   @include font-size($base-font-sizes-title);

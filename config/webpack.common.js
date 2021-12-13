@@ -24,7 +24,7 @@ const getDirectoriesAllFiles = (directory, arrayOfFiles) => {
   return arrayOfFiles;
 };
 
-getDirectoriesAllFiles(path.join(PATHS.source, '/pages'));
+getDirectoriesAllFiles(PATHS.pages);
 
 const entryHtmlPlugins = arrayOfEntryDirectory.map((page) => {
   // https://github.com/jantimon/html-webpack-plugin#options
