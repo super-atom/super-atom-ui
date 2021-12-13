@@ -1,4 +1,4 @@
-@import '../../styles/core';
+@import '../../../styles/core';
 
 .wrapper {
   @include flex-container(row nowrap justify-content align-center);
@@ -47,7 +47,7 @@
       }
     }
 
-    .nav__subject-title {
+    .nav__sub-title {
       width: 100%;
       padding: 0;
       padding-left: 15px;
@@ -126,7 +126,7 @@
     .page__title-wrap {
       position: relative;
       height: 500px;
-      @include background('../../assets/images/vitruvius.jpg');
+      @include background('../../../assets/images/vitruvius.jpg');
 
       &:before {
         @include pseudo;
@@ -148,6 +148,14 @@
         @include centeringXY;
         @include base-font-sizes-title;
       }
+    }
+
+    .section-wrap {
+      margin-bottom: 20px;
+    }
+
+    .section-wrap-title {
+      @include base-font-sizes-title;
     }
 
     .section__subject-wrap {

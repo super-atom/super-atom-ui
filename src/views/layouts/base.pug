@@ -3,15 +3,15 @@ block variables
 
 doctype html
 html.index(lang='pl', dir='ltr')
-  include ../../templates/includes/head.pug
-  include ../../templates/includes/header.pug
-  include ../../templates/includes/footer.pug
+  include ../includes/head.pug
+  include ../includes/header.pug
+  include ../includes/footer.pug
 
   head
     block head
       +head(DATA)
 
-  body#body.body.theme-base(data-theme='')
+  body#body.body(data-theme='')
     block header
       +header
     #content.content

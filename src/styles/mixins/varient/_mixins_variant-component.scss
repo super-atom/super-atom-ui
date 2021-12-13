@@ -5,6 +5,33 @@
     .#{$component} {
       @if ($component == button) {
         @include button($radius: map-deep-get($component-map, button, radius));
+        &[disabled] {
+          cursor: not-allowed;
+        }
+        &[data-type='round'],
+        &[data-type='round-reverse'] {
+          border-radius: 50px;
+        }
+        &[data-type='text'] {
+          border-color: transparent;
+        }
+
+        &[data-type='outlined'] {
+          border-width: 1px;
+          border-style: solid;
+        }
+        &[data-type='outlined-reverse'] {
+          color: $white;
+          border-color: $white;
+          border-style: solid;
+          border-width: 1px;
+          background-color: transparent;
+        }
+        &[data-type='text'],
+        &[data-type='outlined'],
+        &[data-type='round-reverse'] {
+          background-color: transparent;
+        }
       }
     }
   }

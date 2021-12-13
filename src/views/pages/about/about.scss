@@ -1,10 +1,10 @@
-@import '../../styles/core.scss';
+@import '../../../styles/core.scss';
 
 .section-main {
   .title-wrap {
     position: relative;
     height: 500px;
-    @include background('../../assets/images/the-last-supper.jpg');
+    @include background('../../../assets/images/the-last-supper.jpg');
     &::before {
       @include pseudo();
       width: 100%;

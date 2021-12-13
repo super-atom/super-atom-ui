@@ -1,3 +1,5 @@
+const postcssPresetEnv = require('postcss-preset-env');
+const postcssSimpleVars = require('postcss-simple-vars');
 module.exports = (api) => {
   // `api.file` - path to the file
   // `api.mode` - `mode` value of webpack, please read https://webpack.js.org/configuration/mode/
@@ -9,6 +11,7 @@ module.exports = (api) => {
     // You can specify any options from https://postcss.org/api/#processoptions here
     parser: 'postcss-scss',
     syntax: 'postcss-scss',
+    // !!! 순서가 중요하다.
     plugins: [
       'postcss-browser-reporter',
       'lost',
@@ -17,9 +20,17 @@ module.exports = (api) => {
       'postcss-url',
       'postcss-short',
       'postcss-import',
-      'postcss-simple-vars',
       'postcss-reporter',
-      'precss',
+      'postcss-extend-rule',
+      'postcss-advanced-variables',
+      postcssPresetEnv({
+        insertBefore: {
+          'all-property': postcssSimpleVars,
+        },
+      }),
+      'postcss-atroot',
+      'postcss-property-lookup',
+      'postcss-nested',
       'autoprefixer',
     ],
   };
