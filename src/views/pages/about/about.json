@@ -1,13 +1,6 @@
 {
   "head": {
-    "title": "title - about",
-    "description": "description - about"
-  },
-  "body": {
-    "image": "assets/images/about.jpg",
-    "mainText": "main text - about"
-  },
-  "content": {
-    "section": "about"
+    "title": "About - SUPER-ATOM-UI v0.1",
+    "description": "Super atomic design based ui/ux design system"
   }
 }
