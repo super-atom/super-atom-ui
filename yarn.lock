@@ -4154,11 +4154,6 @@
   dependencies:
     "open" "^7.0.3"
 
-"bezier-easing@^2.1.0":
-  "integrity" "sha1-wE3+i5JtbsrKGBPWn/F5t8ICXYY="
-  "resolved" "https://registry.npmjs.org/bezier-easing/-/bezier-easing-2.1.0.tgz"
-  "version" "2.1.0"
-
 "big.js@^5.2.2":
   "integrity" "sha512-vyL2OymJxmarO8gxMr0mhChsO9QGwhynfuu4+MHTAW6czfq9humCB7rKpUjDd9YUiDPU4mzpyupFSvOClAwbmQ=="
   "resolved" "https://registry.npmjs.org/big.js/-/big.js-5.2.2.tgz"
@@ -4168,11 +4163,6 @@
   "integrity" "sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA=="
   "resolved" "https://registry.npmjs.org/binary-extensions/-/binary-extensions-2.2.0.tgz"
   "version" "2.2.0"
-
-"bindall-standalone@^1.0.5":
-  "integrity" "sha1-90MDiPHH+amt4Px1pADnEPZpKh0="
-  "resolved" "https://registry.npmjs.org/bindall-standalone/-/bindall-standalone-1.0.5.tgz"
-  "version" "1.0.5"
 
 "bindings@^1.4.0":
   "integrity" "sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ=="
@@ -6226,13 +6216,6 @@
     "domhandler" "^4.2.0"
     "entities" "^2.0.0"
 
-"dom7@^4.0.1":
-  "integrity" "sha512-y/RWjw3gK3qQnZz6IqDaIoqH6+xBhcB3Wsh5HFwl0abwuO/NAgbSB31ZbxtBDcuDe8jAX5NYUNDLTx4Ul48sIw=="
-  "resolved" "https://registry.npmjs.org/dom7/-/dom7-4.0.1.tgz"
-  "version" "4.0.1"
-  dependencies:
-    "ssr-window" "^4.0.0"
-
 "domelementtype@^2.0.1", "domelementtype@^2.2.0":
   "integrity" "sha512-DtBMo82pv1dFtUmHyr48beiuq792Sxohr+8Hm9zoxklYPfa6n0Z3Byjj2IV7bmr2IyqClnqEQhfgHJJ5QF0R5A=="
   "resolved" "https://registry.npmjs.org/domelementtype/-/domelementtype-2.2.0.tgz"
@@ -7953,13 +7936,6 @@
   "integrity" "sha1-FQStJSMVjKpA20onh8sBQRmU6k8="
   "resolved" "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz"
   "version" "1.0.0"
-
-"fullpage.js@^2.9.7":
-  "integrity" "sha512-r2a7h/xAFRningddSAP/xZtZxG3dxvmAc71ckommFsHF/EAPu5gw1CU4DRc2ErRg10lLX1gBoybISpa5F3ps5A=="
-  "resolved" "https://registry.npmjs.org/fullpage.js/-/fullpage.js-2.9.7.tgz"
-  "version" "2.9.7"
-  dependencies:
-    "jquery" ">=1.6.0"
 
 "function-bind@^1.1.1":
   "integrity" "sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A=="
@@ -9888,7 +9864,7 @@
   dependencies:
     "jquery" ">=1.8.0 <4.0.0"
 
-"jquery@^3.6.0", "jquery@>=1.6.0", "jquery@>=1.8.0 <4.0.0":
+"jquery@^3.6.0", "jquery@>=1.8.0 <4.0.0":
   "integrity" "sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw=="
   "resolved" "https://registry.npmjs.org/jquery/-/jquery-3.6.0.tgz"
   "version" "3.6.0"
@@ -10244,11 +10220,6 @@
   dependencies:
     "readable-stream" "^2.0.5"
 
-"lethargy@^1.0.2":
-  "integrity" "sha512-nFM8blpCF9rqIL5mRAaTGc78W8oQixVtsD86jbEPvcI13+lDUYJf3R7DZQQL7tCiBpbGpGKMX2gwJFO9hiaOkg=="
-  "resolved" "https://registry.npmjs.org/lethargy/-/lethargy-1.0.9.tgz"
-  "version" "1.0.9"
-
 "leven@^3.1.0":
   "integrity" "sha512-qsda+H8jTaUaN/x5vzW2rzc+8Rw4TAQ/4KjB46IwK5VH+IlVeeeje/EoZRpiXvIqjFgK84QffqPztGI3VBLG1A=="
   "resolved" "https://registry.npmjs.org/leven/-/leven-3.1.0.tgz"
@@ -10407,15 +10378,6 @@
   "version" "6.0.0"
   dependencies:
     "p-locate" "^5.0.0"
-
-"locomotive-scroll@^4.1.3":
-  "integrity" "sha512-1b9JAea6IevKCAuBtuyufUogEwhQtKHrClxj+599dLN7Xit1/6CM/X9haveXRCjgfD9RcPKfptasY4kvLGHNdA=="
-  "resolved" "https://registry.npmjs.org/locomotive-scroll/-/locomotive-scroll-4.1.3.tgz"
-  "version" "4.1.3"
-  dependencies:
-    "bezier-easing" "^2.1.0"
-    "smoothscroll-polyfill" "^0.4.4"
-    "virtual-scroll" "^1.5.2"
 
 "lodash.camelcase@^4.3.0":
   "integrity" "sha1-soqmKIorn8ZRA1x3EfZathkDMaY="
@@ -11986,11 +11948,6 @@
   "version" "5.1.2"
   dependencies:
     "mimic-fn" "^2.1.0"
-
-"open-color@^1.9.1":
-  "integrity" "sha512-vCseG/EQ6/RcvxhUcGJiHViOgrtz4x0XbZepXvKik66TMGkvbmjeJrKFyBEx6daG5rNyyd14zYXhz0hZVwQFOw=="
-  "resolved" "https://registry.npmjs.org/open-color/-/open-color-1.9.1.tgz"
-  "version" "1.9.1"
 
 "open@^7.0.0", "open@^7.0.3":
   "integrity" "sha512-MVHddDVweXZF3awtlAS+6pgKLlm/JgxZ90+/NBurBoQctVOOB/zDdVjcyPzQ+0laDGbsWgrRkflI65sQeOgT9Q=="
@@ -15078,11 +15035,6 @@
   "resolved" "https://registry.npmjs.org/slice-ansi/-/slice-ansi-0.0.4.tgz"
   "version" "0.0.4"
 
-"smoothscroll-polyfill@^0.4.4":
-  "integrity" "sha512-TK5ZA9U5RqCwMpfoMq/l1mrH0JAR7y7KRvOBx0n2869aLxch+gT9GhN3yUfjiw+d/DiF1mKo14+hd62JyMmoBg=="
-  "resolved" "https://registry.npmjs.org/smoothscroll-polyfill/-/smoothscroll-polyfill-0.4.4.tgz"
-  "version" "0.4.4"
-
 "snapdragon-node@^2.0.1":
   "integrity" "sha512-O27l4xaMYt/RSQ5TR3vpWCAB5Kb/czIcqUFOM/C4fYcLnbZUc1PkjTAMjof2pBWaSTwOUd6qUHcFGVGj7aIwnw=="
   "resolved" "https://registry.npmjs.org/snapdragon-node/-/snapdragon-node-2.1.1.tgz"
@@ -15398,11 +15350,6 @@
     "jsbn" "~0.1.0"
     "safer-buffer" "^2.0.2"
     "tweetnacl" "~0.14.0"
-
-"ssr-window@^4.0.0", "ssr-window@^4.0.1":
-  "integrity" "sha512-5q936lkCk5Lg5hM6tG8Nutdym4vNiuFSWorslTzOn71PWb3Wnx44q/k2Ryn1LWA1G4FtxMzjywUFOiOxPkVGrA=="
-  "resolved" "https://registry.npmjs.org/ssr-window/-/ssr-window-4.0.1.tgz"
-  "version" "4.0.1"
 
 "stable@^0.1.8":
   "integrity" "sha512-ji9qxRnOVfcuLDySj9qzhGSEFVobyt1kIOSkj1qZzYLzq7Tos/oUUWvotUPQLlrsidqsK6tBH89Bc9kL5zHA6w=="
@@ -15972,14 +15919,6 @@
     "picocolors" "^1.0.0"
     "stable" "^0.1.8"
 
-"swiper@^7.3.0":
-  "integrity" "sha512-pABfs5licxu2fmA53NrwVyeLMBKAMWBRfVbwKTF0PG40bCk3HDNWWqp1l/D3SQoO6/jx2rbKgVPymnAoXrcpKw=="
-  "resolved" "https://registry.npmjs.org/swiper/-/swiper-7.3.0.tgz"
-  "version" "7.3.0"
-  dependencies:
-    "dom7" "^4.0.1"
-    "ssr-window" "^4.0.1"
-
 "symbol-observable@^1.1.0":
   "integrity" "sha512-e900nM8RRtGhlV36KGEU9k65K3mPb1WV70OdjfxlG2EAuM1noi/E/BaW/uMhL7bPEssK8QV57vN3esixjUvcXQ=="
   "resolved" "https://registry.npmjs.org/symbol-observable/-/symbol-observable-1.2.0.tgz"
@@ -16214,11 +16153,6 @@
   "integrity" "sha1-QFQRqOfmM5/mTbmiNN4R3DHgK9Q="
   "resolved" "https://registry.npmjs.org/timsort/-/timsort-0.3.0.tgz"
   "version" "0.3.0"
-
-"tiny-emitter@^1.0.0":
-  "integrity" "sha1-bchFBSywjr78GHRyO1jySmSMO28="
-  "resolved" "https://registry.npmjs.org/tiny-emitter/-/tiny-emitter-1.2.0.tgz"
-  "version" "1.2.0"
 
 "tmp-promise@^3.0.2":
   "integrity" "sha512-RwM7MoPojPxsOBYnyd2hy0bxtIlVrihNs9pj5SUvY8Zz1sQcQG2tG1hSr8PDxfgEB8RNKDhqbIlroIarSNDNsQ=="
@@ -16859,16 +16793,6 @@
     "assert-plus" "^1.0.0"
     "core-util-is" "1.0.2"
     "extsprintf" "^1.2.0"
-
-"virtual-scroll@^1.5.2":
-  "integrity" "sha512-7jDHwlKbHUho7CYU/HojE/VKFH8GV9P5fVWP2HCa7dRUOpVvwl93OBOKIIcb2mKd+vqsbVR/0zl0X70+3sUZqA=="
-  "resolved" "https://registry.npmjs.org/virtual-scroll/-/virtual-scroll-1.5.2.tgz"
-  "version" "1.5.2"
-  dependencies:
-    "bindall-standalone" "^1.0.5"
-    "lethargy" "^1.0.2"
-    "object-assign" "^4.0.1"
-    "tiny-emitter" "^1.0.0"
 
 "void-elements@^2.0.1":
   "integrity" "sha1-wGavtYK7HLQSjWDqkjkulNXp2+w="
