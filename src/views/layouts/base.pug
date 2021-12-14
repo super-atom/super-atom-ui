@@ -1,12 +1,13 @@
+include ../atoms/button.pug
+include ../includes/head.pug
+include ../includes/header.pug
+include ../includes/footer.pug
+include ../mixins/mixins_list.pug
 block variables
 - var DATA = self.htmlWebpackPlugin.options.DATA;
 
 doctype html
 html.index(lang='pl', dir='ltr')
-  include ../includes/head.pug
-  include ../includes/header.pug
-  include ../includes/footer.pug
-
   head
     block head
       +head(DATA)

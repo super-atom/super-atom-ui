@@ -112,10 +112,18 @@
       @include container;
     }
 
-    .section__subject-title {
-      @include base-font-sizes-h3;
-      margin: 10px auto 0;
+    .section__title {
+      @include base-font-sizes-h2;
+    }
+
+    .section__sub-title {
+      @include base-font-sizes-h4;
+      margin: 5px auto;
       font-family: 'NotoSansCJKkr-Medium';
+
+      span {
+        font-family: 'NotoSansCJKkr-Light';
+      }
     }
 
     .section__content {
