@@ -18,7 +18,7 @@ block content
         a.button(href='/docs.html', data-type='outlined') Read installation docs
       .code-wrap
         code git clone https://github.com/super-atom/super-atom-ui
-        button.button(data-type='outlined') copy
+        +button({type:'outlined', label:'copy'}).js_copy_btn
   section.section.section-feature
     .inner
       .txt-wrap

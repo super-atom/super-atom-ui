@@ -5,6 +5,7 @@ const DashboardPlugin = require('webpack-dashboard/plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 const baseConfig = require('./webpack.common.js');
+const ENV = require('./env');
 
 // common part for production and dev
 const { cssLoaders } = require('./util');
@@ -31,7 +32,7 @@ module.exports = merge(baseConfig, {
       overlay: false,
     },
     open: true,
-    port: 3000,
+    port: ENV.server.port,
     liveReload: true,
     hot: false,
     host: 'localhost',

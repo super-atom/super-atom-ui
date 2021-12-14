@@ -25,6 +25,15 @@ body {
   font-family: 'Open Sans';
 }
 
+.code-wrap {
+  code {
+    &::before {
+      @include pseudo($content: '$');
+      left: 0;
+    }
+  }
+}
+
 #header {
   position: fixed;
   top: 0;
@@ -142,10 +151,8 @@ body {
       }
 
       .icon {
-        margin-right: 10px;
-        i {
-          font-size: 24px;
-        }
+        font-size: 24px;
+        color: white;
       }
     }
 

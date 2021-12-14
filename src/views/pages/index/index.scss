@@ -97,14 +97,5 @@
         margin-top: 10px;
       }
     }
-
-    .code-wrap {
-      code {
-        &::before {
-          @include pseudo($content: '$');
-          left: 0;
-        }
-      }
-    }
   }
 }

@@ -14,7 +14,7 @@ block content
             i.fa-solid.fa-up-down
         ul.nav__link-depth-1-wrap.js_nav__link_depth_1_wrap
           li.nav__link-depth-1.js_nav__link_depth_1
-            button.nav__sub-title.js_button(type='button', data-type='text')
+            button.nav__sub-title.js_btn(type='button', data-type='text')
               i.icon.fa-solid.fa-chevron-down
               | Getting started
             ul.nav__link-depth-2-wrap
@@ -25,14 +25,14 @@ block content
               li.nav__link-depth-2
                 a(href='#dependency') Dependency
           li.nav__link-depth-1.js_nav__link_depth_1
-            button.nav__sub-title.js_button(type='button', data-type='text')
+            button.nav__sub-title.js_btn(type='button', data-type='text')
               i.icon.fa-solid.fa-chevron-down
               | Pug Mixins
             ul.nav__link-depth-2-wrap
               li.nav__link-depth-2
-                a(href='#itemList') ItemList
+                a(href='#itemList') ...
           li.nav__link-depth-1.js_nav__link_depth_1
-            button.nav__sub-title.js_button(type='button', data-type='text')
+            button.nav__sub-title.js_btn(type='button', data-type='text')
               i.icon.fa-solid.fa-chevron-down
               | Sass Mixins
             ul.nav__link-depth-2-wrap
@@ -65,7 +65,7 @@ block content
               li.nav__link-depth-2
                 a(href='#varient') Varient
           li.nav__link-depth-1.js_nav__link_depth_1
-            button.nav__sub-title.js_button(type='button', data-type='text')
+            button.nav__sub-title.js_btn(type='button', data-type='text')
               i.icon.fa-solid.fa-chevron-down
               | Customize
             ul.nav__link-depth-2-wrap
@@ -86,52 +86,48 @@ block content
             .section__content
               p UI개발자를 위한 UI프레임워크. SUPER ATOMIC DESIGN에 기반한 프레임워크다.
               .section__subject-wrap
-                h2.section__subject-title 빠른 시작
+                h2.section__sub-title 빠른 시작
                 p 아래의 git 저장소에서 로컬 디렉토리로 파일을 복사하라.
                 .code-wrap
-                  code $ git clone https://github.com/super-atom/super-atom-ui
+                  code git clone https://github.com/super-atom/super-atom-ui
                   button.button(data-type='outlined') copy
                 p npm package를 설치하고 npm run dev 로 프로젝트를 시작하라.
               .section__subject-wrap
-                h2.section__subject-title 페이지 만들기
+                h2.section__sub-title 페이지 만들기
                 p [npm run create 파일명] 명령어로 페이지를 구성하는 폴더 및 파일을 생성하고 코드를 작성하라.
               .section__subject-wrap
-                h2.section__subject-title npm 명령어
+                h2.section__sub-title npm 명령어
                 ul.introduction__list-wrap
                   li
                     p webpack-dev-server 로 로컬 서버에서 개발을 시작한다.
                     .code-wrap
-                      code $ npm run dev
-                      button.button(data-type='outlined') copy
+                      code npm run dev
+                      +button({type:'outlined', label:'copy'}).js_copy_btn
                   li
                     p 웹 사이트를 빌드합니다.
                     .code-wrap
-                      code $ npm run prod
-                      button.button(data-type='outlined') copy
+                      code npm run prod
+                      +button({type:'outlined', label:'copy'}).js_copy_btn
                   li
                     p Prettier 를 이용하여 lint 설정대로 지정한 확장자의 모든 파일의 코드를 정리한다.
                     .code-wrap
-                      code $ npm run pretty
-                      button.button(data-type='outlined') copy
+                      code npm run pretty
+                      +button({type:'outlined', label:'copy'}).js_copy_btn
                   li
                     p 빌드된 파일을 삭제한다.
                     .code-wrap
-                      code $ npm run clean
-                      button.button(data-type='outlined') copy
+                      code npm run clean
+                      +button({type:'outlined', label:'copy'}).js_copy_btn
                   li
                     p 기존의 빌드된 파일을 삭제한 후 웹 사이트를 빌드한다.
                     .code-wrap
-                      code $ npm run build
-                      button.button(data-type='outlined') copy
+                      code npm run build
+                      +button({type:'outlined', label:'copy'}).js_copy_btn
                   li
                     p Netlify로 빌드된 파일을 배포한다.
                     .code-wrap
-                      code $ npm run deploy
-                      button.button(
-                        data-type='outlined',
-                        data-tooltip='클릭하면 코드가 복사됩니다.',
-                        data-tooltip-dir='bottom'
-                      ) copy
+                      code npm run deploy
+                      +button({type:'outlined', label:'copy'}).js_copy_btn
           section#structure.section
             h1.section__title Structure
             .section__content
@@ -432,19 +428,19 @@ block content
             .section__content
               p SUPER-ATOM-UI 는 최신 프론트엔드 툴링을 지원하는 보일러 플레이트다.
               .section__subject-wrap
-                h2.section__subject-title Babel(ES6+)
+                h2.section__sub-title Babel(ES6+)
                 .item-wrap
                   p Babel로 Typescript 코드를 트랜스파일링하여 최종적으로 구형 브라우저는 IE11까지 지원한다.
-                h2.section__subject-title Typescript
+                h2.section__sub-title Typescript
                 .item-wrap
                   p JavaScript의 수퍼셋인 TypeScript를 지원한다.
-                h2.section__subject-title Webpack
+                h2.section__sub-title Webpack
                 .item-wrap
                   p Webpack v5로 Babel, TypeScript 등을 트랜스파일링한다.
-                h2.section__subject-title Pug
+                h2.section__sub-title Pug
                 .item-wrap
                   p Pug는 HTML Template Engine 이다. Pug는 컴파일되어서 HTML 문서를 만든다.
-                h2.section__subject-title Sass + PoctCSS
+                h2.section__sub-title Sass + PoctCSS
                 .item-wrap
                   p Sass는 CSS로 컴파일 된다. 그후 JavaScript를 통해 컴파일된 CSS를 PostCSS로 다시 컴파일된다.
         .section-wrap
@@ -457,10 +453,19 @@ block content
           section#a11y.section
             h1.section__title A11y
             .section__content
-              .section__sub-title a11y-hidden()
-              .function-signature a11y-hidden($focus-visible:bool, $focus-state-class:string)
-              .code-wrap
-                code
-                  | .a11yHidden {
-                  | @include a11y-hidden();
-                  | }
+              .section__sub-wrap
+                .section__sub-title
+                  strong a11y-hidden
+                  span ($focus-visible:bool, $focus-state-class:string)
+                p.section__sub-desc 접근성 감춤(Accessibility Hidden) 믹스인. 요소를 화면에서 감추되, 스크린 리더에서 읽힐 수 있도록 한다.
+                .code-wrap
+                  code
+                    | .a11yHidden {
+                    | @include a11y-hidden();
+                    | }
+                .desc-wrap
+                  ul.code-desc
+                    li $focus-visible:bool = true
+                    li $focus-state-class:string = 'focus'
+                  .txt-desc
+                    p 포커스 상태에서 표시되도록 하려면 true 값을 설정하라

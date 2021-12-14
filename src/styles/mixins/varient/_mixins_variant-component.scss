@@ -19,6 +19,7 @@
         &[data-type='outlined'] {
           border-width: 1px;
           border-style: solid;
+          border-color: $base-grey;
         }
         &[data-type='outlined-reverse'] {
           color: $white;
@@ -31,6 +32,11 @@
         &[data-type='outlined'],
         &[data-type='round-reverse'] {
           background-color: transparent;
+        }
+        &[data-type='round-reverse'] {
+          border-width: 1px;
+          border-style: solid;
+          border-color: $base-grey;
         }
       }
     }

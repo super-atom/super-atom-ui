@@ -28,8 +28,7 @@
     @include lost-center-set;
 
     .txt-wrap {
-      padding-top: 20px;
-      padding-bottom: 20px;
+      @include container;
       @include bp-min(sm) {
         padding-right: 15px;
         padding-left: 15px;

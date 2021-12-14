@@ -1,0 +1,23 @@
+// type : contained, outlined, outlined-reverse, text, round, round-reverse
+mixin link_button(args)
+  a.button(
+    id=attributes.id,
+    class=attributes.class,
+    data-type=args.type,
+    target=args.target,
+    href=args.href
+  )= args.label
+    if block
+      block
+
+mixin button(args)
+  button.button(
+    id=attributes.id,
+    class=attributes.class,
+    data-type=args.type,
+    target=args.target,
+    href=args.href,
+    disabled=args.disabled
+  )= args.label
+    if block
+      block

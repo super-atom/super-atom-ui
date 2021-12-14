@@ -30,12 +30,7 @@ mixin header(page)
           title='example'
         ) EXAMPLE
       .nav__download-wrap
-        a.button(
-          href='https://github.com/super-atom/super-atom-ui',
-          target='_blank',
-          data-type='outlined-reverse'
-        ) DOWNLOAD
+        +link_button({target: 'blank', href: 'https://github.com/super-atom/super-atom-ui'})
+          i.icon.fa-brands.fa-github
       .nav__toggle-wrap
-        button#nav__toggle.button.js-nav__toggle-btn(
-          data-type='outlined-reverse'
-        ) BTN
+        +button({type:'outlined-reverse', label: 'BTN'}).js_nav__toggle_btn

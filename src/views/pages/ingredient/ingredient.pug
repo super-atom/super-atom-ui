@@ -10,13 +10,8 @@ block content
       h1.section__title Typography
       .section__content
         ul.txt-wrap.typeface-wrap
-          li Noto Sans Black
-          li Noto Sans Bold
-          li Noto Sans DemiLight
-          li Noto Sans Light
-          li Noto Sans Medium
-          li Noto Sans Regular
-          li Noto Sans Thin
+          each items in ['Noto Sans Black', 'Noto Sans Bold', 'Noto Sans DemiLight', 'Noto Sans Light', 'Noto Sans Medium', 'Noto Sans Regular', 'Noto Sans Thin']
+            li= items
         ul.txt-wrap.heading-wrap
           h1 Heading 1
           h2 Heading 2
@@ -28,27 +23,13 @@ block content
       h1.section__title Color
       .section__content
         ul.color-wrap
-          li.grey grey-1
-          li.grey grey-2
-          li.grey grey-3
-          li.grey grey-4
-          li.grey grey-5
-          li.grey grey-6
-          li.grey grey-7
-          li.grey grey-8
-          li.grey grey-9
-          li.grey grey-10
+          - var i = 0;
+          while i < 10
+            li.grey= "grey-" + i++
         ul.color-wrap
-          li.material-red red-1
-          li.material-red red-2
-          li.material-red red-3
-          li.material-red red-4
-          li.material-red red-5
-          li.material-red red-6
-          li.material-red red-7
-          li.material-red red-8
-          li.material-red red-9
-          li.material-red red-10
+          - var i = 0;
+          while i < 10
+            li.material-red= "red-" + i++
         ul.color-map-wrap
           li.material-pink pink-5
           li.material-purple purple-5
@@ -70,19 +51,8 @@ block content
     section.section.grid-section
       h1.section__title Grid
       .section__content
-        ul.txt-wrap
-          li Grid
-          li Grid
-          li Grid
-          li Grid
-          li Grid
-          li Grid
-          li Grid
-          li Grid
-          li Grid
-          li Grid
-          li Grid
-          li Grid
+        +list('grid','grid','grid','grid','grid','grid','grid','grid','grid','grid','grid','grid').txt-wrap
+
     section.section.ratio-section
       h1.section__title Ratio
       .section__content
@@ -107,22 +77,20 @@ block content
       h1.section__title Varient
       .section__content
         .btn-wrap
-          button.button(data-type='contained') contained button
-          button.button(data-type='outlined') outlined button
-          button.button(data-type='outlined-reverse') outlined-reverse button
-          button.button(data-type='text') text button
-          button.button(data-type='round') round button
-          button.button(data-type='round-reverse') round-reverse button
-          button.button(disabled) disabled button
+          +button({type:'contained', label:'contained button'})
+          +button({type:'outlined', label:'outlined button'})
+          +button({type:'outlined-reverse', label:'outlined-reverse button'})
+          +button({type:'text', label:'text button'})
+          +button({type:'round', label:'round button'})
+          +button({type:'round-reverse', label:'round-reverse button'})
+          +button({label:'disabled button', disabled: 'disabled'})
     section.section.theme-section
       h1.section__title Theme
       .section__content
         .btn-wrap.theme-base
-          button.button.js_themeless_btn(data-type='contained') themeless button
-        .btn-wrap.theme-base
-          button.button.js_base_theme_btn(data-type='contained') base theme button
-        .btn-wrap.theme-atom
-          button.button.js_atom_theme_btn(data-type='contained') atom theme button
+          +button({type: 'contained', label: 'themeless button'}).js_themeless_btn
+          +button({type: 'contained', label: 'base theme button'}).js_base_theme_btn
+          +button({type: 'contained', label: 'atom theme button'}).js_atom_theme_btn
     section.section.table-section
       h1.section__title Table
       .section__content
