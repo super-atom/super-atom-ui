@@ -1,21 +1,23 @@
-@mixin input($font-size: rem(14), $radius: rem(5)) {
+@mixin input($font-size: rem(14), $padding: 8px, $radius: rem(5)) {
   box-sizing: border-box;
   min-height: 40px;
+  padding-right: $padding;
+  padding-left: $padding;
   font-size: $font-size;
   font-family: inherit;
   line-height: 40px;
   vertical-align: middle;
   background-color: $white;
-  border: 1px solid $state-normal;
+  border: 1px solid $form-state-normal;
   border-radius: $radius;
   outline: none;
 
   &:focus {
-    border-color: $state-focus;
+    border-color: $form-state-focus;
   }
 
   &:disabled {
-    background-color: $state-disabled;
+    background-color: $form-state-disabled;
     cursor: not-allowed;
   }
 

@@ -11,10 +11,10 @@
           border-color: $base-grey;
           &[disabled] {
             color: darken(
-              alt-color($state-disabled, map-deep-get($theme-map, color, sub)),
+              alt-color($form-state-disabled, map-deep-get($theme-map, color, sub)),
               30%
             );
-            background-color: $state-disabled;
+            background-color: $form-state-disabled;
           }
           &[data-type='contained'] {
             color: map-deep-get($theme-map, color, sub);

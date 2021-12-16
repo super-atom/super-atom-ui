@@ -73,13 +73,10 @@ $base-font-sizes-h6: (
 
 // *Responsive Base Custom Font Size
 $base-font-sizes: (
-  $bp-min-xs: (
-    rem(12px),
+  $bp-max-sm: (
+    rem(14px),
   ),
   $bp-min-md: (
-    rem(14px)
-  ),
-  $bp-min-lg: (
     rem(16px)
   ),
 );
@@ -93,5 +90,17 @@ $base-font-sizes-title: (
   ),
   $bp-min-lg: (
     rem(32px)
+  ),
+);
+
+$base-font-sizes-sub-title: (
+  $bp-min-xs: (
+    rem(15px)
+  ),
+  $bp-min-md: (
+    rem(20px)
+  ),
+  $bp-min-lg: (
+    rem(26px)
   ),
 );

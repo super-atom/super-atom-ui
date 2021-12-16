@@ -1,0 +1,47 @@
+@import '../../../styles/core.scss';
+
+#content {
+  @include base-font-sizes-content();
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: bold;
+  }
+
+  .section {
+    @include container;
+
+    .section__title {
+      display: inline-block;
+      margin-bottom: 8px;
+      padding-right: 8px;
+      padding-left: 8px;
+      color: white;
+      background-color: black;
+    }
+
+    .section__sub-title {
+      @include base-font-sizes-sub-title;
+    }
+
+    .txt-wrap {
+      @include bp-max(sm) {
+        max-width: 320px;
+      }
+
+      @include bp-min(md) {
+        max-width: 460px;
+      }
+    }
+  }
+}
+
+.section-description {
+  strong {
+    font-family: 'NotoSansCJKkr-Medium';
+  }
+}

@@ -5,8 +5,7 @@
   + label {
     position: relative;
 
-    margin-right: rem(15);
-    padding-left: rem(25);
+    padding-left: rem(24);
 
     font-size: $font-size;
     cursor: pointer;
@@ -21,6 +20,7 @@
       font-family: sans-serif;
       background-color: $white;
 
+      border: 1px solid $base-grey;
       border-radius: $radius;
       content: '';
     }
@@ -33,19 +33,20 @@
 
   &:checked + label::after {
     position: absolute;
-    top: rem(3);
+    top: 50%;
     left: rem(5);
     width: rem(8);
 
     height: rem(8);
     text-align: center;
-    background-color: $state-active;
+    background-color: $form-state-active;
     border-radius: rem(15);
+    transform: translateY(-50%);
     content: '';
   }
 
   &:focus + label::before {
-    box-shadow: 0 rem(1) 0 darken($state-focus, 30%);
+    box-shadow: 0 rem(1) 0 darken($form-state-focus, 30%);
   }
 
   &:disabled {
@@ -53,12 +54,12 @@
       cursor: not-allowed;
 
       &::before {
-        background-color: $state-disabled;
+        background-color: $form-state-disabled;
       }
     }
 
     &:checked + label::after {
-      background-color: darken($state-disabled, 30%);
+      background-color: darken($form-state-disabled, 30%);
     }
   }
 

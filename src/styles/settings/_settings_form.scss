@@ -21,3 +21,72 @@ select {
   background-color: $white;
   border: 1px solid $base-grey;
 }
+
+input.input[data-form-state='invalid'] {
+  border-color: $form-state-invalid !important;
+}
+
+.input {
+  &.full-input {
+    width: 100%;
+  }
+
+  & + .input {
+    margin-top: 10px;
+  }
+}
+
+.input-group + .input {
+  @include bp-max(sm) {
+    margin-top: 10px;
+  }
+}
+
+.input + .input-group {
+  @include bp-max(sm) {
+    margin-top: 10px;
+  }
+}
+
+.input-group {
+  width: 100%;
+
+  @include bp-max(sm) {
+    & + .input-group {
+      margin-top: 10px;
+    }
+  }
+}
+
+.input + .label {
+  width: max-content;
+}
+
+.input__message {
+  &--invalied {
+    color: $form-state-invalid;
+  }
+}
+
+.form-group {
+  .input-wrap {
+    @include flex-container(row items-center);
+
+    & + .input-wrap {
+      margin-top: 10px;
+    }
+  }
+  .label {
+    width: 50%;
+  }
+
+  .label + .select,
+  .label + .textarea,
+  .label + .input {
+    width: 50%;
+  }
+}
+
+fieldset.fieldset {
+  width: 100%;
+}

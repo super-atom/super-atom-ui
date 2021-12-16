@@ -117,11 +117,15 @@ block content
       .section__content
         .item-wrap
           h2.item-title Input
-          input.input(type='text', placeholder)
-          .input-wrap
-            input.input(type='text', placeholder, data-state='error')
-            p.input__errorMsg 다시 확인해 주세요.
-          input.input(type='text', placeholder, disabled)
+          input.input.full-input(type='text', placeholder)
+          input.input.full-input(
+            type='text',
+            placeholder,
+            data-form-state='invalid'
+          )
+          .input-group
+            p.input__message--invalied 다시 확인해 주세요.
+            input.input(type='text', placeholder='disabled input', disabled)
           input.input(
             type='text',
             placeholder='텍스트 입력',
@@ -142,11 +146,11 @@ block content
               label(for='chk-03') 체크박스
           h2.item-title Checklist
           .item-wrap
-            .chkBox
+            .check-box
               input#check-05.input(type='checkbox', name='check')
               label(for='check-05')
                 strong 약관 전체동의 (필수)
-            .chkBox
+            .check-box
               input#check-06.input(type='checkbox', name='check')
               label(for='check-06') 주문할 상품의 정보를 확인하였으며 해당 주문에 대한 구매에 동의합니다.
         .item-wrap
@@ -163,85 +167,82 @@ block content
               label(for='radio-03') 라디오
         .item-wrap
           h2.item-title Select Box
-          .radioWrap
-            p.item-title Radio Button Group
-            .selectWrap
-              select.select(title='옵션')
-                option 전체
-                option 옵션1
-                option 옵션2
-                option 옵션3
+          select.select(title='옵션')
+            option 전체
+            option 옵션1
+            option 옵션2
+            option 옵션3
         .item-wrap
           h2.item-title Form Group
-          div
-            label.label(for='field1') Full name
-            input#field1.input(
-              name='field1',
-              type='text',
-              value='',
-              size='8',
-              tabindex='1'
-            )
-          div
-            label.label(for='field2') Email
-            input#field2.input(
-              name='field2',
-              type='email',
-              value='',
-              maxlength='255',
-              tabindex='2'
-            )
-          div
-            label.label(for='field3') Message
-            textarea#field3.textarea(
-              name='field3',
-              spellcheck='true',
-              rows='10',
-              cols='50',
-              tabindex='3'
-            )
-          div
-            fieldset
-              legend select a choice
-              div
+          .form-group
+            .input-wrap
+              label.label(for='field1') Full name
+              input#field1.input(
+                name='field1',
+                type='text',
+                value='',
+                size='8',
+                tabindex='1'
+              )
+            .input-wrap
+              label.label(for='field2') Email
+              input#field2.input(
+                name='field2',
+                type='email',
+                value='',
+                maxlength='255',
+                tabindex='2'
+              )
+            .input-wrap
+              label.label(for='field3') Message
+              textarea#field3.textarea(
+                name='field3',
+                spellcheck='true',
+                rows='10',
+                cols='50',
+                tabindex='3'
+              )
+            .input-wrap
+              fieldset.fieldset
+                legend.legend select a choice
                 input.input(type='hidden', value='')
-                div
-                  input#field4_1.input(
-                    name='field4',
-                    type='radio',
-                    value='first choice',
-                    tabindex='4',
-                    checked='checked'
-                  )
-                  label.label(for='field4_1') First Choice
-                div
-                  input#field4_2.input(
-                    name='field4',
-                    type='radio',
-                    value='first choice',
-                    tabindex='5',
-                    checked='checked'
-                  )
-                  label.label(for='field4_2') Second Choice
-                div
-                  input#field4_3.input(
-                    name='field4',
-                    type='radio',
-                    value='first choice',
-                    tabindex='6',
-                    checked='checked'
-                  )
-                  label.label(for='field4_3') Third Choice
-          div
-            label.label Select a Choice
-            div
+                .input-group
+                  .input-wrap
+                    input#field4_1.input(
+                      name='field4',
+                      type='radio',
+                      value='first choice',
+                      tabindex='4',
+                      checked='checked'
+                    )
+                    label.label(for='field4_1') First Choice
+                  .input-wrap
+                    input#field4_2.input(
+                      name='field4',
+                      type='radio',
+                      value='first choice',
+                      tabindex='5',
+                      checked='checked'
+                    )
+                    label.label(for='field4_2') Second Choice
+                  .input-wrap
+                    input#field4_3.input(
+                      name='field4',
+                      type='radio',
+                      value='first choice',
+                      tabindex='6',
+                      checked='checked'
+                    )
+                    label.label(for='field4_3') Third Choice
+            .input-wrap
+              label.label Select a Choice
               select#field5.select(tabindex='7')
                 option(value='first choice') First Choice
                 option(value='second choice') Second Choice
                 option(value='third choice') Third Choice
-          div
-            input#saveForm.input.button(
-              name='saveForm',
-              type='submit',
-              value='submit'
-            )
+            .input-wrap
+              input#saveForm.input.button(
+                name='saveForm',
+                type='submit',
+                value='submit'
+              )

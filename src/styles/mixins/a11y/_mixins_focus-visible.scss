@@ -1,4 +1,4 @@
-@mixin focus-visible($color: rgba($state-focus, 0.7), $thickness: 3px) {
+@mixin focus-visible($color: rgba($form-state-focus, 0.7), $thickness: 3px) {
   //* 포커스 적용한 경우 */
   &:focus {
     outline: none;

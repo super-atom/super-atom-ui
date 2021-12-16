@@ -150,9 +150,14 @@ body {
         transform: translateY(-50%);
       }
 
-      .icon {
-        font-size: 24px;
-        color: white;
+      .button {
+        position: relative;
+        .icon {
+          position: absolute;
+          @include centeringXY;
+          font-size: 24px;
+          color: white;
+        }
       }
     }
 
@@ -167,7 +172,14 @@ body {
       }
 
       .button {
-        color: $sub-color;
+        position: relative;
+        border: 0;
+        .icon {
+          font-size: 24px;
+          color: white;
+          position: absolute;
+          @include centeringXY;
+        }
       }
     }
   }

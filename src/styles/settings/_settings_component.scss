@@ -26,3 +26,7 @@ input.input[type='checkbox'] {
 textarea.textarea {
   @include textarea;
 }
+
+.container {
+  @include container;
+}

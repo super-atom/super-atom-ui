@@ -52,7 +52,7 @@ const entryHtmlPlugins = arrayOfEntryDirectory.map((page) => {
 module.exports = {
   entry: (() => {
     const entries = {};
-    entries['common'] = PATHS.source + `/scripts/ts/common.ts`;
+    entries['common'] = PATHS.src + `/scripts/ts/common.ts`;
     arrayOfEntryDirectory.forEach(
       (page) =>
         (entries[page[1]] = {
