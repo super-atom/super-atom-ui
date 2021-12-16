@@ -22,11 +22,27 @@ select {
   border: 1px solid $base-grey;
 }
 
-input.input[data-form-state='invalid'] {
-  border-color: $form-state-invalid !important;
-}
+input.input {
+  &[data-form-state='normal'] {
+    color: $form-state-normal;
+    border-color: $form-state-normal !important;
+  }
 
-.input {
+  &[data-form-state='focus'] {
+    color: $form-state-focus;
+    border-color: $form-state-focus !important;
+  }
+
+  &[data-form-state='valid'] {
+    color: $form-state-valid;
+    border-color: $form-state-valid !important;
+  }
+
+  &[data-form-state='invalid'] {
+    color: $form-state-invalid;
+    border-color: $form-state-invalid !important;
+  }
+
   &.full-input {
     width: 100%;
   }
@@ -36,26 +52,17 @@ input.input[data-form-state='invalid'] {
   }
 }
 
-.input-group + .input {
-  @include bp-max(sm) {
-    margin-top: 10px;
-  }
-}
-
-.input + .input-group {
-  @include bp-max(sm) {
-    margin-top: 10px;
-  }
-}
-
 .input-group {
   width: 100%;
+}
 
-  @include bp-max(sm) {
-    & + .input-group {
-      margin-top: 10px;
-    }
-  }
+.input-wrap + .input-wrap,
+.input-wrap + .input,
+.input + .input-wrap,
+.input-group + .input-group,
+.input + .input-group,
+.input-group + .input {
+  margin-top: 10px;
 }
 
 .input + .label {
@@ -66,6 +73,10 @@ input.input[data-form-state='invalid'] {
   &--invalied {
     color: $form-state-invalid;
   }
+}
+
+.input[data-form-state='invalid'] + .input__message--invalied {
+  margin-top: 10px;
 }
 
 .form-group {

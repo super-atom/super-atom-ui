@@ -1,4 +1,8 @@
-@mixin input($font-size: rem(14), $padding: 8px, $radius: rem(5)) {
+@mixin input(
+  $font-size: rem(14),
+  $padding: $base-input-padding,
+  $radius: rem(5)
+) {
   box-sizing: border-box;
   min-height: 40px;
   padding-right: $padding;

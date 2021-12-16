@@ -116,43 +116,66 @@ block content
       h1.section__title Form
       .section__content
         .item-wrap
-          h2.item-title Input
+          h2.item-title Input Status
           input.input.full-input(type='text', placeholder)
           input.input.full-input(
             type='text',
-            placeholder,
-            data-form-state='invalid'
+            data-form-state='normal',
+            value='normal state'
+          )
+          input.input.full-input(
+            type='text',
+            data-form-state='hover',
+            value='hover state'
+          )
+          input.input.full-input(
+            type='text',
+            data-form-state='focus',
+            value='focus state'
+          )
+          input.input.full-input(
+            type='text',
+            data-form-state='valid',
+            value='valid state'
           )
           .input-group
+            input.input.full-input(
+              type='text',
+              data-form-state='invalid',
+              value='invalid state'
+            )
             p.input__message--invalied 다시 확인해 주세요.
-            input.input(type='text', placeholder='disabled input', disabled)
-          input.input(
+          input.input.full-input(
+            type='text',
+            placeholder='disabled input',
+            disabled
+          )
+          input.input.full-input(
             type='text',
             placeholder='텍스트 입력',
-            value='입력내용',
+            value='읽기 전용 텍스트',
             readonly
           )
         .item-wrap
           h2.item-title Checkbox
-          .item-wrap
-            .item
-              input#chk-01.input(type='checkbox', name='chk', checked)
-              label(for='chk-01') 체크박스
-            .item
-              input#chk-02.input(type='checkbox', name='chk')
-              label(for='chk-02') 체크박스
-            .item
-              input#chk-03.input(type='checkbox', name='chk', disabled)
-              label(for='chk-03') 체크박스
+          .item
+            input#chk-01.input(type='checkbox', name='chk', checked)
+            label(for='chk-01') 체크박스
+          .item
+            input#chk-02.input(type='checkbox', name='chk')
+            label(for='chk-02') 체크박스
+          .item
+            input#chk-03.input(type='checkbox', name='chk', disabled)
+            label(for='chk-03') 체크박스
+        .item-wrap
           h2.item-title Checklist
-          .item-wrap
-            .check-box
-              input#check-05.input(type='checkbox', name='check')
-              label(for='check-05')
-                strong 약관 전체동의 (필수)
-            .check-box
-              input#check-06.input(type='checkbox', name='check')
-              label(for='check-06') 주문할 상품의 정보를 확인하였으며 해당 주문에 대한 구매에 동의합니다.
+          .check-box
+            input#check-05.input(type='checkbox', name='check')
+            label(for='check-05')
+              strong 약관 전체동의 (필수)
+          .check-box
+            input#check-06.input(type='checkbox', name='check')
+            label(for='check-06') 주문할 상품의 정보를 확인하였으며 해당 주문에 대한 구매에 동의합니다.
         .item-wrap
           h2.item-title Radio Box
           .radioWrap
@@ -172,6 +195,47 @@ block content
             option 옵션1
             option 옵션2
             option 옵션3
+        .item-wrap
+          h2.item-title 그 외 Input
+          .input-wrap
+            label(for='inputColor') Color
+            input#inputColor.full-input.input(type='color')
+          .input-wrap
+            label(for='inputDate') Date
+            input#inputDate.full-input.input(type='date')
+          .input-wrap
+            label(for='inputDatetime') Datetime
+            input#inputDatetime.full-input.input(type='datetime')
+          .input-wrap
+            label(for='inputDatetimeLocal') Datetime Local
+            input#inputDatetimeLocal.full-input.input(type='datetime-local')
+          .input-wrap
+            label(for='inputEmail') Email
+            input#inputEmail.full-input.input(type='email')
+          .input-wrap
+            label(for='inputMonth') Month
+            input#inputMonth.full-input.input(type='month')
+          .input-wrap
+            label(for='inputNumber') Number
+            input#inputNumer.full-input.input(type='number')
+          .input-wrap
+            label(for='inputPassword') Password
+            input#inputPassword.full-input.input(type='password')
+          .input-wrap
+            label(for='inputSearch') Search
+            input#inputSearch.full-input.input(type='search')
+          .input-wrap
+            label(for='inputTel') Tel
+            input#inputTel.full-input.input(type='tel')
+          .input-wrap
+            label(for='inputText') Text
+            input#inputText.full-input.input(type='text')
+          .input-wrap
+            label(for='inputTime') Time
+            input#inputTime.full-input.input(type='time')
+          .input-wrap
+            label(for='inputUrl') Url
+            input#inputUrl.full-input.input(type='url')
         .item-wrap
           h2.item-title Form Group
           .form-group
@@ -200,11 +264,12 @@ block content
                 spellcheck='true',
                 rows='10',
                 cols='50',
-                tabindex='3'
+                tabindex='3',
+                style='height: 100px'
               )
             .input-wrap
               fieldset.fieldset
-                legend.legend select a choice
+                legend.legend Select a choice
                 input.input(type='hidden', value='')
                 .input-group
                   .input-wrap

@@ -21,7 +21,6 @@
             background-color: map-deep-get($theme-map, color, main);
             border-color: map-deep-get($theme-map, color, main);
           }
-
           &[data-type='outlined'] {
             color: map-deep-get($theme-map, color, main);
             border-color: map-deep-get($theme-map, color, main);
@@ -34,6 +33,25 @@
           &[data-type='round-reverse'] {
             color: map-deep-get($theme-map, color, main);
             border-color: map-deep-get($theme-map, color, main);
+          }
+
+          &[data-type='outlined'],
+          &[data-type='round-reverse'] {
+            &:hover,
+            &:focus,
+            &:active {
+              background-color: map-deep-get($theme-map, color, main);
+              color: $white;
+            }
+          }
+
+          &[data-type='contained'],
+          &[data-type='round'] {
+            &:hover,
+            &:focus,
+            &:active {
+              background-color: darken(map-deep-get($theme-map, color, main),10%);
+            }
           }
         }
       }

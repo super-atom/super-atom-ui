@@ -5,6 +5,7 @@
   margin: 0 auto;
   padding: 0 0 8rem 0;
   overflow: hidden;
+  font-size: 1rem;
   text-align: left;
 
   tbody,
@@ -14,21 +15,15 @@
 
   thead {
     font-weight: bold;
-    font-size: 1rem;
     text-align: left;
   }
 
+  th,
   td {
-    padding-top: $padding;
-    padding-bottom: $padding;
-    padding-left: $padding;
-    font-weight: normal;
-    font-size: 1rem;
+    padding: $padding;
   }
 
-  th {
-    padding-top: $padding;
-    padding-bottom: $padding;
-    padding-left: $padding;
+  td {
+    font-weight: normal;
   }
 }
