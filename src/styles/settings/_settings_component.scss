@@ -6,19 +6,7 @@ img.img {
 }
 
 //_variables_input.scss
-input.input[type='color'],
-input.input[type='search'],
-input.input[type='date'],
-input.input[type='datetime'],
-input.input[type='datetime-local'],
-input.input[type='month'],
-input.input[type='number'],
-input.input[type='password'],
-input.input[type='tel'],
-input.input[type='time'],
-input.input[type='url'],
-input.input[type='text'],
-input.input[type='email'] {
+input.input {
   @include input;
 }
 

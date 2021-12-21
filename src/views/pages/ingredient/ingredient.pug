@@ -117,11 +117,22 @@ block content
       .section__content
         .item-wrap
           h2.item-title Input Status
-          input.input.full-input(type='text', placeholder)
+          input.input.full-input(type='text')
           input.input.full-input(
             type='text',
             data-form-state='normal',
             value='normal state'
+          )
+          input.input.full-input(
+            type='text',
+            placeholder='disabled input',
+            disabled
+          )
+          input.input.full-input(
+            type='text',
+            placeholder='텍스트 입력',
+            value='읽기 전용 텍스트',
+            readonly
           )
           input.input.full-input(
             type='text',
@@ -145,37 +156,18 @@ block content
               value='invalid state'
             )
             p.input__message--invalied 다시 확인해 주세요.
-          input.input.full-input(
-            type='text',
-            placeholder='disabled input',
-            disabled
-          )
-          input.input.full-input(
-            type='text',
-            placeholder='텍스트 입력',
-            value='읽기 전용 텍스트',
-            readonly
-          )
+
         .item-wrap
           h2.item-title Checkbox
           .item
             input#chk-01.input(type='checkbox', name='chk', checked)
-            label(for='chk-01') 체크박스
+            label(for='chk-01') 체크박스 checked
           .item
             input#chk-02.input(type='checkbox', name='chk')
             label(for='chk-02') 체크박스
           .item
             input#chk-03.input(type='checkbox', name='chk', disabled)
-            label(for='chk-03') 체크박스
-        .item-wrap
-          h2.item-title Checklist
-          .check-box
-            input#check-05.input(type='checkbox', name='check')
-            label(for='check-05')
-              strong 약관 전체동의 (필수)
-          .check-box
-            input#check-06.input(type='checkbox', name='check')
-            label(for='check-06') 주문할 상품의 정보를 확인하였으며 해당 주문에 대한 구매에 동의합니다.
+            label(for='chk-03') 체크박스 disabled
         .item-wrap
           h2.item-title Radio Box
           .radioWrap

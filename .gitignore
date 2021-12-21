@@ -8,3 +8,5 @@ sources/assets/fonts/*
 
 # Local Netlify folder
 .netlify
+src/views/pages/yonseiPayProcess1
+src/views/pages/yonseiMain

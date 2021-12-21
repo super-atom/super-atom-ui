@@ -1,4 +1,3 @@
-@import '../../variables/variables_color';
 @mixin checkbox($font-size: rem(14), $size: rem(18), $radius: rem(9)) {
   position: absolute;
   left: rem(-1000);
@@ -27,13 +26,23 @@
     }
 
     &::after {
-      opacity: 0;
       transition: opacity 0.3s;
       content: '';
     }
   }
 
   &:checked + label::after {
+    position: absolute;
+    top: 50%;
+    left: rem(5);
+    width: rem(8);
+
+    height: rem(8);
+    text-align: center;
+    background-color: $form-state-active;
+    border-radius: rem(15);
+    transform: translateY(-50%);
+    content: '';
   }
 
   &:focus + label::before {

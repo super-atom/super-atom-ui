@@ -29,6 +29,11 @@ mixin header(page)
           href='/example.html',
           title='example'
         ) EXAMPLE
+        a.nav__link(
+          class=page === "component" ? "nav__link--active" : "",
+          href='/component.html',
+          title='component'
+        ) COMPONENT
       .nav__download-wrap
         +link_button({target: 'blank', href: 'https://github.com/super-atom/super-atom-ui'})
           i.icon.fa-brands.fa-github

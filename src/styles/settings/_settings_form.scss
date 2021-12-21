@@ -24,7 +24,6 @@ select {
 
 input.input {
   &[data-form-state='normal'] {
-    color: $form-state-normal;
     border-color: $form-state-normal !important;
   }
 
