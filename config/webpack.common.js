@@ -28,6 +28,7 @@ getDirectoriesAllFiles(PATHS.pages);
 
 const entryHtmlPlugins = arrayOfEntryDirectory.map((page) => {
   // https://github.com/jantimon/html-webpack-plugin#options
+
   let obj = {
     filename: `${page[1]}`,
     template: `${path.join(page[0], page[1])}.pug`,

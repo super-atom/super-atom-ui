@@ -1,0 +1,97 @@
+extends ../../layouts/base
+block header
+  +header('guide')
+
+block content
+  .section-wrap
+    section.section.section-description
+      .section__title-wrap
+        h1.section__title SUPER-ATOM-UI
+      .section__content
+        .txt-wrap
+          p 모던 프론트엔드 개발 환경 및 도구 모음
+        .txt-wrap
+          h2 목표
+          p 성공적인 프로젝트 완수를 위한 코드 안정성 및 생산성 향상
+        .txt-wrap
+          h2.section__sub-title 의존성
+          ul
+            li Webpack v5 : 라이브러리 핸들링을 위해 의존
+            li Babel : JS(또는 TS)로 모든 자원을 컨트롤해야 하므로 의존
+            li Pug : HTML Templating을 해야 하므로 의존
+            li Sass : CSS 코드 작성 시 생산성 향상을 위해 의존
+            li PostCSS : CSSNext, Autoprefixer 를 사용해야만 하므로 의존
+        .txt-wrap
+          h2.section__sub-title 사용중인 도구
+          ul
+            li Stylelint : 코드 스타일 지정
+            li ESLint : 코드 린트 규칙 지정
+            li Prettier : 코드 포매팅
+            li 에디터 확장 프로그램 관련 : 모든 인원의 환경과 코드 모양을 동일하게 유지하는데 도움을 줌
+        .txt-wrap
+          h2.section__sub-title 포함된 라이브러리
+          ul
+            li Lodash : JavaScript Utility
+            li Lost : Grid System
+            li GSAP v3 : Animation
+            li FontAwesome v6 : Font icon
+        .txt-wrap
+          h2.section__sub-title SUPER-ATOM-UI 사용 주기 시나리오
+          ul
+            li
+              strong 디자인 시스템 설정 단계
+              p 프로젝트에 따라 정의된 디자인 시스템 값을 SUPER-ATOM-UI에 반영합니다. src/style/settings 폴더에서 작성합니다.
+              br
+            li
+              strong 디자인 시스템 작성 단계 - Element
+              p User agent stylesheet에서 정의된 값을 오버라이딩 합니다.
+              p 예) body {margin: 8px;} 를 body {margin:0;} 로 재정의. reset이라고 부르는 시트를 작성합니다.
+              br
+            li
+              strong 컴포넌트 작성 단계 - 1 Atoms
+              p Atoms는 원자라는 뜻으로 컴포넌트의 최소 단위를 작성합니다.
+              p 예) input, button { border-width: 1px; border-style: solid; border-color: black}
+              br
+            li
+              strong 컴포넌트 작성 단계 - 2 Molecules
+              p Molecules는 분자라는 뜻으로 Atoms의 조합 입니다.
+              p .search__bar > .search__form + .search__button 같은 컴포넌트가 이 단계에 속합니다.
+              p 예) .input + .button { margin-left:8px; }
+              br
+            li
+              strong 컴포넌트 작성 단계 - 3 Organisms
+              p Organisms는 유기체라는 뜻으로 Molecules의 조합 입니다. Parts, Includes 등의 뉘앙스와 동일한 단계입니다. App bar 같은 컴포넌트가 이 단계에 속합니다.
+              p 예) .header
+              br
+            li
+              strong 페이지 작성 단계 - 1 Templates
+              p Templates은 Organisms의 조합입니다.
+              p 예) .template-blog
+              br
+            li
+              strong 공통 코드 작성 단계
+              p SUPER-ATOM-UI가 차용한 ABEM (Atomic Design + BEM) 네이밍을 사용합니다.
+              p 직접 네이밍 컨벤션을 정하든 설계한 네이밍은 settings_component.scss 에 utility class를 만들어 사전 정의합니다.
+              p 공통 컴포넌트 코드를 작성함으로써 전체 구조의 통일성과 재사용성이 확보됩니다.
+              p 페이지를 Templates을 만들면서 발견하는 패턴을 공통 코드로 추출합니다.
+              br
+            li
+              strong 페이지 작성 단계 - 2 Pages
+              p Pages는 Templates에 데이터를 바인딩한 상태입니다.
+              p 예) .pages__blog
+              br
+            li
+              strong 리팩토링 단계
+              p 페이지 및 공통 코드에서 사용자의 원칙에 위배되는 코드를 재귀적으로 공통 코드로 옮기거나 삭제합니다.
+              br
+            li
+              strong 최적화 단계
+              p 모든 코드를 정의된 규칙에 따라 검사, 재조정, 불필요한 코드 제거, 압축 합니다. 이 과정은 프로그램에 의해서 자동화되어야 합니다. 우리가 필요한 것은 자동화에 의존한 프로그램의 규칙 정의입니다.
+              br
+            li
+              strong 빌드 단계
+              p 작성한 코드를에 대한 최종 산출물을 얻습니다.
+              br
+            li
+              strong 배포 단계
+              p 빌드한 최종 산출물을 배포합니다.

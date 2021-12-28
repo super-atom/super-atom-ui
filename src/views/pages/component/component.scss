@@ -1,4 +1,4 @@
-@import '../../../styles/core';
+@import '../../../styles/core/core';
 
 .wrapper {
   @include flex-container(row nowrap justify-content items-center);

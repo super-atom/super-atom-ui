@@ -14,6 +14,11 @@ mixin header(page)
           href='/about.html',
           title='about'
         ) ABOUT
+          a.nav__link(
+            class=page === "guide" ? "nav__link--active" : "",
+            href='/guide.html',
+            title='guide'
+          ) GUIDE
         a.nav__link(
           class=page === "docs" ? "nav__link--active" : "",
           href='/docs.html',
@@ -24,11 +29,6 @@ mixin header(page)
           href='/ingredient.html',
           title='ingredient'
         ) INGREDIENT
-        a.nav__link(
-          class=page === "example" ? "nav__link--active" : "",
-          href='/example.html',
-          title='example'
-        ) EXAMPLE
         a.nav__link(
           class=page === "component" ? "nav__link--active" : "",
           href='/component.html',
