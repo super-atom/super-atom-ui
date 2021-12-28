@@ -1,0 +1,29 @@
+@import '../../variables/variables_color';
+@mixin table($padding: 2%) {
+  display: table;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0 8rem 0;
+  overflow: hidden;
+  font-size: 1rem;
+  text-align: left;
+
+  tbody,
+  thead {
+    border: 1px solid $body-text-color;
+  }
+
+  thead {
+    font-weight: bold;
+    text-align: left;
+  }
+
+  th,
+  td {
+    padding: $padding;
+  }
+
+  td {
+    font-weight: normal;
+  }
+}

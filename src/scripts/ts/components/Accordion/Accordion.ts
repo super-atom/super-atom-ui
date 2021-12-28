@@ -3,15 +3,15 @@ import gsap from 'gsap';
 export default class Accordion {
   public el: HTMLElement;
   private readonly items: NodeListOf<Element>;
-  private readonly itemClass: string = '.js-accordion';
-  private readonly contentWrapperClass: string = '.js-content';
+  private readonly itemClass: string = '.js_ui_accordion';
+  private readonly contentWrapperClass: string = '.js_ui_accordion_content';
   private readonly css: object = {
     open: 'is-open',
   };
 
   constructor(el) {
     this.el = document.querySelector(el);
-    this.items = document.querySelectorAll(`${el} .js-accordion`);
+    this.items = document.querySelectorAll(`${el} .js_ui_accordion`);
     if (this.items.length > 0) {
       this.init();
     }

@@ -1,0 +1,62 @@
+extends ../../layouts/base
+block header
+  +header('component')
+
+block content
+  .wrapper
+    aside#aside.aside
+      nav.aside__nav
+        .aside__nav__bar
+          input.input(type='search', placeholder='search')
+          select.select
+            option v0.1
+          button.button.js_aside_nav_btn(type='button')
+            i.fa-solid.fa-up-down
+        ul.nav__link-depth-1-wrap.js_nav__link_depth_1_wrap
+          li.nav__link-depth-1.js_nav__link_depth_1
+            button.nav__sub-title.js_btn(type='button', data-type='text')
+              i.icon.fa-solid.fa-chevron-down
+              | Dynamic
+            ul.nav__link-depth-2-wrap.js_nav__link_depth_2_wrap
+              li.nav__link-depth-2
+                a(href='#tabs') Tabs
+              li.nav__link-depth-2
+                a(href='#accordion') Accordion
+              li.nav__link-depth-2
+                a(href='#carousel') Carousel
+    .view
+      .page__title-wrap
+        h1.page__title COMPONENT
+      .inner
+        .section-wrap.section-wrap-dynamic
+          h1#tabs.section-wrap-title Dynamic
+          section#tabs.section
+            h1.section__title Tabs
+            .section__content
+              .component-wrap 컴포넌트 작동 코드 삽입 위치
+              .code-wrap
+                code code...
+                button.button(data-type='outlined') copy
+          section#tabs.section
+            h1.section__title Accodion
+            .section__content
+              .component-wrap
+                .component-accodion.js_component_accodion
+                  .js_ui_accordion 제목1
+                    .js_ui_accordion_content Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae voluptate impedit eius dicta quasi. Inventore incidunt velit quas. Sint eius amet accusantium consequatur voluptatem, quisquam necessitatibus iste. Mollitia, facilis minima.
+                  .js_ui_accordion 제목2
+                    .js_ui_accordion_content Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae voluptate impedit eius dicta quasi. Inventore incidunt velit quas. Sint eius amet accusantium consequatur voluptatem, quisquam necessitatibus iste. Mollitia, facilis minima.
+                  .js_ui_accordion 제목3
+                    .js_ui_accordion_content Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae voluptate impedit eius dicta quasi. Inventore incidunt velit quas. Sint eius amet accusantium consequatur voluptatem, quisquam necessitatibus iste. Mollitia, facilis minima.
+                  .js_ui_accordion 제목4
+                    .js_ui_accordion_content Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae voluptate impedit eius dicta quasi. Inventore incidunt velit quas. Sint eius amet accusantium consequatur voluptatem, quisquam necessitatibus iste. Mollitia, facilis minima.
+              .code-wrap
+                code code...
+                button.button(data-type='outlined') copy
+          section#tabs.section
+            h1.section__title Carousel
+            .section__content
+              .component-wrap 컴포넌트 작동 코드 삽입 위치
+              .code-wrap
+                code code...
+                button.button(data-type='outlined') copy

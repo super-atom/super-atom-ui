@@ -28,6 +28,7 @@ getDirectoriesAllFiles(PATHS.pages);
 
 const entryHtmlPlugins = arrayOfEntryDirectory.map((page) => {
   // https://github.com/jantimon/html-webpack-plugin#options
+
   let obj = {
     filename: `${page[1]}`,
     template: `${path.join(page[0], page[1])}.pug`,
@@ -52,7 +53,7 @@ const entryHtmlPlugins = arrayOfEntryDirectory.map((page) => {
 module.exports = {
   entry: (() => {
     const entries = {};
-    entries['common'] = PATHS.source + `/scripts/ts/common.ts`;
+    entries['common'] = PATHS.src + `/scripts/ts/common.ts`;
     arrayOfEntryDirectory.forEach(
       (page) =>
         (entries[page[1]] = {

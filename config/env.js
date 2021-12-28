@@ -1,6 +1,3 @@
-const path = require('path');
-const ROOT = process.cwd();
-
 module.exports = {
   server: {
     port: 3000,

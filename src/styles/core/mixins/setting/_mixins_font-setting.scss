@@ -1,0 +1,48 @@
+@import '../../variables/_variables_font-size';
+
+// *Responsive Base Heading Element Font Size
+@mixin base-font-sizes-h1() {
+  @include font-size($base-font-sizes-h1);
+}
+@mixin base-font-sizes-h2() {
+  @include font-size($base-font-sizes-h2);
+}
+@mixin base-font-sizes-h3() {
+  @include font-size($base-font-sizes-h3);
+}
+@mixin base-font-sizes-h4() {
+  @include font-size($base-font-sizes-h4);
+}
+@mixin base-font-sizes-h5() {
+  @include font-size($base-font-sizes-h5);
+}
+@mixin base-font-sizes-h6() {
+  @include font-size($base-font-sizes-h6);
+}
+
+// *Responsive Base Custom Font Size
+@mixin base-font-sizes() {
+  @include font-size($base-font-sizes);
+}
+
+@mixin base-font-sizes-title() {
+  font-weight: 700;
+  font-family: $title-font;
+  letter-spacing: $title-font-letter-spacing;
+  @include font-size($base-font-sizes-title);
+}
+
+@mixin base-font-sizes-sub-title() {
+  font-weight: 700;
+  font-family: $title-font;
+  letter-spacing: $title-font-letter-spacing;
+  @include font-size($base-font-sizes-sub-title);
+}
+
+@mixin base-font-sizes-content() {
+  font-weight: 300;
+  font-family: $main-font;
+  line-height: 1.8;
+  letter-spacing: $main-font-letter-spacing;
+  @include font-size($base-font-sizes);
+}

@@ -14,6 +14,11 @@ mixin header(page)
           href='/about.html',
           title='about'
         ) ABOUT
+          a.nav__link(
+            class=page === "guide" ? "nav__link--active" : "",
+            href='/guide.html',
+            title='guide'
+          ) GUIDE
         a.nav__link(
           class=page === "docs" ? "nav__link--active" : "",
           href='/docs.html',
@@ -25,12 +30,13 @@ mixin header(page)
           title='ingredient'
         ) INGREDIENT
         a.nav__link(
-          class=page === "example" ? "nav__link--active" : "",
-          href='/example.html',
-          title='example'
-        ) EXAMPLE
+          class=page === "component" ? "nav__link--active" : "",
+          href='/component.html',
+          title='component'
+        ) COMPONENT
       .nav__download-wrap
         +link_button({target: 'blank', href: 'https://github.com/super-atom/super-atom-ui'})
           i.icon.fa-brands.fa-github
       .nav__toggle-wrap
-        +button({type:'outlined-reverse', label: 'BTN'}).js_nav__toggle_btn
+        +button({type:'outlined-reverse'}).js_nav__toggle_btn
+          i.icon.fa-solid.fa-bars

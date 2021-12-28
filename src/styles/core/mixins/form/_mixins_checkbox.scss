@@ -1,0 +1,67 @@
+@mixin checkbox($font-size: rem(14), $size: rem(18), $radius: rem(9)) {
+  position: absolute;
+  left: rem(-1000);
+
+  + label {
+    position: relative;
+
+    margin-right: rem(15);
+    padding-left: rem(25);
+
+    font-size: $font-size;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: $size;
+
+      height: $size;
+      font-family: sans-serif;
+      background-color: $base-grey;
+
+      border-radius: $radius;
+      content: '';
+    }
+
+    &::after {
+      transition: opacity 0.3s;
+      content: '';
+    }
+  }
+
+  &:checked + label::after {
+    position: absolute;
+    top: 50%;
+    left: rem(5);
+    width: rem(8);
+
+    height: rem(8);
+    text-align: center;
+    background-color: $form-state-active;
+    border-radius: rem(15);
+    transform: translateY(-50%);
+    content: '';
+  }
+
+  &:focus + label::before {
+    box-shadow: 0 rem(1) 0 $base-grey;
+  }
+
+  &:disabled {
+    + label {
+      cursor: not-allowed;
+
+      &::before {
+        background-color: $base-grey;
+      }
+    }
+
+    &:checked + label::after {
+      background-color: $base-grey;
+    }
+  }
+
+  @content;
+}

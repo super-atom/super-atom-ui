@@ -1,0 +1,102 @@
+@import '../core';
+
+.button,
+button {
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+}
+
+.button,
+button,
+input,
+textarea,
+select {
+  transition: 0.3s ease-out;
+}
+
+input,
+textarea,
+select {
+  background-color: $white;
+  border: 1px solid $base-grey;
+}
+
+input.input {
+  &[data-form-state='normal'] {
+    border-color: $form-state-normal !important;
+  }
+
+  &[data-form-state='focus'] {
+    color: $form-state-focus;
+    border-color: $form-state-focus !important;
+  }
+
+  &[data-form-state='valid'] {
+    color: $form-state-valid;
+    border-color: $form-state-valid !important;
+  }
+
+  &[data-form-state='invalid'] {
+    color: $form-state-invalid;
+    border-color: $form-state-invalid !important;
+  }
+
+  &.full-input {
+    width: 100%;
+  }
+
+  & + .input {
+    margin-top: 10px;
+  }
+}
+
+.input-group {
+  width: 100%;
+}
+
+.input-wrap + .input-wrap,
+.input-wrap + .input,
+.input + .input-wrap,
+.input-group + .input-group,
+.input + .input-group,
+.input-group + .input {
+  margin-top: 10px;
+}
+
+.input + .label {
+  width: max-content;
+}
+
+.input__message {
+  &--invalied {
+    color: $form-state-invalid;
+  }
+}
+
+.input[data-form-state='invalid'] + .input__message--invalied {
+  margin-top: 10px;
+}
+
+.form-group {
+  .input-wrap {
+    @include flex-container(row items-center);
+
+    & + .input-wrap {
+      margin-top: 10px;
+    }
+  }
+  .label {
+    width: 50%;
+  }
+
+  .label + .select,
+  .label + .textarea,
+  .label + .input {
+    width: 50%;
+  }
+}
+
+fieldset.fieldset {
+  width: 100%;
+}

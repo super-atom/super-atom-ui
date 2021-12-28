@@ -1,0 +1,563 @@
+// Default Color
+@import './_variables_color_palette';
+@import '../functions/_functions_map-deep-get';
+
+// Base  ======================================== //
+// Base Grey
+$white: #fefefe !default;
+$base-color-grey-0: #eee !default;
+$base-color-grey-1: #ddd !default;
+$base-color-grey-2: #bbb !default;
+$base-color-grey-3: #aaa !default;
+$base-color-grey-4: #999 !default;
+$base-color-grey-5: #777 !default;
+$base-color-grey-6: #555 !default;
+$base-color-grey-7: #333 !default;
+$base-color-grey-8: #222 !default;
+$base-color-grey-9: #111 !default;
+$black: #010101 !default;
+
+// Common  ======================================== //
+$base-white: $white !default;
+$base-grey: $base-color-grey-1 !default;
+$base-black: $base-color-grey-9 !default;
+
+// User Color Palette  ======================================== //
+$main-color: $black !default;
+$sub-color: $white !default;
+
+// Google Material Color  ======================================== //
+// Google Material Grey
+$grey-0: map-deep-get($color-palette, 'material-grey', 50) !default;
+$grey-1: map-deep-get($color-palette, 'material-grey', 100) !default;
+$grey-2: map-deep-get($color-palette, 'material-grey', 200) !default;
+$grey-3: map-deep-get($color-palette, 'material-grey', 300) !default;
+$grey-4: map-deep-get($color-palette, 'material-grey', 400) !default;
+$grey-5: map-deep-get($color-palette, 'material-grey', 500) !default;
+$grey-6: map-deep-get($color-palette, 'material-grey', 600) !default;
+$grey-7: map-deep-get($color-palette, 'material-grey', 700) !default;
+$grey-8: map-deep-get($color-palette, 'material-grey', 800) !default;
+$grey-9: map-deep-get($color-palette, 'material-grey', 900) !default;
+$grey-a1: map-deep-get($color-palette, 'material-grey', 'A100') !default;
+$grey-a2: map-deep-get($color-palette, 'material-grey', 'A200') !default;
+$grey-a4: map-deep-get($color-palette, 'material-grey', 'A300') !default;
+$grey-a7: map-deep-get($color-palette, 'material-grey', 'A700') !default;
+
+// Google Material Red
+$red-0: map-deep-get($color-palette, 'material-red', 50) !default;
+$red-1: map-deep-get($color-palette, 'material-red', 100) !default;
+$red-2: map-deep-get($color-palette, 'material-red', 200) !default;
+$red-3: map-deep-get($color-palette, 'material-red', 300) !default;
+$red-4: map-deep-get($color-palette, 'material-red', 400) !default;
+$red-5: map-deep-get($color-palette, 'material-red', 500) !default;
+$red-6: map-deep-get($color-palette, 'material-red', 600) !default;
+$red-7: map-deep-get($color-palette, 'material-red', 700) !default;
+$red-8: map-deep-get($color-palette, 'material-red', 800) !default;
+$red-9: map-deep-get($color-palette, 'material-red', 900) !default;
+$red-a1: map-deep-get($color-palette, 'material-red', 'A100') !default;
+$red-a2: map-deep-get($color-palette, 'material-red', 'A200') !default;
+$red-a4: map-deep-get($color-palette, 'material-red', 'A300') !default;
+$red-a7: map-deep-get($color-palette, 'material-red', 'A700') !default;
+
+// Google Material Pink
+$pink-0: map-deep-get($color-palette, 'material-pink', 50) !default;
+$pink-1: map-deep-get($color-palette, 'material-pink', 100) !default;
+$pink-2: map-deep-get($color-palette, 'material-pink', 200) !default;
+$pink-3: map-deep-get($color-palette, 'material-pink', 300) !default;
+$pink-4: map-deep-get($color-palette, 'material-pink', 400) !default;
+$pink-5: map-deep-get($color-palette, 'material-pink', 500) !default;
+$pink-6: map-deep-get($color-palette, 'material-pink', 600) !default;
+$pink-7: map-deep-get($color-palette, 'material-pink', 700) !default;
+$pink-8: map-deep-get($color-palette, 'material-pink', 800) !default;
+$pink-9: map-deep-get($color-palette, 'material-pink', 900) !default;
+$pink-a1: map-deep-get($color-palette, 'material-pink', 'A100') !default;
+$pink-a2: map-deep-get($color-palette, 'material-pink', 'A200') !default;
+$pink-a4: map-deep-get($color-palette, 'material-pink', 'A300') !default;
+$pink-a7: map-deep-get($color-palette, 'material-pink', 'A700') !default;
+
+// Google Material Purple
+$purple-0: map-deep-get($color-palette, 'material-purple', 50) !default;
+$purple-1: map-deep-get($color-palette, 'material-purple', 100) !default;
+$purple-2: map-deep-get($color-palette, 'material-purple', 200) !default;
+$purple-3: map-deep-get($color-palette, 'material-purple', 300) !default;
+$purple-4: map-deep-get($color-palette, 'material-purple', 400) !default;
+$purple-5: map-deep-get($color-palette, 'material-purple', 500) !default;
+$purple-6: map-deep-get($color-palette, 'material-purple', 600) !default;
+$purple-7: map-deep-get($color-palette, 'material-purple', 700) !default;
+$purple-8: map-deep-get($color-palette, 'material-purple', 800) !default;
+$purple-9: map-deep-get($color-palette, 'material-purple', 900) !default;
+$purple-a1: map-deep-get($color-palette, 'material-purple', 'A100') !default;
+$purple-a2: map-deep-get($color-palette, 'material-purple', 'A200') !default;
+$purple-a4: map-deep-get($color-palette, 'material-purple', 'A300') !default;
+$purple-a7: map-deep-get($color-palette, 'material-purple', 'A700') !default;
+$purple-a7: map-deep-get($color-palette, 'material-pink', 'A700') !default;
+
+// Google Material Deep-purple
+$deep-purple-0: map-deep-get(
+  $color-palette,
+  'material-deep-purple',
+  50
+) !default;
+$deep-purple-1: map-deep-get(
+  $color-palette,
+  'material-deep-purple',
+  100
+) !default;
+$deep-purple-2: map-deep-get(
+  $color-palette,
+  'material-deep-purple',
+  200
+) !default;
+$deep-purple-3: map-deep-get(
+  $color-palette,
+  'material-deep-purple',
+  300
+) !default;
+$deep-purple-4: map-deep-get(
+  $color-palette,
+  'material-deep-purple',
+  400
+) !default;
+$deep-purple-5: map-deep-get(
+  $color-palette,
+  'material-deep-purple',
+  500
+) !default;
+$deep-purple-6: map-deep-get(
+  $color-palette,
+  'material-deep-purple',
+  600
+) !default;
+$deep-purple-7: map-deep-get(
+  $color-palette,
+  'material-deep-purple',
+  700
+) !default;
+$deep-purple-8: map-deep-get(
+  $color-palette,
+  'material-deep-purple',
+  800
+) !default;
+$deep-purple-9: map-deep-get(
+  $color-palette,
+  'material-deep-purple',
+  900
+) !default;
+$deep-purple-a1: map-deep-get(
+  $color-palette,
+  'material-deep-purple',
+  'A100'
+) !default;
+$deep-purple-a2: map-deep-get(
+  $color-palette,
+  'material-deep-purple',
+  'A200'
+) !default;
+$deep-purple-a4: map-deep-get(
+  $color-palette,
+  'material-deep-purple',
+  'A300'
+) !default;
+$deep-purple-a7: map-deep-get(
+  $color-palette,
+  'material-deep-purple',
+  'A700'
+) !default;
+
+// Google Material Deep Purple
+$indigo-0: map-deep-get($color-palette, 'material-indigo', 50) !default;
+$indigo-1: map-deep-get($color-palette, 'material-indigo', 100) !default;
+$indigo-2: map-deep-get($color-palette, 'material-indigo', 200) !default;
+$indigo-3: map-deep-get($color-palette, 'material-indigo', 300) !default;
+$indigo-4: map-deep-get($color-palette, 'material-indigo', 400) !default;
+$indigo-5: map-deep-get($color-palette, 'material-indigo', 500) !default;
+$indigo-6: map-deep-get($color-palette, 'material-indigo', 600) !default;
+$indigo-7: map-deep-get($color-palette, 'material-indigo', 700) !default;
+$indigo-8: map-deep-get($color-palette, 'material-indigo', 800) !default;
+$indigo-9: map-deep-get($color-palette, 'material-indigo', 900) !default;
+$indigo-a1: map-deep-get($color-palette, 'material-indigo', 'A100') !default;
+$indigo-a2: map-deep-get($color-palette, 'material-indigo', 'A200') !default;
+$indigo-a4: map-deep-get($color-palette, 'material-indigo', 'A300') !default;
+$indigo-a7: map-deep-get($color-palette, 'material-indigo', 'A700') !default;
+
+// Google Material Blue
+$blue-0: map-deep-get($color-palette, 'material-blue', 50) !default;
+$blue-1: map-deep-get($color-palette, 'material-blue', 100) !default;
+$blue-2: map-deep-get($color-palette, 'material-blue', 200) !default;
+$blue-3: map-deep-get($color-palette, 'material-blue', 300) !default;
+$blue-4: map-deep-get($color-palette, 'material-blue', 400) !default;
+$blue-5: map-deep-get($color-palette, 'material-blue', 500) !default;
+$blue-6: map-deep-get($color-palette, 'material-blue', 600) !default;
+$blue-7: map-deep-get($color-palette, 'material-blue', 700) !default;
+$blue-8: map-deep-get($color-palette, 'material-blue', 800) !default;
+$blue-9: map-deep-get($color-palette, 'material-blue', 900) !default;
+$blue-a1: map-deep-get($color-palette, 'material-blue', 'A100') !default;
+$blue-a2: map-deep-get($color-palette, 'material-blue', 'A200') !default;
+$blue-a4: map-deep-get($color-palette, 'material-blue', 'A300') !default;
+$blue-a7: map-deep-get($color-palette, 'material-blue', 'A700') !default;
+
+// Google Material Light Blue
+$light-blue-0: map-deep-get($color-palette, 'material-light-blue', 50) !default;
+$light-blue-1: map-deep-get(
+  $color-palette,
+  'material-light-blue',
+  100
+) !default;
+$light-blue-2: map-deep-get(
+  $color-palette,
+  'material-light-blue',
+  200
+) !default;
+$light-blue-3: map-deep-get(
+  $color-palette,
+  'material-light-blue',
+  300
+) !default;
+$light-blue-4: map-deep-get(
+  $color-palette,
+  'material-light-blue',
+  400
+) !default;
+$light-blue-5: map-deep-get(
+  $color-palette,
+  'material-light-blue',
+  500
+) !default;
+$light-blue-6: map-deep-get(
+  $color-palette,
+  'material-light-blue',
+  600
+) !default;
+$light-blue-7: map-deep-get(
+  $color-palette,
+  'material-light-blue',
+  700
+) !default;
+$light-blue-8: map-deep-get(
+  $color-palette,
+  'material-light-blue',
+  800
+) !default;
+$light-blue-9: map-deep-get(
+  $color-palette,
+  'material-light-blue',
+  900
+) !default;
+$light-blue-a1: map-deep-get(
+  $color-palette,
+  'material-light-blue',
+  'A100'
+) !default;
+$light-blue-a2: map-deep-get(
+  $color-palette,
+  'material-light-blue',
+  'A200'
+) !default;
+$light-blue-a4: map-deep-get(
+  $color-palette,
+  'material-light-blue',
+  'A300'
+) !default;
+$light-blue-a7: map-deep-get(
+  $color-palette,
+  'material-light-blue',
+  'A700'
+) !default;
+$light-blue-a7: map-deep-get(
+  $color-palette,
+  'material-light-blue',
+  'A700'
+) !default;
+
+// Google Material Cyan
+$cyan-0: map-deep-get($color-palette, 'material-cyan', 50) !default;
+$cyan-1: map-deep-get($color-palette, 'material-cyan', 100) !default;
+$cyan-2: map-deep-get($color-palette, 'material-cyan', 200) !default;
+$cyan-3: map-deep-get($color-palette, 'material-cyan', 300) !default;
+$cyan-4: map-deep-get($color-palette, 'material-cyan', 400) !default;
+$cyan-5: map-deep-get($color-palette, 'material-cyan', 500) !default;
+$cyan-6: map-deep-get($color-palette, 'material-cyan', 600) !default;
+$cyan-7: map-deep-get($color-palette, 'material-cyan', 700) !default;
+$cyan-8: map-deep-get($color-palette, 'material-cyan', 800) !default;
+$cyan-9: map-deep-get($color-palette, 'material-cyan', 900) !default;
+$cyan-a1: map-deep-get($color-palette, 'material-cyan', 'A100') !default;
+$cyan-a2: map-deep-get($color-palette, 'material-cyan', 'A200') !default;
+$cyan-a4: map-deep-get($color-palette, 'material-cyan', 'A300') !default;
+$cyan-a7: map-deep-get($color-palette, 'material-cyan', 'A700') !default;
+
+// Google Material Teal
+$teal-0: map-deep-get($color-palette, 'material-teal', 50) !default;
+$teal-1: map-deep-get($color-palette, 'material-teal', 100) !default;
+$teal-2: map-deep-get($color-palette, 'material-teal', 200) !default;
+$teal-3: map-deep-get($color-palette, 'material-teal', 300) !default;
+$teal-4: map-deep-get($color-palette, 'material-teal', 400) !default;
+$teal-5: map-deep-get($color-palette, 'material-teal', 500) !default;
+$teal-6: map-deep-get($color-palette, 'material-teal', 600) !default;
+$teal-7: map-deep-get($color-palette, 'material-teal', 700) !default;
+$teal-8: map-deep-get($color-palette, 'material-teal', 800) !default;
+$teal-9: map-deep-get($color-palette, 'material-teal', 900) !default;
+$teal-a1: map-deep-get($color-palette, 'material-teal', 'A100') !default;
+$teal-a2: map-deep-get($color-palette, 'material-teal', 'A200') !default;
+$teal-a4: map-deep-get($color-palette, 'material-teal', 'A300') !default;
+$teal-a7: map-deep-get($color-palette, 'material-teal', 'A700') !default;
+
+// Google Material Green
+$green-0: map-deep-get($color-palette, 'material-green', 50) !default;
+$green-1: map-deep-get($color-palette, 'material-green', 100) !default;
+$green-2: map-deep-get($color-palette, 'material-green', 200) !default;
+$green-3: map-deep-get($color-palette, 'material-green', 300) !default;
+$green-4: map-deep-get($color-palette, 'material-green', 400) !default;
+$green-5: map-deep-get($color-palette, 'material-green', 500) !default;
+$green-6: map-deep-get($color-palette, 'material-green', 600) !default;
+$green-7: map-deep-get($color-palette, 'material-green', 700) !default;
+$green-8: map-deep-get($color-palette, 'material-green', 800) !default;
+$green-9: map-deep-get($color-palette, 'material-green', 900) !default;
+$green-a1: map-deep-get($color-palette, 'material-green', 'A100') !default;
+$green-a2: map-deep-get($color-palette, 'material-green', 'A200') !default;
+$green-a4: map-deep-get($color-palette, 'material-green', 'A300') !default;
+$green-a7: map-deep-get($color-palette, 'material-green', 'A700') !default;
+
+// Google Material Light Green
+$light-green-0: map-deep-get(
+  $color-palette,
+  'material-light-green',
+  50
+) !default;
+$light-green-1: map-deep-get(
+  $color-palette,
+  'material-light-green',
+  100
+) !default;
+$light-green-2: map-deep-get(
+  $color-palette,
+  'material-light-green',
+  200
+) !default;
+$light-green-3: map-deep-get(
+  $color-palette,
+  'material-light-green',
+  300
+) !default;
+$light-green-4: map-deep-get(
+  $color-palette,
+  'material-light-green',
+  400
+) !default;
+$light-green-5: map-deep-get(
+  $color-palette,
+  'material-light-green',
+  500
+) !default;
+$light-green-6: map-deep-get(
+  $color-palette,
+  'material-light-green',
+  600
+) !default;
+$light-green-7: map-deep-get(
+  $color-palette,
+  'material-light-green',
+  700
+) !default;
+$light-green-8: map-deep-get(
+  $color-palette,
+  'material-light-green',
+  800
+) !default;
+$light-green-9: map-deep-get(
+  $color-palette,
+  'material-light-green',
+  900
+) !default;
+$light-green-a1: map-deep-get(
+  $color-palette,
+  'material-light-green',
+  'A100'
+) !default;
+$light-green-a2: map-deep-get(
+  $color-palette,
+  'material-light-green',
+  'A200'
+) !default;
+$light-green-a4: map-deep-get(
+  $color-palette,
+  'material-light-green',
+  'A300'
+) !default;
+$light-green-a7: map-deep-get(
+  $color-palette,
+  'material-light-green',
+  'A700'
+) !default;
+
+// Google Material Lime
+$lime-0: map-deep-get($color-palette, 'material-lime', 50) !default;
+$lime-1: map-deep-get($color-palette, 'material-lime', 100) !default;
+$lime-2: map-deep-get($color-palette, 'material-lime', 200) !default;
+$lime-3: map-deep-get($color-palette, 'material-lime', 300) !default;
+$lime-4: map-deep-get($color-palette, 'material-lime', 400) !default;
+$lime-5: map-deep-get($color-palette, 'material-lime', 500) !default;
+$lime-6: map-deep-get($color-palette, 'material-lime', 600) !default;
+$lime-7: map-deep-get($color-palette, 'material-lime', 700) !default;
+$lime-8: map-deep-get($color-palette, 'material-lime', 800) !default;
+$lime-9: map-deep-get($color-palette, 'material-lime', 900) !default;
+$lime-a1: map-deep-get($color-palette, 'material-lime', 'A100') !default;
+$lime-a2: map-deep-get($color-palette, 'material-lime', 'A200') !default;
+$lime-a4: map-deep-get($color-palette, 'material-lime', 'A300') !default;
+$lime-a7: map-deep-get($color-palette, 'material-lime', 'A700') !default;
+
+// Google Material Yellow
+$yellow-0: map-deep-get($color-palette, 'material-yellow', 50) !default;
+$yellow-1: map-deep-get($color-palette, 'material-yellow', 100) !default;
+$yellow-2: map-deep-get($color-palette, 'material-yellow', 200) !default;
+$yellow-3: map-deep-get($color-palette, 'material-yellow', 300) !default;
+$yellow-4: map-deep-get($color-palette, 'material-yellow', 400) !default;
+$yellow-5: map-deep-get($color-palette, 'material-yellow', 500) !default;
+$yellow-6: map-deep-get($color-palette, 'material-yellow', 600) !default;
+$yellow-7: map-deep-get($color-palette, 'material-yellow', 700) !default;
+$yellow-8: map-deep-get($color-palette, 'material-yellow', 800) !default;
+$yellow-9: map-deep-get($color-palette, 'material-yellow', 900) !default;
+$yellow-a1: map-deep-get($color-palette, 'material-yellow', 'A100') !default;
+$yellow-a2: map-deep-get($color-palette, 'material-yellow', 'A200') !default;
+$yellow-a4: map-deep-get($color-palette, 'material-yellow', 'A300') !default;
+$yellow-a7: map-deep-get($color-palette, 'material-yellow', 'A700') !default;
+$lime-a7: map-deep-get($color-palette, 'material-lime', 'A700') !default;
+
+// Google Material Amber
+$amber-0: map-deep-get($color-palette, 'material-amber', 50) !default;
+$amber-1: map-deep-get($color-palette, 'material-amber', 100) !default;
+$amber-2: map-deep-get($color-palette, 'material-amber', 200) !default;
+$amber-3: map-deep-get($color-palette, 'material-amber', 300) !default;
+$amber-4: map-deep-get($color-palette, 'material-amber', 400) !default;
+$amber-5: map-deep-get($color-palette, 'material-amber', 500) !default;
+$amber-6: map-deep-get($color-palette, 'material-amber', 600) !default;
+$amber-7: map-deep-get($color-palette, 'material-amber', 700) !default;
+$amber-8: map-deep-get($color-palette, 'material-amber', 800) !default;
+$amber-9: map-deep-get($color-palette, 'material-amber', 900) !default;
+$amber-a1: map-deep-get($color-palette, 'material-amber', 'A100') !default;
+$amber-a2: map-deep-get($color-palette, 'material-amber', 'A200') !default;
+$amber-a4: map-deep-get($color-palette, 'material-amber', 'A300') !default;
+$amber-a7: map-deep-get($color-palette, 'material-amber', 'A700') !default;
+
+// Google Material Orange
+$orange-0: map-deep-get($color-palette, 'material-orange', 50) !default;
+$orange-1: map-deep-get($color-palette, 'material-orange', 100) !default;
+$orange-2: map-deep-get($color-palette, 'material-orange', 200) !default;
+$orange-3: map-deep-get($color-palette, 'material-orange', 300) !default;
+$orange-4: map-deep-get($color-palette, 'material-orange', 400) !default;
+$orange-5: map-deep-get($color-palette, 'material-orange', 500) !default;
+$orange-6: map-deep-get($color-palette, 'material-orange', 600) !default;
+$orange-7: map-deep-get($color-palette, 'material-orange', 700) !default;
+$orange-8: map-deep-get($color-palette, 'material-orange', 800) !default;
+$orange-9: map-deep-get($color-palette, 'material-orange', 900) !default;
+$orange-a1: map-deep-get($color-palette, 'material-orange', 'A100') !default;
+$orange-a2: map-deep-get($color-palette, 'material-orange', 'A200') !default;
+$orange-a4: map-deep-get($color-palette, 'material-orange', 'A300') !default;
+$orange-a7: map-deep-get($color-palette, 'material-orange', 'A700') !default;
+$amber-a7: map-deep-get($color-palette, 'material-amber', 'A700') !default;
+
+// Google Material Deep Orange
+$deep-orange-0: map-deep-get(
+  $color-palette,
+  'material-deep-orange',
+  50
+) !default;
+$deep-orange-1: map-deep-get(
+  $color-palette,
+  'material-deep-orange',
+  100
+) !default;
+$deep-orange-2: map-deep-get(
+  $color-palette,
+  'material-deep-orange',
+  200
+) !default;
+$deep-orange-3: map-deep-get(
+  $color-palette,
+  'material-deep-orange',
+  300
+) !default;
+$deep-orange-4: map-deep-get(
+  $color-palette,
+  'material-deep-orange',
+  400
+) !default;
+$deep-orange-5: map-deep-get(
+  $color-palette,
+  'material-deep-orange',
+  500
+) !default;
+$deep-orange-6: map-deep-get(
+  $color-palette,
+  'material-deep-orange',
+  600
+) !default;
+$deep-orange-7: map-deep-get(
+  $color-palette,
+  'material-deep-orange',
+  700
+) !default;
+$deep-orange-8: map-deep-get(
+  $color-palette,
+  'material-deep-orange',
+  800
+) !default;
+$deep-orange-9: map-deep-get(
+  $color-palette,
+  'material-deep-orange',
+  900
+) !default;
+$deep-orange-a1: map-deep-get(
+  $color-palette,
+  'material-deep-orange',
+  'A100'
+) !default;
+$deep-orange-a2: map-deep-get(
+  $color-palette,
+  'material-deep-orange',
+  'A200'
+) !default;
+$deep-orange-a4: map-deep-get(
+  $color-palette,
+  'material-deep-orange',
+  'A300'
+) !default;
+$deep-orange-a7: map-deep-get(
+  $color-palette,
+  'material-deep-orange',
+  'A700'
+) !default;
+
+// Google Material Brown
+$brown-0: map-deep-get($color-palette, 'material-brown', 50) !default;
+$brown-1: map-deep-get($color-palette, 'material-brown', 100) !default;
+$brown-2: map-deep-get($color-palette, 'material-brown', 200) !default;
+$brown-3: map-deep-get($color-palette, 'material-brown', 300) !default;
+$brown-4: map-deep-get($color-palette, 'material-brown', 400) !default;
+$brown-5: map-deep-get($color-palette, 'material-brown', 500) !default;
+$brown-6: map-deep-get($color-palette, 'material-brown', 600) !default;
+$brown-7: map-deep-get($color-palette, 'material-brown', 700) !default;
+$brown-8: map-deep-get($color-palette, 'material-brown', 800) !default;
+$brown-9: map-deep-get($color-palette, 'material-brown', 900) !default;
+
+// Google Material Brown
+$blue-grey-0: map-deep-get($color-palette, 'material-blue-grey', 50) !default;
+$blue-grey-1: map-deep-get($color-palette, 'material-blue-grey', 100) !default;
+$blue-grey-2: map-deep-get($color-palette, 'material-blue-grey', 200) !default;
+$blue-grey-3: map-deep-get($color-palette, 'material-blue-grey', 300) !default;
+$blue-grey-4: map-deep-get($color-palette, 'material-blue-grey', 400) !default;
+$blue-grey-5: map-deep-get($color-palette, 'material-blue-grey', 500) !default;
+$blue-grey-6: map-deep-get($color-palette, 'material-blue-grey', 600) !default;
+$blue-grey-7: map-deep-get($color-palette, 'material-blue-grey', 700) !default;
+$blue-grey-8: map-deep-get($color-palette, 'material-blue-grey', 800) !default;
+$blue-grey-9: map-deep-get($color-palette, 'material-blue-grey', 900) !default;
+
+// Form  ======================================== //
+$form-border-color: $base-grey;
+$form-background-color: $white;
+$form-state-normal: $base-color-grey-5;
+$form-state-hover: transparent;
+$form-state-focus: $blue-7;
+$form-state-active: $teal-7;
+$form-state-disabled: $grey-3;
+$form-state-valid: $green-7;
+$form-state-invalid: $red-7;

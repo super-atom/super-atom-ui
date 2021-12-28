@@ -17,7 +17,7 @@ block content
             button.nav__sub-title.js_btn(type='button', data-type='text')
               i.icon.fa-solid.fa-chevron-down
               | Getting started
-            ul.nav__link-depth-2-wrap
+            ul.nav__link-depth-2-wrap.js_nav__link_depth_2_wrap
               li.nav__link-depth-2
                 a(href='#introduction') Introduction
               li.nav__link-depth-2
@@ -28,34 +28,34 @@ block content
             button.nav__sub-title.js_btn(type='button', data-type='text')
               i.icon.fa-solid.fa-chevron-down
               | Pug Mixins
-            ul.nav__link-depth-2-wrap
+            ul.nav__link-depth-2-wrap.js_nav__link_depth_2_wrap
               li.nav__link-depth-2
                 a(href='#itemList') ...
           li.nav__link-depth-1.js_nav__link_depth_1
             button.nav__sub-title.js_btn(type='button', data-type='text')
               i.icon.fa-solid.fa-chevron-down
               | Sass Mixins
-            ul.nav__link-depth-2-wrap
+            ul.nav__link-depth-2-wrap.js_nav__link_depth_2_wrap
               li.nav__link-depth-2
-                a(href='#a11y') A11y
+                a(href='#a11y') A11y (작성예정)
               li.nav__link-depth-2
-                a(href='#boxAlignment') Box-alignment
+                a(href='#boxAlignment') Box-alignment (작성예정)
               li.nav__link-depth-2
-                a(href='#cssGrid') Css-grid
+                a(href='#cssGrid') Css-grid (작성예정)
               li.nav__link-depth-2
-                a(href='#flexBox') Flexbox
+                a(href='#flexbox') Flexbox
               li.nav__link-depth-2
-                a(href='#font') Font
+                a(href='#font') Font (작성예정)
               li.nav__link-depth-2
                 a(href='#form') Form
               li.nav__link-depth-2
-                a(href='#inheritance') Inheritance
+                a(href='#inheritance') Inheritance (작성예정)
               li.nav__link-depth-2
                 a(href='#layout') Layout
               li.nav__link-depth-2
                 a(href='#responsiveWeb') Responsive-web
               li.nav__link-depth-2
-                a(href='#setting') Setting
+                a(href='#setting') Setting (작성예정)
               li.nav__link-depth-2
                 a(href='#text') Text
               li.nav__link-depth-2
@@ -63,12 +63,12 @@ block content
               li.nav__link-depth-2
                 a(href='#utility') Utility
               li.nav__link-depth-2
-                a(href='#varient') Varient
+                a(href='#varient') Varient (작성예정)
           li.nav__link-depth-1.js_nav__link_depth_1
             button.nav__sub-title.js_btn(type='button', data-type='text')
               i.icon.fa-solid.fa-chevron-down
               | Customize
-            ul.nav__link-depth-2-wrap
+            ul.nav__link-depth-2-wrap.js_nav__link_depth_2_wrap
               li.nav__link-depth-2
                 a(href='#variables') Variables
               li.nav__link-depth-2
@@ -79,7 +79,7 @@ block content
       .page__title-wrap
         h1.page__title DOCUMENTATION
       .inner
-        .section-wrap
+        .section-wrap.section-wrap-started
           h1#gettingStared.section-wrap-title Getting starded
           section#introduction.section
             h1.section__title Introduction
@@ -104,7 +104,7 @@ block content
                       code npm run dev
                       +button({type:'outlined', label:'copy'}).js_copy_btn
                   li
-                    p 웹 사이트를 빌드합니다.
+                    p 웹 사이트를 빌드한다.
                     .code-wrap
                       code npm run prod
                       +button({type:'outlined', label:'copy'}).js_copy_btn
@@ -443,29 +443,206 @@ block content
                 h2.section__sub-title Sass + PoctCSS
                 .item-wrap
                   p Sass는 CSS로 컴파일 된다. 그후 JavaScript를 통해 컴파일된 CSS를 PostCSS로 다시 컴파일된다.
-        .section-wrap
+        .section-wrap.section-wrap-pug
           #pugMixins.section-wrap-title Pug Mixins
           section#itemList.section
             h1.section__title ItemList
             .section__content ...
-        .section-wrap
+        .section-wrap.section-wrap-sass
           #sassMixins.section-wrap-title Sass Mixins
-          section#a11y.section
-            h1.section__title A11y
+          section#flexbox.section
+            h1.section__title Flexbox
             .section__content
               .section__sub-wrap
                 .section__sub-title
-                  strong a11y-hidden
-                  span ($focus-visible:bool, $focus-state-class:string)
-                p.section__sub-desc 접근성 감춤(Accessibility Hidden) 믹스인. 요소를 화면에서 감추되, 스크린 리더에서 읽힐 수 있도록 한다.
-                .code-wrap
-                  code
-                    | .a11yHidden {
-                    | @include a11y-hidden();
-                    | }
-                .desc-wrap
-                  ul.code-desc
-                    li $focus-visible:bool = true
-                    li $focus-state-class:string = 'focus'
-                  .txt-desc
-                    p 포커스 상태에서 표시되도록 하려면 true 값을 설정하라
+                  strong flex-container
+                  span ($args, $mode: flex)
+                .section__sub-desc
+                  p
+                  | display: if($mode == flex, flex, inline-flex);
+                  br
+                  | @include flex-container-append($args);
+              .section__sub-wrap
+                .section__sub-title
+                  strong flex-container-append
+                  span ($args:string)
+                .section__sub-desc
+                  p
+                  strong $args : flex-direction
+                  br
+                  | nowrap wrap wrap-reverse
+                  p
+                  strong $args : flex container
+                  br
+                  | justify-start
+                  | justify-center
+                  | justify-end
+                  | justify-left
+                  | justify-right
+                  | justify-normal
+                  | justify-between
+                  | justify-around
+                  | justify-evenly
+                  | justify-safe
+                  | justify-unsafe
+                  | justify-inherit
+                  | justify-initial
+                  | justify-unset
+                  p
+                  strong $args : flex items
+                  br
+                  | items-normal
+                  | items-stretch
+                  | items-start
+                  | items-end
+                  | items-center
+                  | items-baseline
+                  | items-first-baseline
+                  | items-last-baseline
+                  | items-safe
+                  | items-unsafe
+                  | items-inherit
+                  | items-initial
+                  | items-unset
+          section#layout.section
+            h1.section__title Layout
+            .section__content
+              .section__sub-wrap
+                .section__sub-title centeringFlex()
+                .section__sub-desc
+                  | display: flex;
+                  br
+                  | align-items: center;
+                  br
+                  | justify-content: center;
+                  br
+                  | width: 100%;
+                  br
+                  | height: 100%;
+                  br
+                  | text-align: center;
+              .section__sub-wrap
+                .section__sub-title centeringXY($horizontal: true, $vertical: true)
+                .section__sub-desc
+                  | text-align: center;
+                  br
+                  | top: 50%;
+                  br
+                  | left: 50%;
+                  br
+                  | transform: translate(-50%, -50%);
+              .section__sub-wrap
+                .section__sub-title clearfix()
+                .section__sub-desc
+                  | display: block;
+                  br
+                  | &:before,
+                  br
+                  | &:after {
+                  br
+                  | &nbsp;&nbsp;display: block;
+                  br
+                  | &nbsp;&nbsp;clear: both;
+                  br
+                  | &nbsp;&nbsp;height: 0;
+                  br
+                  | &nbsp;&nbsp;font-size: 0;
+                  br
+                  | &nbsp;&nbsp;visibility: hidden;
+                  br
+                  | &nbsp;&nbsp;content: ' ';
+                  br
+                  | }
+          section#responsiveWeb.section
+            h1.section__title Responsive Web
+            .section__content
+              .section__sub-wrap
+                .section__sub-title
+                  strong bp-max, bp-min, bp-only
+                  span ($point: string)
+                .section__sub-desc
+                  p $point : xs, sm, md, lg, xl
+          section#text.section
+            h1.section__title Text
+            .section__content
+              .section__sub-wrap
+                .section__sub-title
+                  strong ellipsis
+                  span ($lines:number = 2, $line-height:number = 1.7)
+                .section__sub-desc
+              .section__sub-wrap
+                .section__sub-title
+                  strong hide-text
+                  span ($indent: 150%)
+                .section__sub-desc
+                  p
+                  | overflow: hidden;
+                  | direction: ltr;
+                  | white-space: nowrap;
+                  | text-indent: $indent;
+              .section__sub-wrap
+                .section__sub-title
+                  strong pseudo
+                  span ($display: block, $pos: absolute, $content: '')
+                .section__sub-desc
+                  p
+                  | position: $pos;
+                  | display: $display;
+                  | content: $content;
+                  | @content;
+              .section__sub-wrap
+                .section__sub-title
+                  strong text-shadow
+                  span ($x:string = 1px, $y:string = 2px, $blur:string = 1px, $color:string = rgba(0, 0, 0, 0.4))
+                .section__sub-desc
+                  p
+                  | position: $pos;
+                  | display: $display;
+                  | content: $content;
+                  | @content;
+              .section__sub-wrap
+                .section__sub-title
+                  strong word-break
+                  span ($type: keep-all)
+                .section__sub-desc
+                  p
+                  | word-wrap: break-word;
+                  | word-break: $type;
+          section#ui.section
+            h1.section__title Ui
+            .section__content
+              .section__sub-wrap
+                .section__sub-title
+                  strong background
+                  span ($url:string, $size:string = 'cover', $repeat:string = 'no-repeat', $position:string = 'center')
+                .section__sub-desc
+                  p
+                  | @if $url {
+                  br
+                  | &nbsp;&nbsp;background-image: url($url);
+                  br
+                  | }
+                  br
+                  | background-repeat: $repeat;
+                  br
+                  | background-position: $position;
+                  br
+                  | background-size: $size;
+              .section__sub-wrap
+                .section__sub-title
+                  strong border-radius
+                  span ($radius: 5px)
+                .section__sub-desc
+                  p
+                  | background-clip: padding-box;
+                  br
+                  | border-radius: $radius;
+          section#utility.section
+            h1.section__title Utility
+            .section__content
+              .section__sub-wrap
+                .section__sub-title
+                  strong container
+                  span ()
+                .section__sub-desc
+                  p padding: 15px;
