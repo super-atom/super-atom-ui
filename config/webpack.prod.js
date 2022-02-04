@@ -69,14 +69,6 @@ const configureOptimization = () => {
   };
 };
 
-// configure MiniCssExtract
-const configureMiniCssExtract = () => {
-  return {
-    filename: 'vendor/css/[name].[fullhash].css',
-    chunkFilename: 'vendor/css/[name].[fullhash].css',
-  };
-};
-
 module.exports = merge(baseConfig, {
   mode: 'production',
   target: 'browserslist',
@@ -110,7 +102,10 @@ module.exports = merge(baseConfig, {
 
     // we extract scss files from js and create
     // separate files for individual pages
-    new MiniCssExtractPlugin(configureMiniCssExtract()),
+    new MiniCssExtractPlugin({
+      filename: 'vendor/css/[name].[fullhash].css',
+      chunkFilename: 'vendor/css/[name].[fullhash].css',
+    }),
 
     // we create a service-worker for our data
     new WorkboxPlugin.GenerateSW({
