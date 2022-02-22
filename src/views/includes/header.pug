@@ -9,31 +9,12 @@ mixin header(page)
           title='index'
         )
       .nav__link-wrap
-        a.nav__link(
-          class=page === "about" ? "nav__link--active" : "",
-          href='/about.html',
-          title='about'
-        ) ABOUT
+        each val in ['about', 'guide', 'docs', 'ingredient', 'component']
           a.nav__link(
-            class=page === "guide" ? "nav__link--active" : "",
-            href='/guide.html',
-            title='guide'
-          ) GUIDE
-        a.nav__link(
-          class=page === "docs" ? "nav__link--active" : "",
-          href='/docs.html',
-          title='docs'
-        ) DOCS
-        a.nav__link(
-          class=page === "ingredient" ? "nav__link--active" : "",
-          href='/ingredient.html',
-          title='ingredient'
-        ) INGREDIENT
-        a.nav__link(
-          class=page === "component" ? "nav__link--active" : "",
-          href='/component.html',
-          title='component'
-        ) COMPONENT
+              class=page === val ? "nav__link--active" : "",
+              href='/' +val+'.html',
+              title=val
+            )=val
       .nav__download-wrap
         +link_button({target: 'blank', href: 'https://github.com/super-atom/super-atom-ui'})
           i.icon.fa-brands.fa-github
