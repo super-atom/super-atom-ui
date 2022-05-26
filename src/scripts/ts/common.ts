@@ -1,4 +1,5 @@
 import '../../styles/core/common.scss';
+import '../../styles/style.scss';
 import './motion/gsap';
 import '../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
 import '../../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss';
