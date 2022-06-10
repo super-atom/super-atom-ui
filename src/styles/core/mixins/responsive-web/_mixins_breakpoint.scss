@@ -59,15 +59,15 @@
       @content;
     }
   } @else if $point == sm {
-    @media (min-width: $bp-min-xs) and (max-width: $bp-max-sm) {
+    @media (min-width: $bp-min-sm) and (max-width: $bp-max-sm) {
       @content;
     }
   } @else if $point == md {
-    @media (min-width: $bp-min-sm) and (max-width: $bp-max-md) {
+    @media (min-width: $bp-min-md) and (max-width: $bp-max-md) {
       @content;
     }
   } @else if $point == lg {
-    @media (min-width: $bp-min-md) and (max-width: $bp-max-lg) {
+    @media (min-width: $bp-min-lg) and (max-width: $bp-max-lg) {
       @content;
     }
   } @else if $point == xl {
