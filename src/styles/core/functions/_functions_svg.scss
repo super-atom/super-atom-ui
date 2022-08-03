@@ -1,0 +1,5 @@
+@function svgIcon($color, $icon){
+  $color: '%23'+$color;
+  $icon: #{$icon} + "fill='#{$color}'";
+  @return url($icon);
+}

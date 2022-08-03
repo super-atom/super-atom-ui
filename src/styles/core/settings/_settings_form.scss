@@ -1,11 +1,6 @@
 @import '../core';
 
 .button,
-button {
-  display: inline-block;
-}
-
-.button,
 button,
 input,
 textarea,
@@ -45,11 +40,12 @@ input.input {
   }
 
   & + .input {
-    margin-top: 10px;
+    margin-top: 2rem;
   }
 }
 
 .input-group {
+	position: relative;
   width: 100%;
 }
 
@@ -59,7 +55,7 @@ input.input {
 .input-group + .input-group,
 .input + .input-group,
 .input-group + .input {
-  margin-top: 10px;
+  margin-top: 2rem;
 }
 
 .input + .label {
