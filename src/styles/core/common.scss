@@ -1,6 +1,6 @@
 /* START : common.scss */
-@import './core';
+@import './core.scss';
 // 사전 정의한 CSS 를 생성합니다.
-@import './base/base';
-@import './settings/settings';
+@import './base/base.scss';
+@import './settings/settings.scss';
 /* END : common.scss */

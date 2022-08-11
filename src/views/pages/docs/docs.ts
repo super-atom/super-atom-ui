@@ -7,7 +7,6 @@ const isNotPc = md.userAgent() !== null;
 const $js_btn: JQuery<HTMLElement> = $('.js_btn');
 const $js_aside_nav_btn = $('.js_aside_nav_btn');
 const $js_nav__link_depth_1_wrap = $('.js_nav__link_depth_1_wrap');
-const $js_nav__link_depth_2_wrap_anchor = $('.js_nav__link_depth_2_wrap li a');
 const $js_nav__link_depth_1 = $('.js_nav__link_depth_1');
 
 if (isNotPc) {

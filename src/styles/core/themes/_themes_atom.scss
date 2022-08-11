@@ -1,13 +1,13 @@
 $theme-atom: (
   color: (
-    main: $deep-purple-5,
+    main: rebeccapurple,
     sub: $white,
   ),
   body: (
     bg: $white,
   ),
   header: (
-    bg: $deep-purple-5,
+    bg: rebeccapurple,
   ),
   button: (
     data-type: map-get($buttons, data-type),

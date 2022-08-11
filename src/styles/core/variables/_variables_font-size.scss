@@ -8,11 +8,11 @@ $base-rem-size: 16px !default;
 
 // *Root Font Size
 // Root
-$root-font-size: rem(16px);
+$root-font-size: 62.5%;
 
 // Body Default Settings
 $body-text-color: $base-color-grey-7;
-$body-font-size: rem(16px);
+$body-font-size: 1.6rem;
 $body-font-weight: 400;
 $body-font-family: $base-font;
 $body-letter-spacing: $base-font-letter-spacing;
@@ -22,86 +22,86 @@ $body-background-color: $white;
 // *Responsive Base Heading Element Font Size
 $base-font-sizes-h1: (
   $bp-min-xs: (
-    1.3rem
+    1.6rem
   ),
   $bp-min-md: (
-    1.5rem
+    1.6rem
   ),
   $bp-min-lg: (
-    2rem
+    1.6rem
   ),
 );
 $base-font-sizes-h2: (
   $bp-min-xs: (
-    1.2rem
+    1.6rem
   ),
   $bp-min-md: (
-    1.35rem
+    1.6rem
   ),
   $bp-min-lg: (
-    1.5rem
+    1.6rem
   ),
 );
 $base-font-sizes-h3: (
   $bp-min-xs: (
-    1.1rem
+    1.6rem
   ),
   $bp-min-md: (
-    1.2rem
+    1.6rem
   ),
   $bp-min-lg: (
-    1.3rem
+    1.6rem
   ),
 );
 $base-font-sizes-h4: (
   $bp-max-md: (
-    1rem
+    1.6rem
   ),
   $bp-min-lg: (
-    1.17rem
+    1.6rem
   ),
 );
 $base-font-sizes-h5: (
   $bp-min-xs: (
-    0.9rem
+    1.6rem
   )
 );
 $base-font-sizes-h6: (
   $bp-min-xs: (
-    0.8rem
+    1.6rem
   )
 );
 
 // *Responsive Base Custom Font Size
 $base-font-sizes: (
   $bp-max-sm: (
-    rem(14px),
+    1.6rem,
   ),
   $bp-min-md: (
-    rem(16px)
+    1.6rem
   ),
 );
 
 $base-font-sizes-title: (
   $bp-min-xs: (
-    rem(20px)
+    1.6rem
   ),
   $bp-min-md: (
-    rem(24px)
+    1.6rem
   ),
   $bp-min-lg: (
-    rem(32px)
+    1.6rem
   ),
 );
 
 $base-font-sizes-sub-title: (
   $bp-min-xs: (
-    rem(15px)
+    1.6rem
   ),
   $bp-min-md: (
-    rem(20px)
+    1.6rem
   ),
   $bp-min-lg: (
-    rem(26px)
+    1.6rem
   ),
 );

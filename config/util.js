@@ -15,13 +15,13 @@ module.exports.cssLoaders = [
       },
     },
   },
-  // {
-  //   loader: 'resolve-url-loader',
-  // },
   {
     loader: 'sass-loader',
     options: {
       sourceMap: true,
     },
   },
+  // {
+  //   loader: 'resolve-url-loader',
+  // },
 ];

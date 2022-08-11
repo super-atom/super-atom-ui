@@ -1,14 +1,23 @@
 // https://github.com/super-atom/super-atom-ui
+
+// ※ 유의사항
+// 본 파일은 Dart Sass 로 작성되었습니다. Dart Sass Compiler 를 이용해주세요.
+// VScode 인 경우는 
+// https://github.com/glenn2223/vscode-live-sass-compiler
+// ctrl + P -> ext install glenn2223.live-sass
+// 로 설치가 가능합니다.
+
 // !!! 아래 순서가 바뀌어서는 안됩니다.
 // !!! 이 파일을 컴파일했을 때 CSS 코드가 생성되서는 안됩니다.
 // SUPER-ATOM-UI의 mixin을 사용하려면 core.scss 파일을 import 해서 사용하세요.
+
 // 1. Variables
-@import './variables/variables';
+@import './variables/variables.scss';
 // 2. Validators
-@import './validators/validators';
+@import './validators/validators.scss';
 // 3. Mixins
-@import './functions/functions';
+@import './functions/functions.scss';
 // 4. Functions
-@import './mixins/mixins';
+@import './mixins/mixins.scss';
 // 5. Config
-@import './config';
+@import './config.scss';

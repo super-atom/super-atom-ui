@@ -9,12 +9,12 @@ mixin header(page)
           title='index'
         )
       .nav__link-wrap
-        each val in ['about', 'guide', 'docs', 'ingredient', 'component']
+        each val in ['about', 'guide', 'docs', 'ingredient', 'component', 'core']
           a.nav__link(
-              class=page === val ? "nav__link--active" : "",
-              href='/' +val+'.html',
-              title=val
-            )=val
+            class=page === val ? "nav__link--active" : "",
+            href="./" + val + ".html",
+            title=val
+          )= val
       .nav__download-wrap
         +link_button({target: 'blank', href: 'https://github.com/super-atom/super-atom-ui'})
           i.icon.fa-brands.fa-github

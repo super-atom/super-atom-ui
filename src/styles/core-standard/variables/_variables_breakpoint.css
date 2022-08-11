@@ -1,0 +1,41 @@
+/*
+Breakpoint
+xs : mobile
+sm : mobile
+md : tablet
+lg : tablet
+xl : pc
+2xl : 1440px
+3xl : 1920px
+*/
+$breakpoints-max: (
+  xs: 568px,
+  sm: 767px,
+  md: 992px,
+  lg: 1200px,
+  xl: 1366px,
+  2xl: 1440px,
+  3xl: 1920px
+);
+
+$bp-max-xs: map-get($breakpoints-max, xs);
+$bp-max-sm: map-get($breakpoints-max, sm);
+$bp-max-md: map-get($breakpoints-max, md);
+$bp-max-lg: map-get($breakpoints-max, lg);
+$bp-max-xl: map-get($breakpoints-max, xl);
+$bp-max-2xl: map-get($breakpoints-max, 2xl);
+$bp-max-3xl: map-get($breakpoints-max, 3xl);
+
+$breakpoints-min: (
+  xs: 320px,
+  sm: 569px,
+  md: 768px,
+  lg: 993px,
+  xl: 1201px
+);
+
+$bp-min-xs: map-get($breakpoints-min, xs);
+$bp-min-sm: map-get($breakpoints-min, sm);
+$bp-min-md: map-get($breakpoints-min, md);
+$bp-min-lg: map-get($breakpoints-min, lg);
+$bp-min-xl: map-get($breakpoints-min, xl);

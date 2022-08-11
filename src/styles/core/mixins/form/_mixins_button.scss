@@ -1,4 +1,5 @@
-@mixin button($font-size: rem(14), $padding: rem(0) rem(12), $radius: 0) {
+@mixin button($font-size: 1.6rem, $height: 2rem, $padding: 1.6rem, $radius: 0) {
+  min-height: $height;
   padding: $padding;
   font-size: $font-size;
   @if ($radius != 0) {

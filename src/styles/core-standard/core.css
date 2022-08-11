@@ -1,0 +1,21 @@
+/* https://github.com/super-atom/super-atom-ui */
+
+/*
+!!! 아래 순서가 바뀌어서는 안됩니다.
+!!! 이 파일을 컴파일했을 때 CSS 코드가 생성되서는 안됩니다.
+SUPER-ATOM-UI의 mixin을 사용하려면 core.css 파일을 import 해서 사용하세요.
+*/
+
+/* 1. Variables */
+@import './variables/variables.css';
+/* 2. Validators */
+@import './validators/validators.css';
+/* 3. Mixins */
+@import './functions/functions.css';
+/* 4. Functions */
+@import './mixins/mixins.css';
+/* 5. Config */
+@import './config.css';
+
+@use postcss-simple-vars;
+@use postcss-map-get;

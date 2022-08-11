@@ -12,6 +12,10 @@
         &[data-type='round-reverse'] {
           border-radius: 50px;
         }
+        &[data-type='icon'] {
+          background-color: transparent;
+          border-color: transparent;
+        }
         &[data-type='text'] {
           border-color: transparent;
         }

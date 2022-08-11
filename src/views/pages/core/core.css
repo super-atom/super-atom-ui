@@ -1,0 +1,55 @@
+@import '../../../styles/core-standard/core.css';
+@import './test.css';
+
+:root {
+  --bg-color: rebeccapurple;
+}
+
+body {
+  width: var(--bp-min-xs);
+  background-color: var(--bg-color);
+
+  /* has-pseudo-class */
+  &:has(.text-test) {
+    color: #333;
+  }
+}
+
+p {
+  &.text-test {
+    width: clamp(30ch, 70%, 75ch);
+    font-size: clamp(1rem, 5vw, 2rem);
+    background-color: rgba(blue, 0.3);
+  }
+
+  &:is(.text-one, .text-two, .text-three) {
+    color: green;
+  }
+
+  &.text-three {
+    @util clearfix;
+    all: unset;
+  }
+}
+
+@custom-media --vw-400px (max-width: 400px);
+@media (--vw-400px) {
+  /* hexadecimal-alpha-notation */
+  body {
+    color: #3339 !important;
+    background-color: #7a7a7a7a;
+  }
+}
+
+/* @media (prefers-color-scheme: dark) {
+  body {
+    color: white;
+    background-color: black;
+  }
+}
+@media (prefers-color-scheme: light) {
+  body {
+    color: black;
+    background-color: white;
+  }
+} */

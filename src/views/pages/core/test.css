@@ -1,0 +1,7 @@
+:root {
+  --test: rebeccapurple;
+}
+
+@define-mixin test --color: var(--test) {
+  color: --color;
+}
