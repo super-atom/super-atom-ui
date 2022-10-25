@@ -1,0 +1,27 @@
+@import '_variables_breakpoint';
+@custom-selector :--heading h1, h2, h3, h4, h5, h6;
+
+// custom-media
+@custom-media --bp-max-xs (#{$bp-max-xs} >= width);
+@custom-media --bp-max-sm (#{$bp-max-sm} >= width);
+@custom-media --bp-max-md (#{$bp-max-md} >= width);
+@custom-media --bp-max-lg (#{$bp-max-lg} >= width);
+@custom-media --bp-max-xl (#{$bp-max-xl} >= width);
+@custom-media --bp-max-2xl (#{$bp-max-2xl} >= width);
+@custom-media --bp-max-3xl (#{$bp-max-3xl} >= width);
+
+@custom-media --bp-min-xs (0px <= width);
+@custom-media --bp-min-sm (#{$bp-min-sm} <= width);
+@custom-media --bp-min-md (#{$bp-min-md} <= width);
+@custom-media --bp-min-lg (#{$bp-min-lg} <= width);
+@custom-media --bp-min-xl (#{$bp-min-xl} <= width);
+@custom-media --bp-min-2xl (#{$bp-min-2xl} <= width);
+@custom-media --bp-min-3xl (#{$bp-min-3xl} <= width);
+
+@custom-media --bp-only-xs (0px <= width <= #{$bp-max-xs});
+@custom-media --bp-only-sm (#{$bp-min-sm} <= width <= #{$bp-max-sm});
+@custom-media --bp-only-md (#{$bp-min-md} <= width <= #{$bp-max-md});
+@custom-media --bp-only-lg (#{$bp-min-lg} <= width <= #{$bp-max-lg});
+@custom-media --bp-only-xl (#{$bp-min-xl} <= width <= #{$bp-max-xl});
+@custom-media --bp-only-2xl (#{$bp-min-2xl} <= width <= #{$bp-max-2xl});
+@custom-media --bp-only-3xl (#{$bp-min-3xl} <= width <= #{$bp-max-3xl});

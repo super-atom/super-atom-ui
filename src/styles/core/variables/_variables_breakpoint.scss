@@ -30,6 +30,8 @@ $breakpoints-min: (
   md: 768px,
   lg: 993px,
   xl: 1201px,
+  2xl: 1367px,
+  3xl: 1441px,
 );
 
 $bp-min-xs: map-get($breakpoints-min, xs);
@@ -37,3 +39,5 @@ $bp-min-sm: map-get($breakpoints-min, sm);
 $bp-min-md: map-get($breakpoints-min, md);
 $bp-min-lg: map-get($breakpoints-min, lg);
 $bp-min-xl: map-get($breakpoints-min, xl);
+$bp-min-2xl: map-get($breakpoints-min, 2xl);
+$bp-min-3xl: map-get($breakpoints-min, 3xl);

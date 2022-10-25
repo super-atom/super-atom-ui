@@ -2,6 +2,7 @@ node_modules
 .vscode
 .DS_Store
 dist
+.yarn/cache
 yarn-error.log
 sources/assets/fonts/*
 .env

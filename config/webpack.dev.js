@@ -62,6 +62,7 @@ module.exports = merge(baseConfig, {
       emitWarning: true,
       files: path.resolve(__dirname, '../src'),
     }),
+    // !!! 에러가 너무 많아서 꺼둠
     // new StylelintPlugin({
     //   files: path.join('src', '**/*.s?(a|c)ss'),
     // }),

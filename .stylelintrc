@@ -3,7 +3,9 @@
   "rules": {
     "prettier/prettier": true,
     "at-rule-no-unknown": null,
-    "scss/at-rule-no-unknown": true
+    "scss/at-rule-no-unknown": true,
+    "scss/at-import-no-partial-leading-underscore": false,
+    "scss/dollar-variable-empty-line-before": false
   },
   "extends": [
     "stylelint-config-standard-scss",

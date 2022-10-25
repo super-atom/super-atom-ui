@@ -3,12 +3,7 @@
 #content {
   @include base-font-sizes-content();
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  :--heading {
     font-weight: bold;
   }
 
@@ -44,4 +39,11 @@
   strong {
     font-family: 'NotoSansCJKkr-Medium';
   }
+}
+
+@media (prefers-color-scheme: dark) {
+  // body {
+  //   background-color: black;
+  //   color: white;
+  // }
 }

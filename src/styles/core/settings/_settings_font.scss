@@ -1,25 +1,25 @@
 @import '../core';
 
-h1 {
+.h1 {
   @include base-font-sizes-h1();
 }
 
-h2 {
+.h2 {
   @include base-font-sizes-h2();
 }
 
-h3 {
+.h3 {
   @include base-font-sizes-h3();
 }
 
-h4 {
+.h4 {
   @include base-font-sizes-h4();
 }
 
-h5 {
+.h5 {
   @include base-font-sizes-h5();
 }
 
-h6 {
+.h6 {
   @include base-font-sizes-h6();
 }

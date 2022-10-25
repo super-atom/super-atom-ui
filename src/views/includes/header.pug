@@ -12,7 +12,7 @@ mixin header(page)
         each val in ['about', 'guide', 'docs', 'ingredient', 'component']
           a.nav__link(
               class=page === val ? "nav__link--active" : "",
-              href='/' +val+'.html',
+              href='./' +val+'.html',
               title=val
             )=val
       .nav__download-wrap
