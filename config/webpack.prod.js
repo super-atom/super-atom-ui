@@ -4,6 +4,7 @@ const baseConfig = require('./webpack.common.js');
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const ESBuildMinifyPlugin = require('esbuild-loader');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 

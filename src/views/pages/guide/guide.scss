@@ -1,4 +1,4 @@
-@import '../../../styles/core/core';
+@import '../../../styles/core/core.scss';
 
 #content {
   @include base-font-sizes-content();
@@ -39,11 +39,4 @@
   strong {
     font-family: 'NotoSansCJKkr-Medium';
   }
-}
-
-@media (prefers-color-scheme: dark) {
-  // body {
-  //   background-color: black;
-  //   color: white;
-  // }
 }

@@ -51,6 +51,8 @@ const entryHtmlPlugins = arrayOfEntryDirectory.map((page) => {
 });
 
 module.exports = {
+  stats: 'errors-only',
+  target: ['web', 'es5'],
   entry: (() => {
     const entries = {};
     entries['common'] = PATHS.src + `/scripts/ts/common.ts`;
@@ -103,6 +105,16 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
       },
+      // {
+      //   test: /\.js$/,
+      //   exclude: /node_modules/,
+      //   loader: 'esbuild-loader',
+      //   options: {
+      //     loader: 'ts',
+      //     target: 'es2015',
+      //     tsconfigRaw: require('../tsconfig.json')
+      //   }
+      // },
       {
         test: /\.pug$/,
         loader: 'pug-loader',
