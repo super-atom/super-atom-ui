@@ -11,7 +11,10 @@
           border-color: $base-grey;
           &[disabled] {
             color: darken(
-              alt-color($form-state-disabled, map-deep-get($theme-map, color, sub)),
+              alt-color(
+                $form-state-disabled,
+                map-deep-get($theme-map, color, sub)
+              ),
               30%
             );
             background-color: $form-state-disabled;
@@ -40,8 +43,8 @@
             &:hover,
             &:focus,
             &:active {
-              background-color: map-deep-get($theme-map, color, main);
               color: $white;
+              background-color: map-deep-get($theme-map, color, main);
             }
           }
 
@@ -50,7 +53,10 @@
             &:hover,
             &:focus,
             &:active {
-              background-color: darken(map-deep-get($theme-map, color, main),10%);
+              background-color: darken(
+                map-deep-get($theme-map, color, main),
+                10%
+              );
             }
           }
         }
