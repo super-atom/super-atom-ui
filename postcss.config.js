@@ -36,9 +36,8 @@ module.exports = (api) => {
       'postcss-advanced-variables',
       'lost',
       'autoprefixer',
-      api.env === 'production'
-        ? require('cssnano')({ preset: 'default' })()
-        : false,
+      'cssnano',
+      // api.env === 'production' ? require('cssnano')({ preset: 'default' })(): false,
     ],
   };
 };

@@ -1,43 +1,12 @@
 @import '../form/mixins_button';
+@import '../setting/index';
 
 @mixin component($component-map) {
   @each $component, $map in $component-map {
     .#{$component} {
       @if ($component == button) {
-        @include button($radius: map-deep-get($component-map, button, radius));
-        &[disabled] {
-          cursor: not-allowed;
-        }
-        &[data-type='round'],
-        &[data-type='round-reverse'] {
-          border-radius: 50px;
-        }
-        &[data-type='text'] {
-          border-color: transparent;
-        }
-
-        &[data-type='outlined'] {
-          border-color: $base-grey;
-          border-style: solid;
-          border-width: 1px;
-        }
-        &[data-type='outlined-reverse'] {
-          color: $white;
-          background-color: transparent;
-          border-color: $white;
-          border-style: solid;
-          border-width: 1px;
-        }
-        &[data-type='text'],
-        &[data-type='outlined'],
-        &[data-type='round-reverse'] {
-          background-color: transparent;
-        }
-        &[data-type='round-reverse'] {
-          border-color: $base-grey;
-          border-style: solid;
-          border-width: 1px;
-        }
+        @include button($radius: map-deep-get($component-map, button, border-radius), $padding: map-deep-get($component-map, button, padding));
+        @include button-setting();
       }
     }
   }

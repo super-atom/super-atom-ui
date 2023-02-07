@@ -14,5 +14,7 @@ $theme-base: (
   ),
   button: (
     data-type: map-get($buttons, data-type),
+    padding: rem(0) rem(12),
+    border-radius: rem(10)
   ),
 );

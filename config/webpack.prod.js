@@ -4,7 +4,7 @@ const baseConfig = require('./webpack.common.js');
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-const ESBuildMinifyPlugin = require('esbuild-loader');
+// const ESBuildMinifyPlugin = require('esbuild-loader');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
@@ -118,14 +118,14 @@ module.exports = merge(baseConfig, {
 
     // we copy all necessary graphic files
     // and assets to build folder
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: path.resolve(__dirname, '../src/assets/'),
-          to: path.resolve(__dirname, '../dist/assets/'),
-        },
-      ],
-    }),
+    // new CopyWebpackPlugin({
+    //   patterns: [
+    //     {
+    //       from: path.resolve(__dirname, '../src/assets/'),
+    //       to: path.resolve(__dirname, '../dist/assets/'),
+    //     },
+    //   ],
+    // }),
 
     // we create a global variable that
     // we use in pug and we can use in js

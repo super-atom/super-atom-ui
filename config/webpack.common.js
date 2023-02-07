@@ -105,16 +105,6 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
       },
-      // {
-      //   test: /\.js$/,
-      //   exclude: /node_modules/,
-      //   loader: 'esbuild-loader',
-      //   options: {
-      //     loader: 'ts',
-      //     target: 'es2015',
-      //     tsconfigRaw: require('../tsconfig.json')
-      //   }
-      // },
       {
         test: /\.pug$/,
         loader: 'pug-loader',

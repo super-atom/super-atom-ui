@@ -1,0 +1,375 @@
+/**
+ * Returns the factorial of a non-negative integer.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integer} $number - A non-negative integer.
+ *
+ * @return {integer}         - The factorial log
+ */
+/**
+ * Returns base to the exponent power.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integers} $base     - The base number
+ * @param  {integers} $exponent - The exponent to which to raise base
+ *
+ * @return {integers}           - The result of the math
+ */
+/**
+ * Calculate color luminance
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string} $colour - The color to calculate the luminance from
+ *
+ * @return {float}          - The luminance
+ */
+/**
+ * Get the contrast ratio of two colors and warn when it is below WCAG 2.0 AA standard 4.5:1
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#contrast-ratiodef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string}  $forground  - Color one
+ * @param  {string}  $background - Color two
+ *
+ * @return {integer}             - The contrast ratio
+ */
+@lost gutter 20px;
+@lost flexbox flex;
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .wrapper {
+    flex-wrap: wrap;
+  }
+}
+
+#aside {
+  position: fixed;
+  top: 80px;
+  z-index: 1;
+  width: 300px;
+  height: 100vh;
+  padding-top: 0 !important;
+  background-color: #eeeeee;
+}
+#aside::-webkit-scrollbar {
+  display: none;
+}
+@media (max-width: 767px) {
+  #aside {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+  }
+}
+@media (min-width: 768px) {
+  #aside {
+    overflow-y: scroll;
+  }
+}
+#aside .aside__nav .aside__nav__bar {
+  position: relative;
+  z-index: 10;
+  padding: 15px;
+  background-color: #e0e0e0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+#aside .aside__nav .aside__nav__bar .input[type=search] {
+  width: 100%;
+}
+#aside .aside__nav .aside__nav__bar > :nth-child(2) {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+#aside .aside__nav .nav__sub-title {
+  width: 100%;
+  padding: 0;
+  padding-left: 15px;
+  font-weight: 600;
+  font-family: "Open Sans";
+  text-align: left;
+  background-color: #e0e0e0;
+}
+@media screen and (min-width: 320px) {
+  #aside .aside__nav .nav__sub-title {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  #aside .aside__nav .nav__sub-title {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 993px) {
+  #aside .aside__nav .nav__sub-title {
+    font-size: 1.3rem;
+  }
+}
+#aside .aside__nav .nav__sub-title .icon {
+  padding-right: 16px;
+  font-size: 16px;
+}
+#aside .aside__nav .nav__link-depth-1-wrap {
+  height: calc(100vh - 154px);
+}
+@media (max-width: 767px) {
+  #aside .aside__nav .nav__link-depth-1-wrap {
+    position: absolute;
+    top: calc(-100% - 262px);
+    z-index: 1;
+    display: none;
+    width: 100%;
+    height: calc(100vh - 154px);
+  }
+  #aside .aside__nav .nav__link-depth-1-wrap.on {
+    top: 100%;
+    display: block;
+  }
+}
+#aside .aside__nav .nav__link-depth-1-wrap .nav__link-depth-1 {
+  position: relative;
+  height: 40px;
+  overflow: hidden;
+  background-color: #eeeeee;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+#aside .aside__nav .nav__link-depth-1-wrap .nav__link-depth-1.on {
+  height: auto;
+}
+#aside .aside__nav .nav__link-depth-2-wrap {
+  padding: 15px;
+  z-index: 1;
+}
+
+#content .view {
+  width: 100%;
+  padding-left: 300px;
+}
+@media (max-width: 767px) {
+  #content .view {
+    padding-left: 0;
+  }
+}
+#content .view .inner {
+  padding: 15px;
+}
+#content .view .page__title-wrap {
+  position: relative;
+  height: 500px;
+  background-image: url("../../../assets/images/vitruvius.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#content .view .page__title-wrap:before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+#content .view .page__title-wrap .page__title {
+  position: absolute;
+  padding: 10px 20px;
+  color: #fefefe;
+  font-weight: 700;
+  font-size: 40px;
+  font-family: "Open Sans";
+  text-transform: uppercase;
+  background-color: #010101;
+  border: 5px solid #fefefe;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: -0.1px;
+}
+@media screen and (min-width: 320px) {
+  #content .view .page__title-wrap .page__title {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  #content .view .page__title-wrap .page__title {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 993px) {
+  #content .view .page__title-wrap .page__title {
+    font-size: 2rem;
+  }
+}
+#content .view .section-wrap-title {
+  margin: -15px;
+  padding: 15px;
+  color: #fefefe;
+  background-color: #010101;
+}
+#content .view .section-wrap:not(:first-child) {
+  padding-top: 10px;
+  border-top: 1px solid #e0e0e0;
+}
+#content .view .section:not(:first-child) {
+  margin-top: 30px;
+}
+@media screen and (min-width: 320px) {
+  #content .view .section__title {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  #content .view .section__title {
+    font-size: 1.35rem;
+  }
+}
+@media screen and (min-width: 993px) {
+  #content .view .section__title {
+    font-size: 1.5rem;
+  }
+}
+#content .view .section__sub-title {
+  margin: 5px auto;
+  font-family: "NotoSansCJKkr-Medium";
+}
+@media screen and (min-width: 992px) {
+  #content .view .section__sub-title {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 993px) {
+  #content .view .section__sub-title {
+    font-size: 1.17rem;
+  }
+}
+#content .view .section__sub-title span {
+  font-family: "NotoSansCJKkr-DemiLight";
+}
+#content .view .section__content {
+  position: relative;
+  z-index: 0;
+}
+#content .view .section-wrap {
+  margin-bottom: 20px;
+}
+#content .view .section-wrap-title {
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: -0.1px;
+}
+@media screen and (min-width: 320px) {
+  #content .view .section-wrap-title {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  #content .view .section-wrap-title {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 993px) {
+  #content .view .section-wrap-title {
+    font-size: 2rem;
+  }
+}
+#content .view .section__subject-wrap {
+  padding-bottom: 15px;
+}
+#content .view #introduction .introduction__list-wrap li {
+  margin-bottom: 15px;
+}
+#content .view #structure .directory {
+  position: relative;
+  z-index: -1;
+  padding: 15px;
+  background-color: #f5f5f5;
+}
+#content .view .section-wrap-sass .section__sub-wrap:not(:first-child) {
+  margin-top: 30px;
+}
+#content .view .section-wrap-sass .section__sub-title {
+  color: #673ab7;
+}
+#content [data-tooltip] {
+  position: relative;
+  color: #fefefe;
+  cursor: pointer;
+}
+#content [data-tooltip]:hover:after {
+  display: block;
+}
+#content [data-tooltip]::before {
+  position: absolute;
+  display: block;
+  content: "";
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  padding: 0 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: translate(-50%, -50%);
+}
+#content [data-tooltip][data-tooltip-dir=bottom]::after {
+  top: initial;
+  bottom: calc(100% + 10px);
+  left: calc(50% + 15px);
+  transform: translate(-50%, 150%);
+}
+#content [data-tooltip]::after {
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 15px);
+  z-index: 9999;
+  display: none;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 200px;
+  padding: 5px;
+  color: #fefefe;
+  font-size: 12px;
+  line-height: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  transform: translateY(-50%);
+  content: attr(data-tooltip);
+}
+
+@media (max-width: 767px) {
+  #footer {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+@media (min-width: 768px) {
+  #footer {
+    width: calc(100vw - 300px);
+    margin-left: 300px;
+  }
+}/*# sourceMappingURL=component.css.map */

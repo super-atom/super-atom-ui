@@ -1,0 +1,121 @@
+/**
+ * Returns the factorial of a non-negative integer.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integer} $number - A non-negative integer.
+ *
+ * @return {integer}         - The factorial log
+ */
+/**
+ * Returns base to the exponent power.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integers} $base     - The base number
+ * @param  {integers} $exponent - The exponent to which to raise base
+ *
+ * @return {integers}           - The result of the math
+ */
+/**
+ * Calculate color luminance
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string} $colour - The color to calculate the luminance from
+ *
+ * @return {float}          - The luminance
+ */
+/**
+ * Get the contrast ratio of two colors and warn when it is below WCAG 2.0 AA standard 4.5:1
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#contrast-ratiodef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string}  $forground  - Color one
+ * @param  {string}  $background - Color two
+ *
+ * @return {integer}             - The contrast ratio
+ */
+@lost gutter 20px;
+@lost flexbox flex;
+.section-main .title-wrap {
+  position: relative;
+  height: 500px;
+  background-image: url("../../../assets/images/the-last-supper.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.section-main .title-wrap::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(1, 1, 1, 0.3);
+}
+.section-main .title-wrap .section__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 10px 20px;
+  color: #fefefe;
+  font-size: 40px;
+  text-transform: uppercase;
+  background-color: #010101;
+  border: 5px solid #fefefe;
+  transform: translate(-50%, -50%);
+}
+@media (min-width: 320px) {
+  .section-main .inner {
+    lost-center: 568px;
+  }
+}
+@media (min-width: 569px) {
+  .section-main .inner {
+    lost-center: 767px;
+  }
+}
+@media (min-width: 768px) {
+  .section-main .inner {
+    lost-center: 992px;
+  }
+}
+@media (min-width: 993px) {
+  .section-main .inner {
+    lost-center: 1200px;
+  }
+}
+@media (min-width: 1201px) {
+  .section-main .inner {
+    lost-center: 1366px;
+  }
+}
+.section-main .inner .txt-wrap {
+  padding: 15px;
+}
+@media (min-width: 569px) {
+  .section-main .inner .txt-wrap {
+    padding-right: 15px;
+    padding-left: 15px;
+    lost-column: 1/1;
+  }
+}
+@media (min-width: 993px) {
+  .section-main .inner .txt-wrap {
+    lost-column: 1/2;
+  }
+}
+.section-main .inner .txt-wrap p + p {
+  margin-top: 10px;
+}/*# sourceMappingURL=about.css.map */

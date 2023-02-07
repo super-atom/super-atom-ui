@@ -1,4 +1,5 @@
-@import '../core';
+@import '../core.scss';
 // 추가할 테마를 불러옵니다. 테마의 설정 값은 themes 폴더에서 가져옵니다.
 @include themable('base', $theme-base);
 @include themable('atom', $theme-atom);
+@include themable('tokens', $theme-tokens);

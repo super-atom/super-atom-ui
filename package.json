@@ -1,18 +1,17 @@
 {
   "name": "super-atom-ui",
   "version": "0.1.0",
-  "engines": {
-    "node": "<= 16.13.0",
-    "npm": "8.1.0"
-  },
   "scripts": {
+    "design-tokens": "node ./tokens/transformTokens.js",
     "dev": "cross-env NODE_ENV=development webpack serve --config ./config/webpack.dev.js --mode development --progress",
     "prod": "cross-env NODE_ENV=production webpack --config ./config/webpack.prod.js --mode production --progress",
     "pretty": "prettier --write \"./**/*.{ts,js,scss,pug,json}\"",
     "clean": "rimraf ./dist/*",
     "create": "node scripts/create-page.js",
-    "build": "npm-run-all clean prod",
-    "deploy": "netlify deploy --prod"
+    "build": "npm-run-all prod design-tokens",
+    "deploy": "netlify deploy --prod",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -31,7 +30,7 @@
     "pug",
     "sass"
   ],
-  "author": "super-atom(Juseok Lee) <super0atom@gmail.com>",
+  "author": "super-atom <super0atom@gmail.com> (Juseok Lee)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/wbkd/super-atom-ui/issues"
@@ -137,5 +136,6 @@
     "webpack-dev-server": "^4.4.0",
     "webpack-merge": "^5.8.0",
     "workbox-webpack-plugin": "^6.3.0"
-  }
+  },
+  "main": "postcss.config.js"
 }

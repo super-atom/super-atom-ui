@@ -9,6 +9,9 @@
         }
         @if ($section == button) {
           border-color: $base-grey;
+          padding: map-get($theme-map, button, padding);
+          border-radius: map-get($theme-map, button, border-radius);
+
           &[disabled] {
             color: darken(
               alt-color(

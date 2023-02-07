@@ -151,7 +151,7 @@ differenceWith([1, 1.2, 1.5, 3, 0], [1.9, 3, 0], (a, b) => Math.round(a) === Mat
 This snippet removes the values for which the comparator function returns false.
 */
 
-export const digitize = (n) => [...`${n}`].map((i) => parseInt(i));
+// export const digitize = (n) => [...`${n}`].map((i) => parseInt(i));
 /*
 This snippet gets a number as input and returns an array of its digits.
 digitize(431); // [4, 3, 1]
@@ -206,8 +206,8 @@ This snippet can be used to get an array with elements that are included in two 
 intersection([1, 2, 3], [4, 3, 2]); // [2, 3]
 */
 
-export const is = (type, val) =>
-  ![, null].includes(val) && val.constructor === type;
+// export const is = (type, val) =>
+//   ![, null].includes(val) && val.constructor === type;
 /*
 This snippet can be used to check if a value is of a particular type.
 is(Array, [1]); // true
@@ -314,7 +314,7 @@ This snippet can be used to find the union of two arrays, resulting in an array 
 union([1, 2, 3], [4, 3, 2]); // [1,2,3,4]
 */
 
-export const uniqueElements = (arr) => [...new Set(arr)];
+// export const uniqueElements = (arr) => [...new Set(arr)];
 /*
 This snippet uses ES6 Setandthe…restoperator to get every element only once.
 uniqueElements([1, 2, 2, 3, 4, 4, 5]); // [1, 2, 3, 4, 5]
